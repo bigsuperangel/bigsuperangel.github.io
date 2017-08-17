@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2017-08-02T02:20:42.641Z</updated>
+  <updated>2017-08-17T02:09:58.461Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kcptun</title>
+    <link href="http://bigsuperangel.github.io/2017/08/17/kcptun/"/>
+    <id>http://bigsuperangel.github.io/2017/08/17/kcptun/</id>
+    <published>2017-08-17T02:09:10.000Z</published>
+    <updated>2017-08-17T02:09:58.461Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">$ ./client_darwin_amd64 -h</div><div class="line">NAME:</div><div class="line">   kcptun - client(with SMUX)</div><div class="line"></div><div class="line">USAGE:</div><div class="line">   client_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</div><div class="line"></div><div class="line">VERSION:</div><div class="line">   20170120</div><div class="line"></div><div class="line">COMMANDS:</div><div class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</div><div class="line"></div><div class="line">GLOBAL OPTIONS:</div><div class="line">   --localaddr value, -l value      local listen<span class="built_in"> address </span>(default: <span class="string">":12948"</span>)</div><div class="line">   --remoteaddr value, -r value     kcp<span class="built_in"> server address </span>(default: <span class="string">"vps:29900"</span>)</div><div class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</div><div class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</div><div class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</div><div class="line">   --conn value                     <span class="builtin-name">set</span> num of UDP connections <span class="keyword">to</span><span class="built_in"> server </span>(default: 1)</div><div class="line">   --autoexpire value               <span class="builtin-name">set</span> auto expiration time(<span class="keyword">in</span> seconds) <span class="keyword">for</span> a single UDP connection, 0 <span class="keyword">to</span> <span class="builtin-name">disable</span> (default: 0)</div><div class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</div><div class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 128)</div><div class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 512)</div><div class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</div><div class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</div><div class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</div><div class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</div><div class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</div><div class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</div><div class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</div><div class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</div><div class="line">   --help, -h                       show help</div><div class="line">   --version, -v                    <span class="builtin-name">print</span> the version</div><div class="line"></div><div class="line">$ ./server_darwin_amd64 -h</div><div class="line">NAME:</div><div class="line">   kcptun - server(with SMUX)</div><div class="line"></div><div class="line">USAGE:</div><div class="line">   server_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</div><div class="line"></div><div class="line">VERSION:</div><div class="line">   20170120</div><div class="line"></div><div class="line">COMMANDS:</div><div class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</div><div class="line"></div><div class="line">GLOBAL OPTIONS:</div><div class="line">   --listen value, -l value         kcp<span class="built_in"> server </span>listen<span class="built_in"> address </span>(default: <span class="string">":29900"</span>)</div><div class="line">   --target value, -t value         target<span class="built_in"> server address </span>(default: <span class="string">"127.0.0.1:12948"</span>)</div><div class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</div><div class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</div><div class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</div><div class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</div><div class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 1024)</div><div class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 1024)</div><div class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</div><div class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</div><div class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</div><div class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</div><div class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</div><div class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</div><div class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</div><div class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</div><div class="line">   --help, -h                       show help</div><div class="line">   --version, -v                    <span class="builtin-name">print</span> the version</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight routeros&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;
+    
+    </summary>
+    
+    
+      <category term="ss" scheme="http://bigsuperangel.github.io/tags/ss/"/>
+    
+      <category term="kcptun" scheme="http://bigsuperangel.github.io/tags/kcptun/"/>
+    
+  </entry>
   
   <entry>
     <title>生成ssh key</title>
@@ -62,9 +85,9 @@
     
       <category term="git" scheme="http://bigsuperangel.github.io/tags/git/"/>
     
-      <category term="submodule" scheme="http://bigsuperangel.github.io/tags/submodule/"/>
-    
       <category term="hexo" scheme="http://bigsuperangel.github.io/tags/hexo/"/>
+    
+      <category term="submodule" scheme="http://bigsuperangel.github.io/tags/submodule/"/>
     
   </entry>
   
@@ -794,36 +817,6 @@ curl --data @filename https://github.api.com/authorizations
       <category term="hosts" scheme="http://bigsuperangel.github.io/tags/hosts/"/>
     
       <category term="google" scheme="http://bigsuperangel.github.io/tags/google/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>java 加解密</title>
-    <link href="http://bigsuperangel.github.io/2016/07/08/java-security/"/>
-    <id>http://bigsuperangel.github.io/2016/07/08/java-security/</id>
-    <published>2016-07-08T07:26:30.000Z</published>
-    <updated>2017-08-01T09:29:10.393Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>在加解密类中引入</p>
-</blockquote>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> &#123;</div><div class="line">	Security.addProvider(<span class="keyword">new</span> <span class="type">BouncyCastleProvider</span>());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.bouncycastle<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bcprov-jdk15<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.45<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;在加解密类中引入&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight haxe&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div c
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://bigsuperangel.github.io/tags/java/"/>
-    
-      <category term="security" scheme="http://bigsuperangel.github.io/tags/security/"/>
     
   </entry>
   
