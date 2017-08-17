@@ -81,6 +81,67 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/07/11/linux-hosts/" title="linux环境下修改hosts" itemprop="url">linux环境下修改hosts</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-11T02:54:41.000Z" itemprop="datePublished"> Published 2016-07-11</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<p>在linux下替换hosts,上google</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/racaljk/</span>hosts<span class="regexp">/master/</span>hosts -qO <span class="regexp">/tmp/</span>hosts &amp;&amp; sudo sh -c <span class="string">'cat /tmp/hosts &gt; /etc/hosts'</span></div></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/hosts/">hosts</a><a href="/tags/google/">google</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/11/linux-hosts/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/11/linux-hosts/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/07/08/java-security/" title="java 加解密" itemprop="url">java 加解密</a>
   </h1>
   <p class="article-author">By
@@ -645,114 +706,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/01/linux-vim/" title="vim 命令大全" itemprop="url">vim 命令大全</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-01T03:30:06.000Z" itemprop="datePublished"> Published 2016-06-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="第一级-–-存活"><a href="#第一级-–-存活" class="headerlink" title="第一级 – 存活"></a>第一级 – 存活</h3><ol>
-<li><p>基本使用</p>
-<blockquote>
-<p>i → Insert 模式，按 ESC 回到 Normal 模式.<br>x → 删当前光标所在的一个字符。<br>:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （注：:w 后可以跟文件名）<br>dd → 删除当前行，并把删除的行存到剪贴板里<br>p → 粘贴剪贴板</p>
-</blockquote>
-</li>
-<li><p>推荐:</p>
-<blockquote>
-<p>hjkl (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像下箭头。<br>:help <command> → 显示相关命令的帮助。你也可以就输入 :help 而不跟命令。（注：退出帮助需要输入:q）</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="第二级-–-感觉良好"><a href="#第二级-–-感觉良好" class="headerlink" title="第二级 – 感觉良好"></a>第二级 – 感觉良好</h3><ol>
-<li><p>各种插入模式</p>
-<blockquote>
-<p>a → 在光标后插入<br>o → 在当前行后插入一个新行<br>O → 在当前行前插入一个新行<br>cw → 替换从光标所在位置后到一个单词结尾的字符</p>
-</blockquote>
-</li>
-<li><p>简单的移动光标</p>
-<blockquote>
-<p>0 → 数字零，到行头<br>^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）<br>$ → 到本行行尾<br>g_ → 到本行最后一个不是blank字符的位置。<br>/pattern → 搜索 pattern 的字符串（注：如果搜索出多个匹配，可按n键到下一个）</p>
-</blockquote>
-</li>
-<li><p>拷贝/粘贴 （注：p/P都可以，p是表示在当前位置之后，P表示在当前位置之前）</p>
-<blockquote>
-<p>P → 粘贴<br>yy → 拷贝当前行当行于 ddP</p>
-</blockquote>
-</li>
-<li><p>Undo/Redo</p>
-<blockquote>
-<p>u → undo<br><c-r> → redo</c-r></p>
-</blockquote>
-</li>
-<li><p>打开/保存/退出/改变文件(Buffer)</p>
-<blockquote>
-<p>:e <path to="" file=""></path> → 打开一个文件<br>:w → 存盘<br>:saveas <path to="" file=""></path> → 另存为 <path to="" file=""></path><br>:x， ZZ 或 :wq → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)<br>:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br>:bn 和 :bp → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（注：我喜欢使用:n到下一个文件）</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="第三级-超能力"><a href="#第三级-超能力" class="headerlink" title="第三级-超能力"></a>第三级-超能力</h3><ol>
-<li><p>按键操作：</p>
-<blockquote>
-<p>注释：ctrl+v 进入列编辑模式,向下或向上移动光标,把需要注释的行的开头标记起来,然后按大写的I,再插入注释符,比如”#”,再按Esc,就会全部注释了。<br>删除：先按v,进入visual模式,横向选中列的个数(如”#”注释符号,需要选中两列),再按Esc,再按ctrl+v 进入列编辑模式,向下或向上移动光标,选中注释部分,然后按d, 就会删除注释符号（#）。<br>PS：当然不一定是shell的注释符”#”，也可以是”//“，或者其他任意的字符；vim才不知道什么是注释符呢，都是字符而已。</p>
-</blockquote>
-</li>
-<li><p>使用替换命令：</p>
-<blockquote>
-<p>:% s/^/\/\//g     在全部内容的行首添加//号注释<br>:2,50 s/^/\/\//g  在2~50行首添加//号注释<br>:2,50 s/^\/\///g  在2~50行首删除//号</p>
-</blockquote>
-</li>
-</ol>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/vim/">vim</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/01/linux-vim/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/01/linux-vim/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next<span></span></a>
@@ -807,7 +760,11 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -819,7 +776,7 @@
 			
 		
 			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>2</sup></a></li>
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -827,11 +784,7 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>2</sup></a></li>
 			
 		
 			
@@ -839,19 +792,7 @@
 			
 		
 			
-				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ss/" title="ss">ss<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/kcptun/" title="kcptun">kcptun<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hibernate/" title="hibernate">hibernate<sup>1</sup></a></li>
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
 			
 		
 			
@@ -859,7 +800,19 @@
 			
 		
 			
+				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/k2/" title="k2">k2<sup>1</sup></a></li>
 			
 		
 		</ul>

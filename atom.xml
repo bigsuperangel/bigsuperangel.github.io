@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2017-08-17T02:09:58.461Z</updated>
+  <updated>2017-08-17T02:19:19.941Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,45 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>斐讯k2刷机记录</title>
+    <link href="http://bigsuperangel.github.io/2017/08/17/k2/"/>
+    <id>http://bigsuperangel.github.io/2017/08/17/k2/</id>
+    <published>2017-08-17T02:18:34.000Z</published>
+    <updated>2017-08-17T02:19:19.941Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="刷机指南"><a href="#刷机指南" class="headerlink" title="刷机指南"></a><strong>刷机指南</strong></h1><p>【适用性】此方法适用于K2 V22.4.5.39以上的新版本官方固件，包括当前最新固件V22.5.9.163、22.5.10.176、22.5.11.5。</p>
+<p>【功 能】根据输入的MAC地址自动生成配置文件，此配置文件用于为K2刷入breed（20170416版本）。你可以后续在breed中刷入<a href="http://pan.baidu.com/s/1geCr84N" target="_blank" rel="external">第三方固件</a>。</p>
+<p>【操作步骤】</p>
+<p>1、输入WAN口MAC地址（格式为CC:81:DA:11:22:33，以冒号隔开），点“下载配置文件”将配置文件下载到本地计算机</p>
+<p>2、在K2 WEB管理页面“高级设置”-“系统设置”-“备份恢复”界面，导入下载的配置文件，然后点击“恢复备份”按钮即可。</p>
+<p>【使用说明】</p>
+<p>MAC地址可以在管理页面的“高级设置”-“系统状态”页面直接拷贝：<br><img src="http://iytc.net/img/br1.jpg" alt=""></p>
+<p>如果采用无线扩展组网或网页上的MAC不正确，可以查看K2机器底部的MAC地址，每隔两个字符加入冒号进行输入，如下图，MAC应该为“D8:C8:E9:1A:94:00”:</p>
+<p><img src="http://iytc.net/img/br3.jpg" alt=""></p>
+<p>配置文件使用方法：</p>
+<p>在K2 WEB管理页面“高级设置”-“系统设置”-“备份恢复”界面，导入下载的配置文件，然后点击“恢复备份”按钮即可。</p>
+<p><img src="http://iytc.net/img/br2.jpg" alt=""></p>
+<p>配置文件导入后，K2会复位两次，请耐心等待，不要断电或人工复位！</p>
+<p>【breed进入方式】</p>
+<p>导入配置两分钟后K2会正常启动，指示灯变黄或变蓝，此时断电，电脑连接K2的一个LAN口自动获取 IP 地址，按住K2复位键再通电，持续按住几秒，然后电脑访问<a href="http://192.168.1.1即可在WEB刷第三方固件" target="_blank" rel="external">http://192.168.1.1即可在WEB刷第三方固件</a><br><img src="http://iytc.net/img/br4.jpg" alt=""></p>
+<p>【进入路由器后台】<br><a href="http://192.168.123.1/" target="_blank" rel="external">http://192.168.123.1/</a><br>admin<br>admin</p>
+<p>【相关链接】<br><a href="http://iytc.net/k2.php" target="_blank" rel="external">http://iytc.net/k2.php</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;刷机指南&quot;&gt;&lt;a href=&quot;#刷机指南&quot; class=&quot;headerlink&quot; title=&quot;刷机指南&quot;&gt;&lt;/a&gt;&lt;strong&gt;刷机指南&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;【适用性】此方法适用于K2 V22.4.5.39以上的新版本官方固件，包括当前最新固件V2
+    
+    </summary>
+    
+    
+      <category term="k2" scheme="http://bigsuperangel.github.io/tags/k2/"/>
+    
+      <category term="斐讯" scheme="http://bigsuperangel.github.io/tags/%E6%96%90%E8%AE%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>kcptun</title>
@@ -85,9 +124,9 @@
     
       <category term="git" scheme="http://bigsuperangel.github.io/tags/git/"/>
     
-      <category term="hexo" scheme="http://bigsuperangel.github.io/tags/hexo/"/>
-    
       <category term="submodule" scheme="http://bigsuperangel.github.io/tags/submodule/"/>
+    
+      <category term="hexo" scheme="http://bigsuperangel.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -786,37 +825,6 @@ curl --data @filename https://github.api.com/authorizations
       <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
     
       <category term="scp" scheme="http://bigsuperangel.github.io/tags/scp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux环境下修改hosts</title>
-    <link href="http://bigsuperangel.github.io/2016/07/11/linux-hosts/"/>
-    <id>http://bigsuperangel.github.io/2016/07/11/linux-hosts/</id>
-    <published>2016-07-11T02:54:41.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>在linux下替换hosts,上google</p>
-</blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/racaljk/</span>hosts<span class="regexp">/master/</span>hosts -qO <span class="regexp">/tmp/</span>hosts &amp;&amp; sudo sh -c <span class="string">'cat /tmp/hosts &gt; /etc/hosts'</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;在linux下替换hosts,上google&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight awk&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
-      <category term="hosts" scheme="http://bigsuperangel.github.io/tags/hosts/"/>
-    
-      <category term="google" scheme="http://bigsuperangel.github.io/tags/google/"/>
     
   </entry>
   
