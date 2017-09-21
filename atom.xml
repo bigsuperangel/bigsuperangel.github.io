@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2017-08-17T02:19:19.941Z</updated>
+  <updated>2017-09-21T09:15:17.000Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://bigsuperangel.github.io/2017/09/21/googleacf67a1a66a49fce/"/>
+    <id>http://bigsuperangel.github.io/2017/09/21/googleacf67a1a66a49fce/</id>
+    <published>2017-09-21T09:26:39.247Z</published>
+    <updated>2017-09-21T09:15:17.000Z</updated>
+    
+    <content type="html"><![CDATA[google-site-verification: googleacf67a1a66a49fce.html]]></content>
+    
+    <summary type="html">
+    
+      google-site-verification: googleacf67a1a66a49fce.html
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>斐讯k2刷机记录</title>
@@ -770,61 +788,6 @@ curl --data @filename https://github.api.com/authorizations
       <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
     
       <category term="shadowsocks" scheme="http://bigsuperangel.github.io/tags/shadowsocks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令——scp 两台linux机器间文件或目录传输</title>
-    <link href="http://bigsuperangel.github.io/2016/07/18/scp-linux/"/>
-    <id>http://bigsuperangel.github.io/2016/07/18/scp-linux/</id>
-    <published>2016-07-18T02:40:10.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<ol>
-<li>从远程复制文件到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/nginx-</span><span class="number">0</span>.<span class="number">5.38</span>.tar.gz /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>从远程复制目录到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/中下载mongodb 目录到本地的/opt/soft/目录来。</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/mongodb</span> /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地文件到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：复制本地opt/soft/目录下的文件nginx-0.5.38.tar.gz 到远程机器192.168.120.204的opt/soft/scptest目录</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> /opt/soft/nginx-<span class="number">0</span>.<span class="number">5.38</span>.tar.gz root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地目录到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：上传本地目录 /opt/soft/mongodb到远程机器192.168.120.204上/opt/soft/scptest的目录中去</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r /opt/soft/mongodb root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;从远程复制文件到本地目录。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中&lt;/p&gt;
-&lt;/blockq
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
-      <category term="scp" scheme="http://bigsuperangel.github.io/tags/scp/"/>
     
   </entry>
   
