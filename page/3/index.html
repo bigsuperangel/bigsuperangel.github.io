@@ -81,91 +81,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/18/scp-linux/" title="linux命令——scp 两台linux机器间文件或目录传输" itemprop="url">linux命令——scp 两台linux机器间文件或目录传输</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-07-18T02:40:10.000Z" itemprop="datePublished"> Published 2016-07-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <ol>
-<li>从远程复制文件到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/nginx-</span><span class="number">0</span>.<span class="number">5.38</span>.tar.gz /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>从远程复制目录到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/中下载mongodb 目录到本地的/opt/soft/目录来。</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/mongodb</span> /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地文件到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：复制本地opt/soft/目录下的文件nginx-0.5.38.tar.gz 到远程机器192.168.120.204的opt/soft/scptest目录</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> /opt/soft/nginx-<span class="number">0</span>.<span class="number">5.38</span>.tar.gz root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地目录到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：上传本地目录 /opt/soft/mongodb到远程机器192.168.120.204上/opt/soft/scptest的目录中去</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r /opt/soft/mongodb root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/scp/">scp</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/07/18/scp-linux/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/18/scp-linux/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/07/11/linux-hosts/" title="linux环境下修改hosts" itemprop="url">linux环境下修改hosts</a>
   </h1>
   <p class="article-author">By
@@ -720,6 +635,64 @@
 	
 	  	<span></span>
 		<a href="/2016/06/06/ubuntu-fixed-ip/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/06/ubuntu-fixed-ip/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/06/06/redis-command/" title="redis 相关命令" itemprop="url">redis 相关命令</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-06T02:09:48.000Z" itemprop="datePublished"> Published 2016-06-06</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">redis-cli -h host -p<span class="built_in"> port </span>-a password  #针对redis设置了密码</div><div class="line">keys * #查看所有的key</div><div class="line"><span class="builtin-name">SET</span> KEY_NAME VALUE</div><div class="line"><span class="builtin-name">GET</span> KEY_NAME</div></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/redis/">redis</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/06/redis-command/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/06/redis-command/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
