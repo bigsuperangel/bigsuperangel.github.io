@@ -4,33 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>virtualenv | linyu blog</title>
+    <title>linux 命令 -mysqlimport | linyu blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="linyu">
     
 
     
-    <meta name="description" content="VirtualEnv可以方便的解决不同项目对类库的依赖问题，这里讲下windows上如何安装virtualenv。 1. 安装 virtualenv 2. 为项目安装虚拟环境 3. 启动虚拟环境中，为项目安装所需类库在windows中，启动虚拟环境使用命令：your_env_dir\Scripts\activate，激活虚拟环境后，在cmd窗口的命令前面将出现，表示目前处于虚拟环境中。 4. 在虚">
-<meta name="keywords" content="python,virtualenv">
+    <meta name="description" content="mysqlimport为MySQL服务器用命令行方式导入数据 补充说明mysqlimport命令 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。 语法1mysqlimport(选项)(参数) 选项12345-D：导入数据前清空表；-f：出现错误时继续处理剩余的操作；-h：MySQL服务器的ip地址或主机名；-u：连接MySQL服">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="virtualenv">
-<meta property="og:url" content="http://bigsuperangel.github.io/2017/03/08/virtualenv/index.html">
+<meta property="og:title" content="linux 命令 -mysqlimport">
+<meta property="og:url" content="http://bigsuperangel.github.io/2017/11/08/mysqlimport/index.html">
 <meta property="og:site_name" content="linyu blog">
-<meta property="og:description" content="VirtualEnv可以方便的解决不同项目对类库的依赖问题，这里讲下windows上如何安装virtualenv。 1. 安装 virtualenv 2. 为项目安装虚拟环境 3. 启动虚拟环境中，为项目安装所需类库在windows中，启动虚拟环境使用命令：your_env_dir\Scripts\activate，激活虚拟环境后，在cmd窗口的命令前面将出现，表示目前处于虚拟环境中。 4. 在虚">
+<meta property="og:description" content="mysqlimport为MySQL服务器用命令行方式导入数据 补充说明mysqlimport命令 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。 语法1mysqlimport(选项)(参数) 选项12345-D：导入数据前清空表；-f：出现错误时继续处理剩余的操作；-h：MySQL服务器的ip地址或主机名；-u：连接MySQL服">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/5643975ae128412eaf43f35fff5c1dd7.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/e357d5fb8428418bb14f2b43ebd05dcf.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/77990833b53d46299e2d486bd00b460a.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/d552521b25144f02bbd12a1753c954bb.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/dc3fa4e4fb7d4abcacc8744b6b81555e.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/820b2fa7c7554ea59d2e7b5bdb8f9704.png">
-<meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/b44caaea05fc48728b6adf1919b39b2c.png">
-<meta property="og:updated_time" content="2017-08-01T09:29:10.401Z">
+<meta property="og:updated_time" content="2017-11-08T07:13:19.334Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="virtualenv">
-<meta name="twitter:description" content="VirtualEnv可以方便的解决不同项目对类库的依赖问题，这里讲下windows上如何安装virtualenv。 1. 安装 virtualenv 2. 为项目安装虚拟环境 3. 启动虚拟环境中，为项目安装所需类库在windows中，启动虚拟环境使用命令：your_env_dir\Scripts\activate，激活虚拟环境后，在cmd窗口的命令前面将出现，表示目前处于虚拟环境中。 4. 在虚">
-<meta name="twitter:image" content="http://olrtj18qs.bkt.clouddn.com/file/2017/3/5643975ae128412eaf43f35fff5c1dd7.png">
+<meta name="twitter:title" content="linux 命令 -mysqlimport">
+<meta name="twitter:description" content="mysqlimport为MySQL服务器用命令行方式导入数据 补充说明mysqlimport命令 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。 语法1mysqlimport(选项)(参数) 选项12345-D：导入数据前清空表；-f：出现错误时继续处理剩余的操作；-h：MySQL服务器的ip地址或主机名；-u：连接MySQL服">
 
     
     <link rel="alternative" href="/atom.xml" title="linyu blog" type="application/atom+xml">
@@ -92,14 +84,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/03/08/virtualenv/" title="virtualenv" itemprop="url">virtualenv</a>
+      <a href="/2017/11/08/mysqlimport/" title="linux 命令 -mysqlimport" itemprop="url">linux 命令 -mysqlimport</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-08T06:50:24.000Z" itemprop="datePublished"> Published 2017-03-08</time>
+    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> Published 2017-11-08</time>
     
   </p>
 </header>
@@ -108,22 +100,18 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqlimport"><span class="toc-number">1.</span> <span class="toc-text">mysqlimport</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#补充说明"><span class="toc-number">1.1.</span> <span class="toc-text">补充说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-number">1.1.2.</span> <span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">1.1.3.</span> <span class="toc-text">参数</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<p>VirtualEnv可以方便的解决不同项目对类库的依赖问题，这里讲下windows上如何安装virtualenv。</p>
-<p><strong>1. 安装 <code>virtualenv</code></strong><br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/5643975ae128412eaf43f35fff5c1dd7.png" alt="5643975ae128412eaf43f35fff5c1dd7.png"></p>
-<p><strong>2. 为项目安装虚拟环境</strong><br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/e357d5fb8428418bb14f2b43ebd05dcf.png" alt="e357d5fb8428418bb14f2b43ebd05dcf.png"></p>
-<p><strong>3. 启动虚拟环境中，为项目安装所需类库</strong><br>在windows中，启动虚拟环境使用命令：your_env_dir\Scripts\activate，激活虚拟环境后，在cmd窗口的命令前面将出现，表示目前处于虚拟环境中。<br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/77990833b53d46299e2d486bd00b460a.png" alt="77990833b53d46299e2d486bd00b460a.png"></p>
-<p><strong>4. 在虚拟环境中进行开发</strong><br>A.在项目目录下，创建一个flask_demo.py的文件，用来演示用flask创建一个应用。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line"><span class="meta">@app.route('/')</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_flask</span><span class="params">()</span>:</span></div><div class="line">  <span class="keyword">return</span> <span class="string">'hello flask!'</span></div><div class="line"></div><div class="line">    <span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">      app.run()</div></pre></td></tr></table></figure>
-<p>B.在虚拟环境中执行该应用：<br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/d552521b25144f02bbd12a1753c954bb.png" alt="d552521b25144f02bbd12a1753c954bb.png"><br>C.在浏览器中验证该应用：<br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/dc3fa4e4fb7d4abcacc8744b6b81555e.png" alt="dc3fa4e4fb7d4abcacc8744b6b81555e.png"></p>
-<p><strong>5. 离开虚拟环境，使用deactivate命令</strong><br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/820b2fa7c7554ea59d2e7b5bdb8f9704.png" alt="820b2fa7c7554ea59d2e7b5bdb8f9704.png"><br>发现命令行前面已经没有了<env></env></p>
-<p><strong>6. 在系统环境中，我们并没有安装flask类库，可以对比在系统环境中和虚拟环境中的脚本运行效果：</strong><br><img src="http://olrtj18qs.bkt.clouddn.com/file/2017/3/b44caaea05fc48728b6adf1919b39b2c.png" alt="b44caaea05fc48728b6adf1919b39b2c.png"></p>
-<blockquote>
-<p>总结：virtualenv虚拟环境为每个项目隔离了一套运行类库，不同的项目在各自的虚拟环境中使用不同的类库，避免了将所有类库都安装到系统环境中导致的不同项目需要不同（版本）类库的问题，项目与项目之间的类库依存不再成为问题。</p>
-</blockquote>
+		<h1 id="mysqlimport"><a href="#mysqlimport" class="headerlink" title="mysqlimport"></a>mysqlimport</h1><p>为MySQL服务器用命令行方式导入数据</p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p><strong>mysqlimport命令</strong> 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></div></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">D：导入数据前清空表；</span></div><div class="line"><span class="ruby">-f：出现错误时继续处理剩余的操作；</span></div><div class="line"><span class="ruby">-h：MySQL服务器的ip地址或主机名；</span></div><div class="line"><span class="ruby">-u：连接MySQL服务器的用户名；</span></div><div class="line"><span class="ruby">-p：连接MySQL服务器的密码。</span></div></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>数据库名：指定要导入的数据库名称；</li>
+<li>文本文件：包含特定格式文本文件。</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -132,7 +120,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/python/">python</a><a href="/tags/virtualenv/">virtualenv</a>
+  <span></span> <a href="/tags/linux/">linux</a>
   </div>
 
 </div>
@@ -141,7 +129,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bigsuperangel.github.io/2017/03/08/virtualenv/" data-title="virtualenv | linyu blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bigsuperangel.github.io/2017/11/08/mysqlimport/" data-title="linux 命令 -mysqlimport | linyu blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -154,19 +142,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/03/10/jitpack/" title="利用jitpack.io发布Android、Java项目，通过gradle、maven方式引用">
-  <strong>上一篇：</strong><br/>
-  <span>
-  利用jitpack.io发布Android、Java项目，通过gradle、maven方式引用</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/02/23/freenom/"  title="免费顶级域名freenom使用小结">
+<a href="/2017/08/17/k2/"  title="斐讯k2刷机记录">
  <strong>下一篇：</strong><br/> 
- <span>免费顶级域名freenom使用小结
+ <span>斐讯k2刷机记录
 </span>
 </a>
 </div>
@@ -175,7 +155,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2017/03/08/virtualenv/" data-title="virtualenv" data-url="http://bigsuperangel.github.io/2017/03/08/virtualenv/"></div>
+	<div class="ds-thread" data-thread-key="2017/11/08/mysqlimport/" data-title="linux 命令 -mysqlimport" data-url="http://bigsuperangel.github.io/2017/11/08/mysqlimport/"></div>
 </section>
 
 
@@ -185,7 +165,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mysqlimport"><span class="toc-number">1.</span> <span class="toc-text">mysqlimport</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#补充说明"><span class="toc-number">1.1.</span> <span class="toc-text">补充说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-number">1.1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选项"><span class="toc-number">1.1.2.</span> <span class="toc-text">选项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">1.1.3.</span> <span class="toc-text">参数</span></a></li></ol></li></ol></li></ol>
  
   </div>
 

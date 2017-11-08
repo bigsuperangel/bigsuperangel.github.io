@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2017-08-17T02:19:19.941Z</updated>
+  <updated>2017-11-08T07:13:19.334Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux 命令 -mysqlimport</title>
+    <link href="http://bigsuperangel.github.io/2017/11/08/mysqlimport/"/>
+    <id>http://bigsuperangel.github.io/2017/11/08/mysqlimport/</id>
+    <published>2017-11-08T07:12:23.000Z</published>
+    <updated>2017-11-08T07:13:19.334Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="mysqlimport"><a href="#mysqlimport" class="headerlink" title="mysqlimport"></a>mysqlimport</h1><p>为MySQL服务器用命令行方式导入数据</p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p><strong>mysqlimport命令</strong> 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></div></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">D：导入数据前清空表；</span></div><div class="line"><span class="ruby">-f：出现错误时继续处理剩余的操作；</span></div><div class="line"><span class="ruby">-h：MySQL服务器的ip地址或主机名；</span></div><div class="line"><span class="ruby">-u：连接MySQL服务器的用户名；</span></div><div class="line"><span class="ruby">-p：连接MySQL服务器的密码。</span></div></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>数据库名：指定要导入的数据库名称；</li>
+<li>文本文件：包含特定格式文本文件。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;mysqlimport&quot;&gt;&lt;a href=&quot;#mysqlimport&quot; class=&quot;headerlink&quot; title=&quot;mysqlimport&quot;&gt;&lt;/a&gt;mysqlimport&lt;/h1&gt;&lt;p&gt;为MySQL服务器用命令行方式导入数据&lt;/p&gt;
+&lt;h2 id=&quot;补充
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>斐讯k2刷机记录</title>
@@ -770,61 +799,6 @@ curl --data @filename https://github.api.com/authorizations
       <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
     
       <category term="shadowsocks" scheme="http://bigsuperangel.github.io/tags/shadowsocks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux命令——scp 两台linux机器间文件或目录传输</title>
-    <link href="http://bigsuperangel.github.io/2016/07/18/scp-linux/"/>
-    <id>http://bigsuperangel.github.io/2016/07/18/scp-linux/</id>
-    <published>2016-07-18T02:40:10.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<ol>
-<li>从远程复制文件到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/nginx-</span><span class="number">0</span>.<span class="number">5.38</span>.tar.gz /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>从远程复制目录到本地目录。</li>
-</ol>
-<blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/中下载mongodb 目录到本地的/opt/soft/目录来。</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/mongodb</span> /opt/soft/</div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地文件到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：复制本地opt/soft/目录下的文件nginx-0.5.38.tar.gz 到远程机器192.168.120.204的opt/soft/scptest目录</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> /opt/soft/nginx-<span class="number">0</span>.<span class="number">5.38</span>.tar.gz root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-<ol>
-<li>上传本地目录到远程目录。</li>
-</ol>
-<blockquote>
-<p>说明：上传本地目录 /opt/soft/mongodb到远程机器192.168.120.204上/opt/soft/scptest的目录中去</p>
-</blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$scp</span> -r /opt/soft/mongodb root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;从远程复制文件到本地目录。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中&lt;/p&gt;
-&lt;/blockq
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
-      <category term="scp" scheme="http://bigsuperangel.github.io/tags/scp/"/>
     
   </entry>
   

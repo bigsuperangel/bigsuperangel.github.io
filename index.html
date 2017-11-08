@@ -81,6 +81,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/11/08/mysqlimport/" title="linux 命令 -mysqlimport" itemprop="url">linux 命令 -mysqlimport</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> Published 2017-11-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="mysqlimport"><a href="#mysqlimport" class="headerlink" title="mysqlimport"></a>mysqlimport</h1><p>为MySQL服务器用命令行方式导入数据</p>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p><strong>mysqlimport命令</strong> 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></div></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">D：导入数据前清空表；</span></div><div class="line"><span class="ruby">-f：出现错误时继续处理剩余的操作；</span></div><div class="line"><span class="ruby">-h：MySQL服务器的ip地址或主机名；</span></div><div class="line"><span class="ruby">-u：连接MySQL服务器的用户名；</span></div><div class="line"><span class="ruby">-p：连接MySQL服务器的密码。</span></div></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>数据库名：指定要导入的数据库名称；</li>
+<li>文本文件：包含特定格式文本文件。</li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/11/08/mysqlimport/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/11/08/mysqlimport/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/08/17/k2/" title="斐讯k2刷机记录" itemprop="url">斐讯k2刷机记录</a>
   </h1>
   <p class="article-author">By
@@ -648,76 +713,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/12/maven-profile/" title="使用 Maven Profile 和 Filtering 打各种环境的包" itemprop="url">使用 Maven Profile 和 Filtering 打各种环境的包</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-12T09:15:17.000Z" itemprop="datePublished"> Published 2016-09-12</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>每个项目都会有多套运行环境（开发，测试，正式等等），不同的环境配置也不尽相同（如jdbc.url)，借助Jenkins和自动部署提供的便利，我们可以把不同环境的配置文件单独抽离出来，打完包后用对应环境的配置文件替换打包后的文件，其实maven已经给我们提供了替换方案：profile + filtering</p>
-<ol>
-<li>配置 resource 插件，启用filtering功能并添加属性到pom:</li>
-</ol>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span></div><div class="line"><span class="xml">...</span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">filters</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">filter</span>&gt;</span>src/main/filters-$</span><span class="template-variable">&#123;active.profile&#125;</span><span class="xml">.properties<span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">filters</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span></div><div class="line"><span class="xml">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span></div><div class="line"><span class="xml">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">profiles</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">            <span class="tag">&lt;<span class="name">active.profile</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">active.profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="comment">&lt;!-- 把当前profile设置为默认profile，可以同时这是多个为默认--&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span></div><div class="line"><span class="xml">            <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>test<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">            <span class="tag">&lt;<span class="name">active.profile</span>&gt;</span>test<span class="tag">&lt;/<span class="name">active.profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>product<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">            <span class="tag">&lt;<span class="name">active.profile</span>&gt;</span>product<span class="tag">&lt;/<span class="name">active.profile</span>&gt;</span></span></div><div class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span></div><div class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span></div><div class="line"><span class="xml">...</span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<ol>
-<li>然后在src/main下新建三个文件：filters-dev.properties,filters-test.properties,filters-product.properties,文件内容如下（以filters-dev.properties为例):</li>
-</ol>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">pom<span class="selector-class">.jdbc</span><span class="selector-class">.url</span>=jdbc:mysql:<span class="comment">//127.0.0.1:3306/dev</span></div><div class="line">pom<span class="selector-class">.jdbc</span><span class="selector-class">.username</span>=root</div><div class="line">pom<span class="selector-class">.jdbc</span><span class="selector-class">.password</span>=<span class="number">123456</span></div></pre></td></tr></table></figure>
-<ol>
-<li>用 dev profile 打开发包mvn clean package -Pdev, 打包后jdbc.properties文件内容如下：</li>
-</ol>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">jdbc.<span class="attribute">url</span>=jdbc:mysql://127.0.0.1:3306/dev</div><div class="line">jdbc.<span class="attribute">username</span>=root</div><div class="line">jdbc.<span class="attribute">password</span>=123456</div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/maven/">maven</a><a href="/tags/profile/">profile</a><a href="/tags/package/">package</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/09/12/maven-profile/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/09/12/maven-profile/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -748,7 +743,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>14</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>15</sup></a></li>
 			
 		
 			
@@ -772,11 +767,7 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -788,11 +779,15 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
+				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			

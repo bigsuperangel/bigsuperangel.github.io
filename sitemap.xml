@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bigsuperangel.github.io/2017/11/08/mysqlimport/</loc>
+    
+    <lastmod>2017-11-08T07:13:19.334Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bigsuperangel.github.io/2017/08/02/ssh-key/</loc>
     
     <lastmod>2017-08-25T03:39:09.476Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://bigsuperangel.github.io/2017/03/08/virtualenv/</loc>
     
     <lastmod>2017-08-01T09:29:10.401Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/06/01/ubuntu-root-pwd/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
   </url>
   
@@ -128,13 +128,6 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/08/04/maven-nexus/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/09/12/maven-profile/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
@@ -142,28 +135,7 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/07/11/linux-hosts/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/06/01/linux-command/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/07/27/maven-web/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/05/13/springboot-devtools/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
@@ -178,6 +150,34 @@
   
   <url>
     <loc>http://bigsuperangel.github.io/2016/04/21/mysql-setup/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/06/01/linux-command/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/07/11/linux-hosts/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/05/13/springboot-devtools/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/06/01/ubuntu-root-pwd/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
@@ -199,6 +199,13 @@
   
   <url>
     <loc>http://bigsuperangel.github.io/2016/04/22/npm/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/08/04/maven-nexus/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
