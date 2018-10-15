@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2017-11-08T07:13:19.334Z</updated>
+  <updated>2018-10-15T03:00:24.550Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker</title>
+    <link href="http://bigsuperangel.github.io/2018/10/15/docker/"/>
+    <id>http://bigsuperangel.github.io/2018/10/15/docker/</id>
+    <published>2018-10-15T02:56:40.000Z</published>
+    <updated>2018-10-15T03:00:24.550Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>1.</code> docker mysql 配置</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">docker search mysql</div><div class="line">docker <span class="built_in">run</span> <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></div><div class="line">docker image ls</div><div class="line">docker exec -<span class="keyword">it</span> <span class="keyword">some</span>-mysql bash</div><div class="line"><span class="comment">#配置远程访问</span></div><div class="line">mysql&gt; grant all privileges <span class="keyword">on</span> *.* <span class="keyword">to</span> root@<span class="string">"%"</span> identified <span class="keyword">by</span> <span class="string">"password"</span> <span class="keyword">with</span> grant option; </div><div class="line">Query OK, <span class="number">0</span> rows affected, <span class="number">1</span> warning (<span class="number">0.04</span> sec)</div><div class="line">mysql&gt; flush privileges; </div><div class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;1.&lt;/code&gt; docker mysql 配置&lt;/p&gt;
+&lt;figure class=&quot;highlight applescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;di
+    
+    </summary>
+    
+    
+      <category term="docker" scheme="http://bigsuperangel.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>linux 命令 -mysqlimport</title>
@@ -153,9 +176,9 @@
     
       <category term="git" scheme="http://bigsuperangel.github.io/tags/git/"/>
     
-      <category term="submodule" scheme="http://bigsuperangel.github.io/tags/submodule/"/>
-    
       <category term="hexo" scheme="http://bigsuperangel.github.io/tags/hexo/"/>
+    
+      <category term="submodule" scheme="http://bigsuperangel.github.io/tags/submodule/"/>
     
   </entry>
   
@@ -715,9 +738,9 @@ curl --data @filename https://github.api.com/authorizations
     </summary>
     
     
-      <category term="curl" scheme="http://bigsuperangel.github.io/tags/curl/"/>
-    
       <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
+    
+      <category term="curl" scheme="http://bigsuperangel.github.io/tags/curl/"/>
     
   </entry>
   
@@ -753,52 +776,6 @@ curl --data @filename https://github.api.com/authorizations
       <category term="科学上网" scheme="http://bigsuperangel.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
       <category term="翻墙" scheme="http://bigsuperangel.github.io/tags/%E7%BF%BB%E5%A2%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shadowsocks客户端配置</title>
-    <link href="http://bigsuperangel.github.io/2016/07/26/shadowsocks-client/"/>
-    <id>http://bigsuperangel.github.io/2016/07/26/shadowsocks-client/</id>
-    <published>2016-07-26T02:17:24.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>ubuntu 安装 shadowsocks</p>
-</blockquote>
-<h5 id="一、pip-安装"><a href="#一、pip-安装" class="headerlink" title="一、pip 安装"></a>一、pip 安装</h5><ul>
-<li>安装python库</li>
-</ul>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">apt-<span class="built_in">get</span> install <span class="keyword">python</span>-pip</div><div class="line"><span class="keyword">python</span>-setuptools m2crypto</div><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
-<ul>
-<li>启动shadowsocks</li>
-</ul>
-<p>A. 命令行启动</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sslocal -s <span class="number">11.22</span><span class="number">.33</span><span class="number">.44</span> -p <span class="number">50003</span> -k <span class="string">"123456"</span> -l <span class="number">1080</span> -t <span class="number">600</span> -m aes<span class="number">-256</span>-cfb</div></pre></td></tr></table></figure>
-<p>B. 配置文件启动</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sslocal -c /<span class="built_in">home</span>/mudao/shadowsocks.json</div></pre></td></tr></table></figure>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"server"</span>:<span class="string">"11.22.33.44"</span>,</div><div class="line"><span class="attr">"server_port"</span>:<span class="number">50003</span>,</div><div class="line"><span class="attr">"local_port"</span>:<span class="number">1080</span>,</div><div class="line"><span class="attr">"password"</span>:<span class="string">"123456"</span>,</div><div class="line"><span class="attr">"timeout"</span>:<span class="number">600</span>,</div><div class="line"><span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>server  你服务端的IP<br>servier_port  你服务端的端口<br>local_port  本地端口，一般默认1080<br>passwd  ss服务端设置的密码<br>timeout  超时设置 和服务端一样<br>method  加密方法 和服务端一样</p>
-<h5 id="二、shadowsocks-qt5-安装"><a href="#二、shadowsocks-qt5-安装" class="headerlink" title="二、shadowsocks-qt5 安装"></a>二、shadowsocks-qt5 安装</h5><p>在ubuntu上可以这样，通过PPA源安装，仅支持Ubuntu 14.04或更高版本。</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo<span class="built_in"> add-apt-repository </span>ppa:hzwhuang/ss-qt5</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install shadowsocks-qt5</div></pre></td></tr></table></figure>
-<p>由于是图形界面，配置和windows基本没啥差别就不赘述了。经过上面的配置，你只是启动了sslocal 但是要上网你还需要配置下浏览器到指定到代理端口比如1080才可以正式上网。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;ubuntu 安装 shadowsocks&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h5 id=&quot;一、pip-安装&quot;&gt;&lt;a href=&quot;#一、pip-安装&quot; class=&quot;headerlink&quot; title=&quot;一、pip 安装&quot;&gt;&lt;/a&gt;一、pip 
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
-      <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
-    
-      <category term="shadowsocks" scheme="http://bigsuperangel.github.io/tags/shadowsocks/"/>
     
   </entry>
   
