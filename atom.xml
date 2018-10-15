@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2018-10-15T03:00:24.550Z</updated>
+  <updated>2018-10-15T04:20:33.696Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -20,10 +20,12 @@
     <link href="http://bigsuperangel.github.io/2018/10/15/docker/"/>
     <id>http://bigsuperangel.github.io/2018/10/15/docker/</id>
     <published>2018-10-15T02:56:40.000Z</published>
-    <updated>2018-10-15T03:00:24.550Z</updated>
+    <updated>2018-10-15T04:20:33.696Z</updated>
     
     <content type="html"><![CDATA[<p><code>1.</code> docker mysql 配置</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">docker search mysql</div><div class="line">docker <span class="built_in">run</span> <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></div><div class="line">docker image ls</div><div class="line">docker exec -<span class="keyword">it</span> <span class="keyword">some</span>-mysql bash</div><div class="line"><span class="comment">#配置远程访问</span></div><div class="line">mysql&gt; grant all privileges <span class="keyword">on</span> *.* <span class="keyword">to</span> root@<span class="string">"%"</span> identified <span class="keyword">by</span> <span class="string">"password"</span> <span class="keyword">with</span> grant option; </div><div class="line">Query OK, <span class="number">0</span> rows affected, <span class="number">1</span> warning (<span class="number">0.04</span> sec)</div><div class="line">mysql&gt; flush privileges; </div><div class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)</div></pre></td></tr></table></figure>
+<p><code>2.</code> docker tomcat 配置</p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># tomcat8 给内网服务器使用</div><div class="line">docker run --name tomcat8 -d \</div><div class="line">	-<span class="ruby">v ~<span class="regexp">/web/tomcat</span>8/<span class="symbol">webapps:</span>/usr/local/tomcat/webapps \</span></div><div class="line"><span class="ruby">	-v ~<span class="regexp">/web/tomcat</span>8/<span class="symbol">logs:</span>/usr/local/tomcat/logs \</span></div><div class="line"><span class="ruby">	-v /etc/<span class="symbol">localtime:</span>/etc/<span class="symbol">localtime:</span>ro \</span></div><div class="line"><span class="ruby">	-e TZ=<span class="string">"Asia/Shanghai"</span> \</span></div><div class="line"><span class="ruby">	-p <span class="number">8080</span><span class="symbol">:</span><span class="number">8080</span> <span class="symbol">tomcat:</span><span class="number">8.0</span></span></div><div class="line"><span class="ruby"></span></div><div class="line"><span class="ruby">docker logs --tail=<span class="number">100</span> -f tomcat8</span></div><div class="line"><span class="ruby">docker container stop tomcat8</span></div><div class="line"><span class="ruby">docker container start tomcat8</span></div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
