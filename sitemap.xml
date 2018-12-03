@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bigsuperangel.github.io/2018/12/03/alsamixer/</loc>
+    
+    <lastmod>2018-12-03T06:44:41.243Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bigsuperangel.github.io/2017/08/02/ssh-key/</loc>
     
     <lastmod>2018-10-26T02:32:31.623Z</lastmod>
@@ -44,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/04/22/winver/</loc>
+    <loc>http://bigsuperangel.github.io/2017/02/20/vscode/</loc>
     
     <lastmod>2017-08-01T09:29:10.401Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2017/02/20/vscode/</loc>
+    <loc>http://bigsuperangel.github.io/2016/04/22/winver/</loc>
     
     <lastmod>2017-08-01T09:29:10.401Z</lastmod>
     
@@ -65,7 +72,21 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/04/22/npm/</loc>
+    <loc>http://bigsuperangel.github.io/2016/05/06/ubuntu-tomcat-80/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/04/19/nodejs/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/06/21/ubuntu-service/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
@@ -114,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/05/06/nginx/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/08/08/maven-jar/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
@@ -135,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/05/06/ubuntu-tomcat-80/</loc>
+    <loc>http://bigsuperangel.github.io/2016/09/12/maven-profile/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
@@ -156,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/09/12/maven-profile/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/04/21/mysql-setup/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
@@ -170,21 +177,28 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/06/21/ubuntu-service/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/04/19/nodejs/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/06/01/ubuntu-root-pwd/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/05/06/nginx/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/09/18/ubuntu-rc/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/04/22/npm/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
     
@@ -247,13 +261,6 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/06/27/tomcat-realm/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://bigsuperangel.github.io/2016/06/06/ubuntu-fixed-ip/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
@@ -261,58 +268,9 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/09/18/ubuntu-rc/</loc>
+    <loc>http://bigsuperangel.github.io/2016/06/27/tomcat-realm/</loc>
     
     <lastmod>2017-08-01T09:29:10.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/08/05/java-ignore/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/06/12/gradle-hotswap/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/07/27/curl-linux/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/05/26/eclipse-quick-key/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/07/08/java-security/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2016/05/26/eclipse-quick-key-invalid/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bigsuperangel.github.io/2017/02/23/freenom/</loc>
-    
-    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
     
   </url>
   
@@ -331,7 +289,21 @@
   </url>
   
   <url>
-    <loc>http://bigsuperangel.github.io/2016/04/19/hexo-info/</loc>
+    <loc>http://bigsuperangel.github.io/2016/05/26/eclipse-quick-key-invalid/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/08/05/java-ignore/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/07/27/curl-linux/</loc>
     
     <lastmod>2017-08-01T09:29:10.393Z</lastmod>
     
@@ -339,6 +311,41 @@
   
   <url>
     <loc>http://bigsuperangel.github.io/2016/08/08/git-proxy/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/07/08/java-security/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/05/26/eclipse-quick-key/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/04/19/hexo-info/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2016/06/12/gradle-hotswap/</loc>
+    
+    <lastmod>2017-08-01T09:29:10.393Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://bigsuperangel.github.io/2017/02/23/freenom/</loc>
     
     <lastmod>2017-08-01T09:29:10.393Z</lastmod>
     

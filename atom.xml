@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2018-10-15T04:20:33.696Z</updated>
+  <updated>2018-12-03T06:44:41.243Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux下`alsamixer`配置</title>
+    <link href="http://bigsuperangel.github.io/2018/12/03/alsamixer/"/>
+    <id>http://bigsuperangel.github.io/2018/12/03/alsamixer/</id>
+    <published>2018-12-03T06:41:38.000Z</published>
+    <updated>2018-12-03T06:44:41.243Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装alsa相关应用：</span></div><div class="line">sudo apt install alsa-base alsa-utils alsa-oss alsa-tools</div><div class="line"></div><div class="line"><span class="comment">#查看系统中的声卡：</span></div><div class="line">cat /proc/asound/cards</div><div class="line"></div><div class="line">sudo alsamixer</div><div class="line"><span class="comment">#其中，Master和PCM是必须打开的，Master和PCM声道默认是静音的，标记是MM。用左右方向键选择设置项，按M健来修改为OO或开启调节，上下键调节音量大小。</span></div><div class="line"></div><div class="line">sudo alsactl store <span class="comment">#保存配置</span></div><div class="line">cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">alsa</span>/<span class="title">asound</span>.<span class="title">state</span> <span class="comment">#查看配置生效的内容</span></span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight crystal&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
+    
+      <category term="alsamixer" scheme="http://bigsuperangel.github.io/tags/alsamixer/"/>
+    
+  </entry>
   
   <entry>
     <title>docker</title>
@@ -324,9 +347,9 @@
     </summary>
     
     
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
       <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
+    
+      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
     
       <category term="rc" scheme="http://bigsuperangel.github.io/tags/rc/"/>
     
@@ -740,44 +763,9 @@ curl --data @filename https://github.api.com/authorizations
     </summary>
     
     
-      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
-    
       <category term="curl" scheme="http://bigsuperangel.github.io/tags/curl/"/>
     
-  </entry>
-  
-  <entry>
-    <title>通过shadowsocks科学上网</title>
-    <link href="http://bigsuperangel.github.io/2016/07/26/shadowsocks-server/"/>
-    <id>http://bigsuperangel.github.io/2016/07/26/shadowsocks-server/</id>
-    <published>2016-07-26T02:50:01.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>搬瓦工搭建流程</p>
-</blockquote>
-<p>搬瓦工搭建shadowsocks比较简单，博主之前并没有任何经验，也轻松搞定，使用其他方案获得账号的可忽略此章。</p>
-<p>Linode的VPS网上也有一键安装脚本之类的，但都没有搬瓦工便捷，官方自带一键安装，还支持支付宝，简直是对墙内用户的贴心关照。</p>
-<p>去<a href="https://bandwagonhost.com/aff.php?aff=9506" target="_blank" rel="external">搬瓦工官网</a>购买一个最便宜的VPS，之所买便宜的，是因为如果你的VPS只是用来翻墙的话，没必要买高性能的。</p>
-<p>点击Shadowsocks Server，在右边再点击Install Shadowsocks Server，稍等一会就安装完成了，太简单，我就不贴图了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;搬瓦工搭建流程&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;搬瓦工搭建shadowsocks比较简单，博主之前并没有任何经验，也轻松搞定，使用其他方案获得账号的可忽略此章。&lt;/p&gt;
-&lt;p&gt;Linode的VPS网上也有一键安装脚本之类的，但都没有搬瓦工
-    
-    </summary>
-    
-    
-      <category term="shdowsocks" scheme="http://bigsuperangel.github.io/tags/shdowsocks/"/>
-    
-      <category term="科学上网" scheme="http://bigsuperangel.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-      <category term="翻墙" scheme="http://bigsuperangel.github.io/tags/%E7%BF%BB%E5%A2%99/"/>
+      <category term="linux" scheme="http://bigsuperangel.github.io/tags/linux/"/>
     
   </entry>
   

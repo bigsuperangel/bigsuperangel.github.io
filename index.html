@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -72,7 +72,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -90,6 +90,64 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/12/03/alsamixer/" title="linux下`alsamixer`配置" itemprop="url">linux下`alsamixer`配置</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2018-12-03T06:41:38.000Z" itemprop="datePublished"> Published 2018-12-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装alsa相关应用：</span></div><div class="line">sudo apt install alsa-base alsa-utils alsa-oss alsa-tools</div><div class="line"></div><div class="line"><span class="comment">#查看系统中的声卡：</span></div><div class="line">cat /proc/asound/cards</div><div class="line"></div><div class="line">sudo alsamixer</div><div class="line"><span class="comment">#其中，Master和PCM是必须打开的，Master和PCM声道默认是静音的，标记是MM。用左右方向键选择设置项，按M健来修改为OO或开启调节，上下键调节音量大小。</span></div><div class="line"></div><div class="line">sudo alsactl store <span class="comment">#保存配置</span></div><div class="line">cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">alsa</span>/<span class="title">asound</span>.<span class="title">state</span> <span class="comment">#查看配置生效的内容</span></span></div></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ubuntu/">ubuntu</a><a href="/tags/alsamixer/">alsamixer</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2018/12/03/alsamixer/#comments" class="ds-thread-count comments-count-link" data-thread-key="2018/12/03/alsamixer/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/10/15/docker/" title="docker" itemprop="url">docker</a>
   </h1>
   <p class="article-author">By
@@ -97,7 +155,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2018-10-15T02:56:40.000Z" itemprop="datePublished"> 发表于 2018-10-15</time>
+    <time datetime="2018-10-15T02:56:40.000Z" itemprop="datePublished"> Published 2018-10-15</time>
     
   </p>
 </header>
@@ -158,7 +216,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> 发表于 2017-11-08</time>
+    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> Published 2017-11-08</time>
     
   </p>
 </header>
@@ -223,7 +281,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-17T02:18:34.000Z" itemprop="datePublished"> 发表于 2017-08-17</time>
+    <time datetime="2017-08-17T02:18:34.000Z" itemprop="datePublished"> Published 2017-08-17</time>
     
   </p>
 </header>
@@ -297,7 +355,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-17T02:09:10.000Z" itemprop="datePublished"> 发表于 2017-08-17</time>
+    <time datetime="2017-08-17T02:09:10.000Z" itemprop="datePublished"> Published 2017-08-17</time>
     
   </p>
 </header>
@@ -355,7 +413,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> 发表于 2017-08-02</time>
+    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> Published 2017-08-02</time>
     
   </p>
 </header>
@@ -416,7 +474,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-02T02:04:50.000Z" itemprop="datePublished"> 发表于 2017-08-02</time>
+    <time datetime="2017-08-02T02:04:50.000Z" itemprop="datePublished"> Published 2017-08-02</time>
     
   </p>
 </header>
@@ -476,7 +534,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-10T10:12:24.000Z" itemprop="datePublished"> 发表于 2017-03-10</time>
+    <time datetime="2017-03-10T10:12:24.000Z" itemprop="datePublished"> Published 2017-03-10</time>
     
   </p>
 </header>
@@ -546,7 +604,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-08T06:50:24.000Z" itemprop="datePublished"> 发表于 2017-03-08</time>
+    <time datetime="2017-03-08T06:50:24.000Z" itemprop="datePublished"> Published 2017-03-08</time>
     
   </p>
 </header>
@@ -615,7 +673,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-02-23T03:34:29.000Z" itemprop="datePublished"> 发表于 2017-02-23</time>
+    <time datetime="2017-02-23T03:34:29.000Z" itemprop="datePublished"> Published 2017-02-23</time>
     
   </p>
 </header>
@@ -661,83 +719,21 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/02/20/vscode/" title="vscode相关配置操作小结" itemprop="url">vscode相关配置操作小结</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-02-20T12:26:04.000Z" itemprop="datePublished"> 发表于 2017-02-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="1-vscode下python-print-输出乱码"><a href="#1-vscode下python-print-输出乱码" class="headerlink" title="1. vscode下python print 输出乱码"></a>1. vscode下python print 输出乱码</h2><blockquote>
-<p>在task文件中加入环境变量，然后问题解决。</p>
-</blockquote>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">"options"</span>: &#123;</div><div class="line">  <span class="string">"env"</span>:&#123;</div><div class="line">      <span class="string">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="2-python-运行配置"><a href="#2-python-运行配置" class="headerlink" title="2. python 运行配置"></a>2. python 运行配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</div><div class="line">    <span class="attr">"command"</span>: <span class="string">"python"</span>,</div><div class="line">    <span class="attr">"windows"</span>: &#123;</div><div class="line">        <span class="attr">"command"</span>: <span class="string">"D:\\develop\\running\\Python35\\python.exe"</span> //python的安装路径</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"isShellCommand"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">"args"</span>: [</div><div class="line">        <span class="string">"$&#123;file&#125;"</span></div><div class="line">    ],</div><div class="line">    <span class="attr">"showOutput"</span>: <span class="string">"always"</span>,</div><div class="line">    <span class="attr">"options"</span>: &#123;</div><div class="line">        <span class="attr">"env"</span>: &#123;</div><div class="line">            <span class="attr">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/python/">python</a><a href="/tags/vscode/">vscode</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/02/20/vscode/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/02/20/vscode/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -749,7 +745,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -757,11 +753,11 @@
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>10</sup></a></li>
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>10</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>9</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>10</sup></a></li>
 			
 		
 			
@@ -777,10 +773,6 @@
 			
 		
 			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
 			
 		
@@ -789,11 +781,15 @@
 			
 		
 			
-				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/python/" title="python">python<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
 			
@@ -801,15 +797,15 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/profile/" title="profile">profile<sup>1</sup></a></li>
+				<li><a href="/tags/python/" title="python">python<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
 			
 		
 			
@@ -817,19 +813,19 @@
 			
 		
 			
-				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+				<li><a href="/tags/hibernate/" title="hibernate">hibernate<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gradle/" title="gradle">gradle<sup>1</sup></a></li>
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/idea/" title="idea">idea<sup>1</sup></a></li>
+				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/hotswap/" title="hotswap">hotswap<sup>1</sup></a></li>
+				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -837,7 +833,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -859,11 +855,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -1014,7 +1010,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
