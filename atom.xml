@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2018-12-14T04:14:17.809Z</updated>
+  <updated>2018-12-14T04:18:47.540Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -16,14 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>centos6升级`python2.7`及`pip`</title>
+    <title>centos6升级python2.7</title>
     <link href="http://bigsuperangel.github.io/2018/12/14/install-python-pip/"/>
     <id>http://bigsuperangel.github.io/2018/12/14/install-python-pip/</id>
     <published>2018-12-14T04:08:17.000Z</published>
-    <updated>2018-12-14T04:14:17.809Z</updated>
+    <updated>2018-12-14T04:18:47.540Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-upgrade-python2-7"><a href="#1-upgrade-python2-7" class="headerlink" title="1. upgrade python2.7"></a>1. upgrade python2.7</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//gitee.<span class="keyword">com</span>/bigsuperyu/git-test/raw/master/python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></div><div class="line">bash python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></div></pre></td></tr></table></figure>
 <h3 id="2-install-pip"><a href="#2-install-pip" class="headerlink" title="2. install pip"></a>2. install pip</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">curl </span><span class="string">https:</span>//<span class="string">bootstrap.</span><span class="string">pypa.</span><span class="string">io/</span><span class="built_in">get-pip.py</span> | <span class="string">python</span></div><div class="line"><span class="string">ln </span>-s /<span class="string">usr/</span><span class="string">local/</span><span class="string">bin/</span><span class="string">pip </span>/<span class="string">usr/</span><span class="string">bin/</span><span class="string">pip</span></div><div class="line"><span class="string">pip </span>-V</div></pre></td></tr></table></figure>
+<h3 id="3-install-mycli"><a href="#3-install-mycli" class="headerlink" title="3. install mycli"></a>3. install mycli</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> mycli</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
