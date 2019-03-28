@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bigsuperangel.github.io/"/>
-  <updated>2018-12-14T04:18:47.540Z</updated>
+  <updated>2019-03-28T07:06:30.204Z</updated>
   <id>http://bigsuperangel.github.io/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu 安装好后没声音的解决方法</title>
+    <link href="http://bigsuperangel.github.io/2019/03/28/ubuntu-audio/"/>
+    <id>http://bigsuperangel.github.io/2019/03/28/ubuntu-audio/</id>
+    <published>2019-03-28T07:05:08.000Z</published>
+    <updated>2019-03-28T07:06:30.204Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install </span>alsa-<span class="keyword">base</span></div><div class="line"><span class="keyword">sudo </span>alsamixer</div></pre></td></tr></table></figure>
+<h2 id="使用M来调整声音"><a href="#使用M来调整声音" class="headerlink" title="使用M来调整声音"></a>使用M来调整声音</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight mipsasm&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=
+    
+    </summary>
+    
+    
+      <category term="ubuntu" scheme="http://bigsuperangel.github.io/tags/ubuntu/"/>
+    
+      <category term="alsamixer" scheme="http://bigsuperangel.github.io/tags/alsamixer/"/>
+    
+  </entry>
   
   <entry>
     <title>centos6升级python2.7</title>
@@ -627,43 +650,6 @@
       <category term="maven" scheme="http://bigsuperangel.github.io/tags/maven/"/>
     
       <category term="nexus" scheme="http://bigsuperangel.github.io/tags/nexus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>maven下实时编译web工程</title>
-    <link href="http://bigsuperangel.github.io/2016/07/27/maven-web/"/>
-    <id>http://bigsuperangel.github.io/2016/07/27/maven-web/</id>
-    <published>2016-07-27T03:11:38.000Z</published>
-    <updated>2017-08-01T09:29:10.397Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="在pom文件build节点下加入"><a href="#在pom文件build节点下加入" class="headerlink" title="在pom文件build节点下加入"></a>在pom文件build节点下加入</h3><pre><code>&lt;outputDirectory&gt;${project.basedir}/src/main/webapp/WEB-INF/classes/&lt;/outputDirectory&gt;
-</code></pre><h3 id="web配置"><a href="#web配置" class="headerlink" title="web配置"></a>web配置</h3><ol>
-<li>tomcat6</li>
-</ol>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="comment">&lt;!-- tomcat6插件 --&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat6-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$</span><span class="template-variable">&#123;tomcat.version&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">version</span>&gt;</span> </span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">port</span>&gt;</span>$</span><span class="template-variable">&#123;webserver.port&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">port</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">path</span>&gt;</span>/$</span><span class="template-variable">&#123;project.artifactId&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">uriEncoding</span>&gt;</span>$</span><span class="template-variable">&#123;project.build.sourceEncoding&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">uriEncoding</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<ol>
-<li>tomcat7</li>
-</ol>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="comment">&lt;!-- tomcat7插件 --&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$</span><span class="template-variable">&#123;tomcat.version&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">version</span>&gt;</span> </span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">port</span>&gt;</span>$</span><span class="template-variable">&#123;webserver.port&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">port</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">path</span>&gt;</span>/$</span><span class="template-variable">&#123;project.artifactId&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">uriEncoding</span>&gt;</span>$</span><span class="template-variable">&#123;project.build.sourceEncoding&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">uriEncoding</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span></div></pre></td></tr></table></figure>
-<ol>
-<li>jetty</li>
-</ol>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="comment">&lt;!-- jetty插件 --&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mortbay.jetty<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jetty-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$</span><span class="template-variable">&#123;jetty.version&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">version</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">connectors</span>&gt;</span></span></div><div class="line"><span class="xml">			<span class="tag">&lt;<span class="name">connector</span> <span class="attr">implementation</span>=<span class="string">"org.eclipse.jetty.server.nio.SelectChannelConnector"</span>&gt;</span></span></div><div class="line"><span class="xml">				<span class="tag">&lt;<span class="name">port</span>&gt;</span>$</span><span class="template-variable">&#123;webserver.port&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">port</span>&gt;</span></span></div><div class="line"><span class="xml">			<span class="tag">&lt;/<span class="name">connector</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">connectors</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">webAppConfig</span>&gt;</span></span></div><div class="line"><span class="xml">			<span class="tag">&lt;<span class="name">contextPath</span>&gt;</span>/$</span><span class="template-variable">&#123;project.artifactId&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">contextPath</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">webAppConfig</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;<span class="name">systemProperties</span>&gt;</span>  </span></div><div class="line"><span class="xml">			<span class="tag">&lt;<span class="name">systemProperty</span>&gt;</span></span></div><div class="line"><span class="xml">				<span class="tag">&lt;<span class="name">name</span>&gt;</span>org.mortbay.util.URI.charset<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span></div><div class="line"><span class="xml">				<span class="tag">&lt;<span class="name">value</span>&gt;</span>$</span><span class="template-variable">&#123;project.build.sourceEncoding&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">value</span>&gt;</span></span></div><div class="line"><span class="xml">			<span class="tag">&lt;/<span class="name">systemProperty</span>&gt;</span></span></div><div class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">systemProperties</span>&gt;</span></span></div><div class="line"><span class="xml">	<span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span></div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span></div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;在pom文件build节点下加入&quot;&gt;&lt;a href=&quot;#在pom文件build节点下加入&quot; class=&quot;headerlink&quot; title=&quot;在pom文件build节点下加入&quot;&gt;&lt;/a&gt;在pom文件build节点下加入&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;ou
-    
-    </summary>
-    
-    
-      <category term="maven" scheme="http://bigsuperangel.github.io/tags/maven/"/>
-    
-      <category term="tomcat" scheme="http://bigsuperangel.github.io/tags/tomcat/"/>
-    
-      <category term="jetty" scheme="http://bigsuperangel.github.io/tags/jetty/"/>
     
   </entry>
   

@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -72,7 +72,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -90,6 +90,65 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/05/13/springboot-devtools/" title="spring配置springboot-devtools来实现热启动" itemprop="url">spring配置springboot-devtools来实现热启动</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2016-05-13T06:26:49.000Z" itemprop="datePublished"> 發表於 2016-05-13</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">finalName</span>&gt;</span>boot-web<span class="tag">&lt;/<span class="name">finalName</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>org.boot.web.Application<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">layout</span>&gt;</span>ZIP<span class="tag">&lt;/<span class="name">layout</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">executions</span>&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">execution</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">goals</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="name">goal</span>&gt;</span>repackage<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></div></pre></td></tr></table></figure>
+<h6 id="springboot-devtools需要配置fock-为true才能正常运行"><a href="#springboot-devtools需要配置fock-为true才能正常运行" class="headerlink" title="springboot devtools需要配置fock 为true才能正常运行"></a>springboot devtools需要配置fock 为true才能正常运行</h6><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">spring-boot :<span class="keyword">run</span><span class="bash"></span></div></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java/">java</a><a href="/tags/ubuntu/">ubuntu</a><a href="/tags/linux/">linux</a><a href="/tags/springboot/">springboot</a><a href="/tags/devtools/">devtools</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/05/13/springboot-devtools/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/13/springboot-devtools/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/05/13/openjdk8/" title="ubuntu15 以下安装 openjdk8" itemprop="url">ubuntu15 以下安装 openjdk8</a>
   </h1>
   <p class="article-author">By
@@ -97,7 +156,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-13T06:21:40.000Z" itemprop="datePublished"> Published 2016-05-13</time>
+    <time datetime="2016-05-13T06:21:40.000Z" itemprop="datePublished"> 發表於 2016-05-13</time>
     
   </p>
 </header>
@@ -169,7 +228,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-06T03:22:30.000Z" itemprop="datePublished"> Published 2016-05-06</time>
+    <time datetime="2016-05-06T03:22:30.000Z" itemprop="datePublished"> 發表於 2016-05-06</time>
     
   </p>
 </header>
@@ -230,7 +289,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-06T03:12:09.000Z" itemprop="datePublished"> Published 2016-05-06</time>
+    <time datetime="2016-05-06T03:12:09.000Z" itemprop="datePublished"> 發表於 2016-05-06</time>
     
   </p>
 </header>
@@ -307,7 +366,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-04T03:59:05.000Z" itemprop="datePublished"> Published 2016-05-04</time>
+    <time datetime="2016-05-04T03:59:05.000Z" itemprop="datePublished"> 發表於 2016-05-04</time>
     
   </p>
 </header>
@@ -375,7 +434,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-04T02:57:53.000Z" itemprop="datePublished"> Published 2016-05-04</time>
+    <time datetime="2016-05-04T02:57:53.000Z" itemprop="datePublished"> 發表於 2016-05-04</time>
     
   </p>
 </header>
@@ -447,7 +506,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-22T06:22:46.000Z" itemprop="datePublished"> Published 2016-04-22</time>
+    <time datetime="2016-04-22T06:22:46.000Z" itemprop="datePublished"> 發表於 2016-04-22</time>
     
   </p>
 </header>
@@ -507,7 +566,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-22T06:05:42.000Z" itemprop="datePublished"> Published 2016-04-22</time>
+    <time datetime="2016-04-22T06:05:42.000Z" itemprop="datePublished"> 發表於 2016-04-22</time>
     
   </p>
 </header>
@@ -565,7 +624,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-22T03:06:16.000Z" itemprop="datePublished"> Published 2016-04-22</time>
+    <time datetime="2016-04-22T03:06:16.000Z" itemprop="datePublished"> 發表於 2016-04-22</time>
     
   </p>
 </header>
@@ -645,7 +704,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-21T06:52:12.000Z" itemprop="datePublished"> Published 2016-04-21</time>
+    <time datetime="2016-04-21T06:52:12.000Z" itemprop="datePublished"> 發表於 2016-04-21</time>
     
   </p>
 </header>
@@ -697,81 +756,21 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/04/19/nodejs/" title="nodejs" itemprop="url">nodejs</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-04-19T08:28:40.000Z" itemprop="datePublished"> Published 2016-04-19</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="About-Setup"><a href="#About-Setup" class="headerlink" title="About Setup"></a><strong>About Setup</strong></h3><h4 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup_5.<span class="keyword">x</span> | sudo -E bash -</div><div class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> nodejs</div></pre></td></tr></table></figure>
-<h4 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">yum -y install gcc make gcc-c++ openssl-devel wget python <span class="comment">#下载并解压</span></div><div class="line">wget https://nodejs.org/dist/v4.<span class="number">2.1</span>/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz</div><div class="line">tar zxvf <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz  <span class="comment">#在解压后文件夹里的bin文件夹中已经存在node以及npm，如果你进入到对应文件的中执行命令行一点问题都没有，说明是编译好的文件</span></div><div class="line">cd <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin</div><div class="line">ln -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/bin/<span class="keyword">node</span><span class="title"></span></div><div class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/local/bin/<span class="keyword">node</span><span class="title"></span></div><div class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/npm /usr/local/bin/npm</div></pre></td></tr></table></figure>
-<h3 id="Git-remember-password"><a href="#Git-remember-password" class="headerlink" title="Git remember password"></a>Git remember password</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#设置记住密码（默认15分钟）</span></div><div class="line">git <span class="built_in">config</span> --global credential.helper <span class="keyword">cache</span></div><div class="line"><span class="keyword">#设置记住密码（时间自定义） </span>一小时有效期</div><div class="line">git <span class="built_in">config</span> credential.helper <span class="string">'cache --timeout=3600'</span></div><div class="line"><span class="comment">#设置记住密码（长期有效）</span></div><div class="line">git <span class="built_in">config</span> --global credential.helper store</div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/nodejs/">nodejs</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/04/19/nodejs/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/04/19/nodejs/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github Card</p>
+<p class="asidetitle">Github 名片</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -783,7 +782,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
@@ -791,7 +790,7 @@
 			
 		
 			
-				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>10</sup></a></li>
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>11</sup></a></li>
 			
 		
 			
@@ -815,11 +814,15 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
@@ -831,7 +834,7 @@
 			
 		
 			
-				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
 			
 		
 			
@@ -843,15 +846,7 @@
 			
 		
 			
-				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/pip/" title="pip">pip<sup>1</sup></a></li>
 			
 		
 			
@@ -866,12 +861,16 @@
 				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
 			
 		
+			
+				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+			
+		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -893,11 +892,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -938,7 +937,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
 		
 		<a href="/about" target="_blank" title="linyu">linyu</a>
 		
@@ -1048,7 +1047,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
