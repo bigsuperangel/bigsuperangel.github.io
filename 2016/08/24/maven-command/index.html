@@ -20,18 +20,18 @@
     
 
     
-    <meta name="description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
+    <meta name="description" content="123456789101112131415##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn">
 <meta name="keywords" content="java,maven,command">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven 相关命令">
 <meta property="og:url" content="http://bigsuperangel.github.io/2016/08/24/maven-command/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
+<meta property="og:description" content="123456789101112131415##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-24T03:44:23.444Z">
+<meta property="og:updated_time" content="2020-09-24T08:34:10.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="maven 相关命令">
-<meta name="twitter:description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
+<meta name="twitter:description" content="123456789101112131415##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -113,7 +113,7 @@
 		
 		</div>
 		
-		<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:</span></span><br><span class="line"></span><br><span class="line">mvn archetype:generate <span class="attribute">-DgroupId</span>=com.mycompany.app <span class="attribute">-DartifactId</span>=my-app <span class="attribute">-DarchetypeArtifactId</span>=maven-archetype-quickstart <span class="attribute">-DinteractiveMode</span>=<span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##　You may test the newly compiled and packaged JAR with the following command:</span></span><br><span class="line">java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App</span><br><span class="line"></span><br><span class="line"><span class="comment">##　ignore test</span></span><br><span class="line">mvn install -Dmaven.test.<span class="attribute">skip</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">mvn dependency:tree</span><br><span class="line">mvn install -X</span><br></pre></td></tr></table></figure>
+		<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:</span></span><br><span class="line"></span><br><span class="line">mvn archetype:generate <span class="attribute">-DgroupId</span>=com.mycompany.app <span class="attribute">-DartifactId</span>=my-app <span class="attribute">-DarchetypeArtifactId</span>=maven-archetype-quickstart <span class="attribute">-DinteractiveMode</span>=<span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##　You may test the newly compiled and packaged JAR with the following command:</span></span><br><span class="line">java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App</span><br><span class="line"></span><br><span class="line"><span class="comment">##　ignore test</span></span><br><span class="line">mvn install -Dmaven.test.<span class="attribute">skip</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 按指定文件指定环境打包</span></span><br><span class="line">mvn -B package --file pom_github.xml -P<span class="built_in"> profile </span>-Dmaven.test.<span class="attribute">skip</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">mvn dependency:tree</span><br><span class="line">mvn install -X</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
