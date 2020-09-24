@@ -93,6 +93,68 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/07/08/java-security/" title="java 加解密" itemprop="url">java 加解密</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-08T07:26:30.000Z" itemprop="datePublished"> Published 2016-07-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<p>在加解密类中引入</p>
+</blockquote>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">	Security.addProvider(<span class="keyword">new</span> <span class="type">BouncyCastleProvider</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.bouncycastle<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bcprov-jdk15<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.45<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java/">java</a><a href="/tags/security/">security</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/08/java-security/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/08/java-security/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/28/mysql-oracle/" title="mysql与oracle相关函数转化" itemprop="url">mysql与oracle相关函数转化</a>
   </h1>
   <p class="article-author">By
@@ -703,65 +765,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/01/ubuntu-root-pwd/" title="ubuntu 默认 root 密码" itemprop="url">ubuntu 默认 root 密码</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-01T03:03:05.000Z" itemprop="datePublished"> Published 2016-06-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p> 安装完Ubuntu后忽然意识到没有设置root密码，不知道密码自然就无法进入根用户下。到网上搜了一下，原来是这麽回事。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。我们可以在终端输入命令 sudo passwd，然后输入当前用户的密码，enter，终端会提示我们输入新的密码并确认，此时的密码就是root新密码。修改成功后，输入命令 su root，再输入新的密码就ok了。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> passwd  <span class="comment">#更改原来root密码</span></span><br><span class="line">su root      <span class="comment">#root帐号登陆</span></span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ubuntu/">ubuntu</a><a href="/tags/linux/">linux</a><a href="/tags/root/">root</a><a href="/tags/pwd/">pwd</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/01/ubuntu-root-pwd/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/01/ubuntu-root-pwd/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/3/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next<span></span></a>
@@ -800,11 +803,11 @@
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>10</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>11</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/maven/" title="maven">maven<sup>7</sup></a></li>
+				<li><a href="/tags/maven/" title="maven">maven<sup>8</sup></a></li>
 			
 		
 			
@@ -840,6 +843,10 @@
 			
 		
 			
+				<li><a href="/tags/actions/" title="actions">actions<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -865,10 +872,6 @@
 		
 			
 				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>

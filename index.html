@@ -93,6 +93,64 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2020/09/24/maven-github-actions/" title="github actions maven打包部署" itemprop="url">github actions maven打包部署</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2020-09-24T08:36:24.000Z" itemprop="datePublished"> Published 2020-09-24</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This workflow will build a Java project with Maven</span></span><br><span class="line"><span class="comment"># For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">Java</span> <span class="string">CI</span> <span class="string">with</span> <span class="string">Maven</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"doc/auto_deploy.txt"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">JDK</span> <span class="number">1.8</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-java@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">java-version:</span> <span class="number">1.8</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">with</span> <span class="string">Maven</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">mvn</span> <span class="string">-B</span> <span class="string">package</span> <span class="string">--file</span> <span class="string">pom_github.xml</span> <span class="string">-P</span> <span class="string">sample_profile</span> <span class="string">-Dmaven.test.skip=true</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">deploy</span> <span class="string">file</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">wlixcc/SFTP-Deploy-Action@v1.0</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">ssh_private_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">local_path:</span> <span class="string">'./target/ROOT.war'</span></span><br><span class="line">        <span class="attr">remote_path:</span> <span class="string">'/root/war'</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">executing</span> <span class="string">remote</span> <span class="string">ssh</span> <span class="string">commands</span> <span class="string">using</span> <span class="string">ssh</span> <span class="string">key</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">script:</span> <span class="string">ls</span> <span class="string">-al</span></span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/java/">java</a><a href="/tags/actions/">actions</a><a href="/tags/maven/">maven</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2020/09/24/maven-github-actions/#comments" class="ds-thread-count comments-count-link" data-thread-key="2020/09/24/maven-github-actions/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2020/09/24/hexo-github-actions/" title="github actions 自动部署 hexo" itemprop="url">github actions 自动部署 hexo</a>
   </h1>
   <p class="article-author">By
@@ -123,7 +181,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/deploy/">deploy</a>
+  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/actions/">actions</a>
   </div>
 
 </div>
@@ -641,64 +699,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/08/17/kcptun/" title="kcptun" itemprop="url">kcptun</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2017-08-17T02:09:10.000Z" itemprop="datePublished"> Published 2017-08-17</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">$ ./client_darwin_amd64 -h</span><br><span class="line">NAME:</span><br><span class="line">   kcptun - client(with SMUX)</span><br><span class="line"></span><br><span class="line">USAGE:</span><br><span class="line">   client_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</span><br><span class="line"></span><br><span class="line">VERSION:</span><br><span class="line">   20170120</span><br><span class="line"></span><br><span class="line">COMMANDS:</span><br><span class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</span><br><span class="line"></span><br><span class="line">GLOBAL OPTIONS:</span><br><span class="line">   --localaddr value, -l value      local listen<span class="built_in"> address </span>(default: <span class="string">":12948"</span>)</span><br><span class="line">   --remoteaddr value, -r value     kcp<span class="built_in"> server address </span>(default: <span class="string">"vps:29900"</span>)</span><br><span class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</span><br><span class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</span><br><span class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</span><br><span class="line">   --conn value                     <span class="builtin-name">set</span> num of UDP connections <span class="keyword">to</span><span class="built_in"> server </span>(default: 1)</span><br><span class="line">   --autoexpire value               <span class="builtin-name">set</span> auto expiration time(<span class="keyword">in</span> seconds) <span class="keyword">for</span> a single UDP connection, 0 <span class="keyword">to</span> <span class="builtin-name">disable</span> (default: 0)</span><br><span class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</span><br><span class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 128)</span><br><span class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 512)</span><br><span class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</span><br><span class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</span><br><span class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</span><br><span class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</span><br><span class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</span><br><span class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</span><br><span class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</span><br><span class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</span><br><span class="line">   --help, -h                       show help</span><br><span class="line">   --version, -v                    <span class="builtin-name">print</span> the version</span><br><span class="line"></span><br><span class="line">$ ./server_darwin_amd64 -h</span><br><span class="line">NAME:</span><br><span class="line">   kcptun - server(with SMUX)</span><br><span class="line"></span><br><span class="line">USAGE:</span><br><span class="line">   server_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</span><br><span class="line"></span><br><span class="line">VERSION:</span><br><span class="line">   20170120</span><br><span class="line"></span><br><span class="line">COMMANDS:</span><br><span class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</span><br><span class="line"></span><br><span class="line">GLOBAL OPTIONS:</span><br><span class="line">   --listen value, -l value         kcp<span class="built_in"> server </span>listen<span class="built_in"> address </span>(default: <span class="string">":29900"</span>)</span><br><span class="line">   --target value, -t value         target<span class="built_in"> server address </span>(default: <span class="string">"127.0.0.1:12948"</span>)</span><br><span class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</span><br><span class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</span><br><span class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</span><br><span class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</span><br><span class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 1024)</span><br><span class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 1024)</span><br><span class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</span><br><span class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</span><br><span class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</span><br><span class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</span><br><span class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</span><br><span class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</span><br><span class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</span><br><span class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</span><br><span class="line">   --help, -h                       show help</span><br><span class="line">   --version, -v                    <span class="builtin-name">print</span> the version</span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ss/">ss</a><a href="/tags/kcptun/">kcptun</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/08/17/kcptun/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/08/17/kcptun/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -737,11 +737,11 @@
 			
 		
 			
-				<li><a href="/tags/java/" title="java">java<sup>10</sup></a></li>
+				<li><a href="/tags/java/" title="java">java<sup>11</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/maven/" title="maven">maven<sup>7</sup></a></li>
+				<li><a href="/tags/maven/" title="maven">maven<sup>8</sup></a></li>
 			
 		
 			
@@ -777,6 +777,10 @@
 			
 		
 			
+				<li><a href="/tags/actions/" title="actions">actions<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -802,10 +806,6 @@
 		
 			
 				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>
