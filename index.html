@@ -90,6 +90,67 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2020/09/24/hexo-github-actions/" title="github actions 自动部署 hexo" itemprop="url">github actions 自动部署 hexo</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2020-09-24T03:28:42.000Z" itemprop="datePublished"> Published 2020-09-24</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>workflow yaml</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">name</span>: CI</span><br><span class="line"></span><br><span class="line"><span class="attribute">on:</span></span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line"><span class="attribute">env:</span></span><br><span class="line">  GIT_USER: bigsuperangel</span><br><span class="line">  GIT_EMAIL: bigsuperangel@gmail.com</span><br><span class="line">  THEME_REPO: bigsuperangel/jacman</span><br><span class="line">  THEME_BRANCH: master</span><br><span class="line">  DEPLOY_REPO: bigsuperangel/bigsuperangel.github.io</span><br><span class="line">  DEPLOY_BRANCH: master</span><br><span class="line"></span><br><span class="line"><span class="attribute">jobs:</span></span><br><span class="line">  build:</span><br><span class="line">    name: Build on node $&#123;&#123; matrix.node_version &#125;&#125; and $&#123;&#123; matrix.os &#125;&#125;</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    strategy:</span><br><span class="line">      matrix:</span><br><span class="line">        os: [ubuntu-latest]</span><br><span class="line">        node_version: [12.x]</span><br><span class="line"></span><br><span class="line">    steps:</span><br><span class="line">      - name: Checkout</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line"></span><br><span class="line">      - name: Checkout theme repo</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">        with:</span><br><span class="line">          repository: $&#123;&#123; env.THEME_REPO &#125;&#125;</span><br><span class="line">          ref: $&#123;&#123; env.THEME_BRANCH &#125;&#125;</span><br><span class="line">          path: themes/jacman</span><br><span class="line">      - name: Checkout deploy repo</span><br><span class="line">        uses: actions/checkout@v2</span><br><span class="line">        with:</span><br><span class="line">          repository: $&#123;&#123; env.DEPLOY_REPO &#125;&#125;</span><br><span class="line">          ref: $&#123;&#123; env.DEPLOY_BRANCH &#125;&#125;</span><br><span class="line">          path: .deploy_git</span><br><span class="line"></span><br><span class="line">      - name: Use Node.js $&#123;&#123; matrix.node_version &#125;&#125;</span><br><span class="line">        uses: actions/setup-node@v1</span><br><span class="line">        with:</span><br><span class="line">          node-version: $&#123;&#123; matrix.node_version &#125;&#125;</span><br><span class="line"></span><br><span class="line">      - name: Configuration environment</span><br><span class="line">        env:</span><br><span class="line">          HEXO_DEPLOY_PRI: $&#123;&#123;secrets.HEXO_DEPLOY_PRI&#125;&#125;</span><br><span class="line">        run: |</span><br><span class="line">          sudo timedatectl set-timezone "Asia/Shanghai"</span><br><span class="line">          mkdir -p ~/.ssh/</span><br><span class="line">          echo "$HEXO_DEPLOY_PRI" &gt; ~/.ssh/id_rsa</span><br><span class="line">          chmod 600 ~/.ssh/id_rsa</span><br><span class="line">          ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><br><span class="line">          git config --global user.name $GIT_USER</span><br><span class="line">          git config --global user.email $GIT_EMAIL</span><br><span class="line">          npm install hexo-cli -g</span><br><span class="line">          npm install</span><br><span class="line">          </span><br><span class="line">      - name: Install dependencies</span><br><span class="line">        run: |</span><br><span class="line">          hexo clean</span><br><span class="line">          hexo d</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/deploy/">deploy</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2020/09/24/hexo-github-actions/#comments" class="ds-thread-count comments-count-link" data-thread-key="2020/09/24/hexo-github-actions/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2020/09/24/nssm/" title="nssm 使用指南" itemprop="url">nssm 使用指南</a>
   </h1>
   <p class="article-author">By
@@ -635,67 +696,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/08/02/ssh-key/" title="生成ssh key" itemprop="url">生成ssh key</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> Published 2017-08-02</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> <span class="regexp">~ #切换到git目录下</span></span><br><span class="line"><span class="regexp">ssh-keygen</span> -t rsa -C <span class="string">"xxxxx<span class="variable">@xxxxx</span>.com"</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br><span class="line"><span class="comment"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br><span class="line"></span><br><span class="line">ssh -T git<span class="variable">@git</span>.oschina.net</span><br></pre></td></tr></table></figure>
-<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ touch config</span><br><span class="line"></span><br><span class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></span><br><span class="line"></span><br><span class="line">linux:</span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line"><span class="built_in">	User </span>    bigsuperangel</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github</span><br><span class="line">	ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br><span class="line"></span><br><span class="line">window:</span><br><span class="line"><span class="comment"># oschina</span></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">   <span class="built_in"> User </span>bigsuperyu</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">   <span class="built_in"> User </span>    bigsuperangel</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/github-rsa</span><br><span class="line">    ProxyCommand connect -H 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
-<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i id_rsa.pub root@host</span><br><span class="line">ssh-copy-id -i id_rsa.pub -p<span class="built_in"> port </span>root@host</span><br></pre></td></tr></table></figure>
-<h2 id="4-相关问题"><a href="#4-相关问题" class="headerlink" title="4. 相关问题"></a>4. 相关问题</h2><h4 id="a-git-fatal-early-EOF-fatal-index-pack-failed"><a href="#a-git-fatal-early-EOF-fatal-index-pack-failed" class="headerlink" title="a. git fatal: early EOF fatal: index-pack failed"></a>a. git fatal: early EOF fatal: index-pack failed</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[core] </span><br><span class="line">packedGitLimit = 512m </span><br><span class="line">packedGitWindowSize = 512m </span><br><span class="line">[pack] </span><br><span class="line">deltaCacheSize = 2047m </span><br><span class="line">packSizeLimit = 2047m </span><br><span class="line">windowMemory = 2047m</span><br><span class="line"></span><br><span class="line">I have tried this in /etc/ssh/ssh_config for Linux and Mac:</span><br><span class="line">Host *</span><br><span class="line">ServerAliveInterval 120</span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/ssh/">ssh</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/08/02/ssh-key/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/08/02/ssh-key/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -750,6 +750,10 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
@@ -767,10 +771,6 @@
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			

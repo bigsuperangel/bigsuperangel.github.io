@@ -90,6 +90,79 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/28/mysql-oracle/" title="mysql与oracle相关函数转化" itemprop="url">mysql与oracle相关函数转化</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-28T02:54:54.000Z" itemprop="datePublished"> Published 2016-06-28</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="一、日期函数"><a href="#一、日期函数" class="headerlink" title="一、日期函数"></a>一、日期函数</h3><ul>
+<li>mysql</li>
+</ul>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str_to_date() </span><br><span class="line"><span class="keyword">select</span> str_to_date('<span class="number">2008</span><span class="number">-4</span><span class="number">-2</span> <span class="number">15</span>:<span class="number">3</span>:<span class="number">28</span>','<span class="symbol">%Y-</span><span class="symbol">%m-</span><span class="symbol">%d</span> <span class="symbol">%H</span>:<span class="symbol">%i</span>:<span class="symbol">%s</span>')<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>oracle</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">to_date()</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">to_date</span>(<span class="string">'2005-01-01 13:14:20'</span>,<span class="string">'yyyy-MM-dd HH24:mm:ss'</span>) <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure>
+<h3 id="二、聚合函数"><a href="#二、聚合函数" class="headerlink" title="二、聚合函数"></a>二、聚合函数</h3><ul>
+<li>mysql</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">group_concat()</span><br><span class="line">select id,group_concat(name) <span class="keyword">from</span> aa<span class="built_in"> group </span>by id;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>oracle</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wm_concat()</span><br><span class="line">select aa,wmsys.wm_concat(t1.name) <span class="keyword">from</span> (</span><br><span class="line">select t.name,to_char(t.createdate,<span class="string">'yyyy-mm-dd'</span>) aa <span class="keyword">from</span> td_user t where t.td_conference_id = 3218 <span class="keyword">and</span> t.status = 1 <span class="keyword">and</span> t.createdate &gt; to_date(<span class="string">'2012-10-28'</span>,<span class="string">'yyyy-mm-dd'</span>) order by createdate desc</span><br><span class="line">) t1<span class="built_in"> group </span>by t1.aa</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/mysql/">mysql</a><a href="/tags/oracle/">oracle</a><a href="/tags/database/">database</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/28/mysql-oracle/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/28/mysql-oracle/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/27/tomcat-realm/" title="tomcat设置realm" itemprop="url">tomcat设置realm</a>
   </h1>
   <p class="article-author">By
@@ -686,71 +759,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/01/linux-command/" title="linux 常用命令" itemprop="url">linux 常用命令</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-01T02:53:03.000Z" itemprop="datePublished"> Published 2016-06-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># uname -a               # 查看内核/操作系统/CPU信息</span><br><span class="line"># head -n <span class="number">1</span> /etc/issue   # 查看操作系统版本 </span><br><span class="line"># cat /proc/cpuinfo      # 查看CPU信息</span><br><span class="line"># hostname               # 查看计算机名 </span><br><span class="line"># lspci -tv              # 列出所有PCI设备</span><br><span class="line"># lsusb -tv              # 列出所有USB设备 </span><br><span class="line"># lsmod                  # 列出加载的内核模块</span><br><span class="line"># env                    # 查看环境变量</span><br></pre></td></tr></table></figure>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># free -m                # 查看内存使用量和交换区使用量 </span><br><span class="line"># df -h                  # 查看各分区使用情况 </span><br><span class="line"># du -sh &lt;目录名&gt;        # 查看指定目录的大小 </span><br><span class="line"># grep MemTotal /proc/meminfo   # 查看内存总量</span><br><span class="line"># grep MemFree /proc/meminfo    # 查看空闲内存量</span><br><span class="line"># uptime                 # 查看系统运行时间、用户数、负载 </span><br><span class="line"># cat /proc/loadavg      # 查看系统负载</span><br></pre></td></tr></table></figure>
-<h3 id="磁盘和分区"><a href="#磁盘和分区" class="headerlink" title="磁盘和分区"></a>磁盘和分区</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># mount | column -t      # 查看挂接的分区状态 </span><br><span class="line"># fdisk -l               # 查看所有分区 </span><br><span class="line"># swapon -s              # 查看所有交换分区</span><br><span class="line"># hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备) </span><br><span class="line"># dmesg | grep IDE       # 查看启动时IDE设备检测状况</span><br></pre></td></tr></table></figure>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># ifconfig               # 查看所有网络接口的属性</span><br><span class="line"># iptables -L            # 查看防火墙设置 </span><br><span class="line"># route -n               # 查看路由表 </span><br><span class="line"># netstat -lntp          # 查看所有监听端口 </span><br><span class="line"># netstat -antp          # 查看所有已经建立的连接</span><br><span class="line"># netstat -s             # 查看网络统计信息</span><br></pre></td></tr></table></figure>
-<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ps -ef                 # 查看所有进程 </span><br><span class="line"># top                    # 实时显示进程状态</span><br></pre></td></tr></table></figure>
-<h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># w                      # 查看活动用户 </span><br><span class="line"># id &lt;用户名&gt;            # 查看指定用户信息 </span><br><span class="line"># last                   # 查看用户登录日志 </span><br><span class="line"># cut -d: -f1 /etc/passwd   # 查看系统所有用户 </span><br><span class="line"># cut -d: -f1 /etc/group    # 查看系统所有组 </span><br><span class="line"># crontab -l             # 查看当前用户的计划任务</span><br></pre></td></tr></table></figure>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># chkconfig --list       # 列出所有系统服务 </span><br><span class="line"># chkconfig --list | grep on    # 列出所有启动的系统服务</span><br></pre></td></tr></table></figure>
-<h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># rpm -qa                # 查看所有安装的软件包</span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ubuntu/">ubuntu</a><a href="/tags/linux/">linux</a><a href="/tags/command/">command</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/01/linux-command/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/01/linux-command/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/3/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next<span></span></a>
@@ -805,6 +813,10 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
@@ -822,10 +834,6 @@
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			

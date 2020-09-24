@@ -90,6 +90,67 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2017/08/02/ssh-key/" title="生成ssh key" itemprop="url">生成ssh key</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> Published 2017-08-02</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> <span class="regexp">~ #切换到git目录下</span></span><br><span class="line"><span class="regexp">ssh-keygen</span> -t rsa -C <span class="string">"xxxxx<span class="variable">@xxxxx</span>.com"</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br><span class="line"><span class="comment"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br><span class="line"></span><br><span class="line">ssh -T git<span class="variable">@git</span>.oschina.net</span><br></pre></td></tr></table></figure>
+<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ touch config</span><br><span class="line"></span><br><span class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></span><br><span class="line"></span><br><span class="line">linux:</span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line"><span class="built_in">	User </span>    bigsuperangel</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github</span><br><span class="line">	ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br><span class="line"></span><br><span class="line">window:</span><br><span class="line"><span class="comment"># oschina</span></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">   <span class="built_in"> User </span>bigsuperyu</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">   <span class="built_in"> User </span>    bigsuperangel</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/github-rsa</span><br><span class="line">    ProxyCommand connect -H 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i id_rsa.pub root@host</span><br><span class="line">ssh-copy-id -i id_rsa.pub -p<span class="built_in"> port </span>root@host</span><br></pre></td></tr></table></figure>
+<h2 id="4-相关问题"><a href="#4-相关问题" class="headerlink" title="4. 相关问题"></a>4. 相关问题</h2><h4 id="a-git-fatal-early-EOF-fatal-index-pack-failed"><a href="#a-git-fatal-early-EOF-fatal-index-pack-failed" class="headerlink" title="a. git fatal: early EOF fatal: index-pack failed"></a>a. git fatal: early EOF fatal: index-pack failed</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[core] </span><br><span class="line">packedGitLimit = 512m </span><br><span class="line">packedGitWindowSize = 512m </span><br><span class="line">[pack] </span><br><span class="line">deltaCacheSize = 2047m </span><br><span class="line">packSizeLimit = 2047m </span><br><span class="line">windowMemory = 2047m</span><br><span class="line"></span><br><span class="line">I have tried this in /etc/ssh/ssh_config for Linux and Mac:</span><br><span class="line">Host *</span><br><span class="line">ServerAliveInterval 120</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/ssh/">ssh</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2017/08/02/ssh-key/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/08/02/ssh-key/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2017/08/02/git-submodule/" title="hexo 配置themes相关submodule" itemprop="url">hexo 配置themes相关submodule</a>
   </h1>
   <p class="article-author">By
@@ -679,64 +740,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/08/08/git-proxy/" title="git设置和取消代理" itemprop="url">git设置和取消代理</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2016-08-08T03:37:49.000Z" itemprop="datePublished"> Published 2016-08-08</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> https<span class="variable">.proxy</span> http:<span class="comment">//127.0.0.1:1080</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> https<span class="variable">.proxy</span> https:<span class="comment">//127.0.0.1:1080</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> --unset http<span class="variable">.proxy</span></span><br><span class="line"></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> --unset https<span class="variable">.proxy</span></span><br><span class="line"></span><br><span class="line">npm <span class="keyword">config</span> delete proxy</span><br><span class="line"></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> http<span class="variable">.proxy</span> 'socks5:<span class="comment">//127.0.0.1:1080' </span></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> https<span class="variable">.proxy</span> 'socks5:<span class="comment">//127.0.0.1:1080'</span></span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/git/">git</a><a href="/tags/proxy/">proxy</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/08/08/git-proxy/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/08/08/git-proxy/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
@@ -791,6 +794,10 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
@@ -808,10 +815,6 @@
 		
 			
 				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
 			
 		
 			
