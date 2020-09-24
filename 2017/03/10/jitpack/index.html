@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com//file/2017/3/64d617943ba64d2f8b079606ccadd245.png">
 <meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com//file/2017/3/3101ee3d460749989f948ea4300855ab.png">
 <meta property="og:image" content="http://olrtj18qs.bkt.clouddn.com//file/2017/3/1a976650a6614ffb8359fb286b5bcfa0.png">
-<meta property="og:updated_time" content="2017-08-01T09:29:10.397Z">
+<meta property="og:updated_time" content="2020-09-24T02:33:22.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用jitpack.io发布Android、Java项目，通过gradle、maven方式引用">
 <meta name="twitter:description" content="Android、Java项目开源这里就仅仅介绍如何发布一个Android、Java的项目到 jitpack.io 。 第一步：配置项目根目录的build.gradle12345678910buildscript &amp;#123;   repositories &amp;#123;          jcenter()   &amp;#125;   dependencies &amp;#123;       classpath">
@@ -52,7 +52,7 @@
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
+</html>
   <body>
     <header>
       
@@ -66,7 +66,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -84,7 +84,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -107,31 +107,31 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-03-10T10:12:24.000Z" itemprop="datePublished"> 發表於 2017-03-10</time>
+    <time datetime="2017-03-10T10:12:24.000Z" itemprop="datePublished"> Published 2017-03-10</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android、Java项目开源"><span class="toc-number">1.</span> <span class="toc-text">Android、Java项目开源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步：配置项目根目录的build-gradle"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：配置项目根目录的build.gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步：配置需要发布的Module-Lib的build-gradle"><span class="toc-number">1.2.</span> <span class="toc-text">第二步：配置需要发布的Module Lib的build.gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步：发布到github"><span class="toc-number">1.3.</span> <span class="toc-text">第三步：发布到github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步：创建Release版本"><span class="toc-number">1.4.</span> <span class="toc-text">第四步：创建Release版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五步：到-jitpack-io-构建"><span class="toc-number">1.5.</span> <span class="toc-text">第五步：到 jitpack.io 构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第六步：完成，即可通过gradle或maven引入发布的Lib"><span class="toc-number">1.6.</span> <span class="toc-text">第六步：完成，即可通过gradle或maven引入发布的Lib</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第七步：添加仓库标识符"><span class="toc-number">1.7.</span> <span class="toc-text">第七步：添加仓库标识符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第八步：通过gradle引用"><span class="toc-number">1.8.</span> <span class="toc-text">第八步：通过gradle引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#示范代码"><span class="toc-number">1.9.</span> <span class="toc-text">示范代码</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h3 id="Android、Java项目开源"><a href="#Android、Java项目开源" class="headerlink" title="Android、Java项目开源"></a>Android、Java项目开源</h3><p>这里就仅仅介绍如何发布一个Android、Java的项目到 <a href="https://jitpack.io/" target="_blank" rel="external">jitpack.io</a> 。</p>
-<h4 id="第一步：配置项目根目录的build-gradle"><a href="#第一步：配置项目根目录的build-gradle" class="headerlink" title="第一步：配置项目根目录的build.gradle"></a>第一步：配置项目根目录的build.gradle</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">buildscript</span> &#123;</div><div class="line">   <span class="keyword">repositories</span> &#123;</div><div class="line">          jcenter()</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="keyword">dependencies</span> &#123;</div><div class="line">       <span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:1.5.0'</span></div><div class="line">       <span class="keyword">classpath</span> <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.3'</span><span class="comment">//ADD</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第二步：配置需要发布的Module-Lib的build-gradle"><a href="#第二步：配置需要发布的Module-Lib的build-gradle" class="headerlink" title="第二步：配置需要发布的Module Lib的build.gradle"></a>第二步：配置需要发布的Module Lib的build.gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'java'</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span><span class="comment">//ADD</span></div></pre></td></tr></table></figure>
+		<h3 id="Android、Java项目开源"><a href="#Android、Java项目开源" class="headerlink" title="Android、Java项目开源"></a>Android、Java项目开源</h3><p>这里就仅仅介绍如何发布一个Android、Java的项目到 <a href="https://jitpack.io/" target="_blank" rel="noopener">jitpack.io</a> 。</p>
+<h4 id="第一步：配置项目根目录的build-gradle"><a href="#第一步：配置项目根目录的build-gradle" class="headerlink" title="第一步：配置项目根目录的build.gradle"></a>第一步：配置项目根目录的build.gradle</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">buildscript</span> &#123;</span><br><span class="line">   <span class="keyword">repositories</span> &#123;</span><br><span class="line">          jcenter()</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">dependencies</span> &#123;</span><br><span class="line">       <span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:1.5.0'</span></span><br><span class="line">       <span class="keyword">classpath</span> <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.3'</span><span class="comment">//ADD</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="第二步：配置需要发布的Module-Lib的build-gradle"><a href="#第二步：配置需要发布的Module-Lib的build-gradle" class="headerlink" title="第二步：配置需要发布的Module Lib的build.gradle"></a>第二步：配置需要发布的Module Lib的build.gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="string">plugin:</span> <span class="string">'java'</span></span><br><span class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span><span class="comment">//ADD</span></span><br></pre></td></tr></table></figure>
 <h4 id="第三步：发布到github"><a href="#第三步：发布到github" class="headerlink" title="第三步：发布到github"></a>第三步：发布到github</h4><p>这个参考网络上git教程</p>
 <h4 id="第四步：创建Release版本"><a href="#第四步：创建Release版本" class="headerlink" title="第四步：创建Release版本"></a>第四步：创建Release版本</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/aa86b3db62434b3faf2adc73a1c211c4.png" alt="aa86b3db62434b3faf2adc73a1c211c4.png"><br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/d369db53afd74d338fcbaabea98f3627.png" alt="d369db53afd74d338fcbaabea98f3627.png"><br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/8f027d11d86e4ba1ae2d554138a1026f.png" alt="8f027d11d86e4ba1ae2d554138a1026f.png"></p>
-<h4 id="第五步：到-jitpack-io-构建"><a href="#第五步：到-jitpack-io-构建" class="headerlink" title="第五步：到 jitpack.io 构建"></a>第五步：到 <a href="https://jitpack.io/" target="_blank" rel="external">jitpack.io</a> 构建</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/64d617943ba64d2f8b079606ccadd245.png" alt="64d617943ba64d2f8b079606ccadd245.png"></p>
+<h4 id="第五步：到-jitpack-io-构建"><a href="#第五步：到-jitpack-io-构建" class="headerlink" title="第五步：到 jitpack.io 构建"></a>第五步：到 <a href="https://jitpack.io/" target="_blank" rel="noopener">jitpack.io</a> 构建</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/64d617943ba64d2f8b079606ccadd245.png" alt="64d617943ba64d2f8b079606ccadd245.png"></p>
 <h4 id="第六步：完成，即可通过gradle或maven引入发布的Lib"><a href="#第六步：完成，即可通过gradle或maven引入发布的Lib" class="headerlink" title="第六步：完成，即可通过gradle或maven引入发布的Lib"></a>第六步：完成，即可通过gradle或maven引入发布的Lib</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/3101ee3d460749989f948ea4300855ab.png" alt="3101ee3d460749989f948ea4300855ab.png"></p>
 <h4 id="第七步：添加仓库标识符"><a href="#第七步：添加仓库标识符" class="headerlink" title="第七步：添加仓库标识符"></a>第七步：添加仓库标识符</h4><p>把这段Markdown代码放到README.md页面，需要根据项目地址修改。<br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/1a976650a6614ffb8359fb286b5bcfa0.png" alt="1a976650a6614ffb8359fb286b5bcfa0.png"></p>
-<h4 id="第八步：通过gradle引用"><a href="#第八步：通过gradle引用" class="headerlink" title="第八步：通过gradle引用"></a>第八步：通过gradle引用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">repository</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jitpack.ioid<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://jitpack.io<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.bigsuperangel<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hiwetoptools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="第八步：通过gradle引用"><a href="#第八步：通过gradle引用" class="headerlink" title="第八步：通过gradle引用"></a>第八步：通过gradle引用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jitpack.ioid<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://jitpack.io<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.bigsuperangel<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hiwetoptools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="示范代码"><a href="#示范代码" class="headerlink" title="示范代码"></a>示范代码</h4><ul>
-<li><a href="https://github.com/bigsuperangel/hiwetoptools" target="_blank" rel="external">https://github.com/bigsuperangel/hiwetoptools</a></li>
-<li><a href="https://github.com/bigsuperangel/robot" target="_blank" rel="external">https://github.com/bigsuperangel/robot</a></li>
+<li><a href="https://github.com/bigsuperangel/hiwetoptools" target="_blank" rel="noopener">https://github.com/bigsuperangel/hiwetoptools</a></li>
+<li><a href="https://github.com/bigsuperangel/robot" target="_blank" rel="noopener">https://github.com/bigsuperangel/robot</a></li>
 </ul>
   
 	</div>
@@ -189,22 +189,22 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android、Java项目开源"><span class="toc-number">1.</span> <span class="toc-text">Android、Java项目开源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#第一步：配置项目根目录的build-gradle"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：配置项目根目录的build.gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第二步：配置需要发布的Module-Lib的build-gradle"><span class="toc-number">1.2.</span> <span class="toc-text">第二步：配置需要发布的Module Lib的build.gradle</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第三步：发布到github"><span class="toc-number">1.3.</span> <span class="toc-text">第三步：发布到github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第四步：创建Release版本"><span class="toc-number">1.4.</span> <span class="toc-text">第四步：创建Release版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第五步：到-jitpack-io-构建"><span class="toc-number">1.5.</span> <span class="toc-text">第五步：到 jitpack.io 构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第六步：完成，即可通过gradle或maven引入发布的Lib"><span class="toc-number">1.6.</span> <span class="toc-text">第六步：完成，即可通过gradle或maven引入发布的Lib</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第七步：添加仓库标识符"><span class="toc-number">1.7.</span> <span class="toc-text">第七步：添加仓库标识符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第八步：通过gradle引用"><span class="toc-number">1.8.</span> <span class="toc-text">第八步：通过gradle引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#示范代码"><span class="toc-number">1.9.</span> <span class="toc-text">示范代码</span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -216,11 +216,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>16</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>17</sup></a></li>
 			
 		
 			
@@ -240,15 +240,23 @@
 			
 		
 			
+				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>3</sup></a></li>
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -264,14 +272,6 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
@@ -280,23 +280,23 @@
 			
 		
 			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gradle/" title="gradle">gradle<sup>1</sup></a></li>
+				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -304,7 +304,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -326,11 +326,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -371,7 +371,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
 		
 		<a href="/about" target="_blank" title="linyu">linyu</a>
 		
@@ -570,7 +570,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

@@ -13,25 +13,25 @@
         gtag('config', 'UA-84488915-1');
   </script>
   
-    <title>maven 相关命令 | linyu blog</title>
+    <title>tomcat 命令启动关闭 | linyu blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="linyu">
     
 
     
-    <meta name="description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
-<meta name="keywords" content="java,maven,command">
+    <meta name="description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
+<meta name="keywords" content="linux,tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="maven 相关命令">
-<meta property="og:url" content="http://bigsuperangel.github.io/2016/08/24/maven-command/index.html">
+<meta property="og:title" content="tomcat 命令启动关闭">
+<meta property="og:url" content="http://bigsuperangel.github.io/2019/06/20/tomcat/index.html">
 <meta property="og:site_name" content="linyu blog">
-<meta property="og:description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
+<meta property="og:description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-24T02:33:22.002Z">
+<meta property="og:updated_time" content="2020-09-24T02:33:22.006Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="maven 相关命令">
-<meta name="twitter:description" content="123456789101112##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:mvn arche">
+<meta name="twitter:title" content="tomcat 命令启动关闭">
+<meta name="twitter:description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
 
     
     <link rel="alternative" href="/atom.xml" title="linyu blog" type="application/atom+xml">
@@ -93,14 +93,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/08/24/maven-command/" title="maven 相关命令" itemprop="url">maven 相关命令</a>
+      <a href="/2019/06/20/tomcat/" title="tomcat 命令启动关闭" itemprop="url">tomcat 命令启动关闭</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-24T03:27:37.000Z" itemprop="datePublished"> Published 2016-08-24</time>
+    <time datetime="2019-06-20T02:43:28.000Z" itemprop="datePublished"> Published 2019-06-20</time>
     
   </p>
 </header>
@@ -113,7 +113,7 @@
 		
 		</div>
 		
-		<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##　You will need somewhere for your project to reside, create a directory somewhere and start a shell in that directory. On your command line, execute the following Maven goal:</span></span><br><span class="line"></span><br><span class="line">mvn archetype:generate <span class="attribute">-DgroupId</span>=com.mycompany.app <span class="attribute">-DartifactId</span>=my-app <span class="attribute">-DarchetypeArtifactId</span>=maven-archetype-quickstart <span class="attribute">-DinteractiveMode</span>=<span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">##　You may test the newly compiled and packaged JAR with the following command:</span></span><br><span class="line">java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App</span><br><span class="line"></span><br><span class="line"><span class="comment">##　ignore test</span></span><br><span class="line">mvn install -Dmaven.test.<span class="attribute">skip</span>=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line">mvn dependency:tree</span><br><span class="line">mvn install -X</span><br></pre></td></tr></table></figure>
+		<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | <span class="type">grep</span> <span class="number">8081</span> | <span class="type">awk</span> '&#123;printf $<span class="number">7</span>&#125;' | <span class="type">cut</span> -d <span class="string">"/"</span> -f <span class="number">1</span></span><br><span class="line">ps -ef | <span class="type">grep</span> <span class="string">"/usr/local/tomcat/"</span> | <span class="type">grep</span> -v 'grep\|<span class="type">tail</span>\|<span class="type">more</span>\|<span class="type">bash</span>\|<span class="type">le</span>    ss'| <span class="type">awk</span> '&#123;print $<span class="number">2</span>&#125;'</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -122,7 +122,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/maven/">maven</a><a href="/tags/command/">command</a>
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/tomcat/">tomcat</a>
   </div>
 
 </div>
@@ -131,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bigsuperangel.github.io/2016/08/24/maven-command/" data-title="maven 相关命令 | linyu blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bigsuperangel.github.io/2019/06/20/tomcat/" data-title="tomcat 命令启动关闭 | linyu blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -144,19 +144,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/09/12/maven-profile/" title="使用 Maven Profile 和 Filtering 打各种环境的包">
-  <strong>上一篇：</strong><br/>
-  <span>
-  使用 Maven Profile 和 Filtering 打各种环境的包</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/08/08/maven-jar/"  title="maven打包jar">
+<a href="/2019/03/28/ubuntu-audio/"  title="ubuntu 安装好后没声音的解决方法">
  <strong>下一篇：</strong><br/> 
- <span>maven打包jar
+ <span>ubuntu 安装好后没声音的解决方法
 </span>
 </a>
 </div>
@@ -165,7 +157,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/08/24/maven-command/" data-title="maven 相关命令" data-url="http://bigsuperangel.github.io/2016/08/24/maven-command/"></div>
+	<div class="ds-thread" data-thread-key="2019/06/20/tomcat/" data-title="tomcat 命令启动关闭" data-url="http://bigsuperangel.github.io/2019/06/20/tomcat/"></div>
 </section>
 
 

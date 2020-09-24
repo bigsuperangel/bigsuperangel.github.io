@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -40,7 +40,7 @@
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
+</html>
   <body>
     <header>
       
@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -72,7 +72,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -90,6 +90,64 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2019/06/20/tomcat/" title="tomcat 命令启动关闭" itemprop="url">tomcat 命令启动关闭</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
+		
+  <p class="article-time">
+    <time datetime="2019-06-20T02:43:28.000Z" itemprop="datePublished"> Published 2019-06-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | <span class="type">grep</span> <span class="number">8081</span> | <span class="type">awk</span> '&#123;printf $<span class="number">7</span>&#125;' | <span class="type">cut</span> -d <span class="string">"/"</span> -f <span class="number">1</span></span><br><span class="line">ps -ef | <span class="type">grep</span> <span class="string">"/usr/local/tomcat/"</span> | <span class="type">grep</span> -v 'grep\|<span class="type">tail</span>\|<span class="type">more</span>\|<span class="type">bash</span>\|<span class="type">le</span>    ss'| <span class="type">awk</span> '&#123;print $<span class="number">2</span>&#125;'</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/tomcat/">tomcat</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2019/06/20/tomcat/#comments" class="ds-thread-count comments-count-link" data-thread-key="2019/06/20/tomcat/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2019/03/28/ubuntu-audio/" title="ubuntu 安装好后没声音的解决方法" itemprop="url">ubuntu 安装好后没声音的解决方法</a>
   </h1>
   <p class="article-author">By
@@ -97,13 +155,13 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2019-03-28T07:05:08.000Z" itemprop="datePublished"> 發表於 2019-03-28</time>
+    <time datetime="2019-03-28T07:05:08.000Z" itemprop="datePublished"> Published 2019-03-28</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt <span class="keyword">install </span>alsa-<span class="keyword">base</span></div><div class="line"><span class="keyword">sudo </span>alsamixer</div></pre></td></tr></table></figure>
+        <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt <span class="keyword">install </span>alsa-<span class="keyword">base</span></span><br><span class="line"><span class="keyword">sudo </span>alsamixer</span><br></pre></td></tr></table></figure>
 <h2 id="使用M来调整声音"><a href="#使用M来调整声音" class="headerlink" title="使用M来调整声音"></a>使用M来调整声音</h2>
         
         
@@ -155,15 +213,15 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2018-12-14T04:08:17.000Z" itemprop="datePublished"> 發表於 2018-12-14</time>
+    <time datetime="2018-12-14T04:08:17.000Z" itemprop="datePublished"> Published 2018-12-14</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h3 id="1-upgrade-python2-7"><a href="#1-upgrade-python2-7" class="headerlink" title="1. upgrade python2.7"></a>1. upgrade python2.7</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">wget http<span class="variable">s:</span>//gitee.<span class="keyword">com</span>/bigsuperyu/git-test/raw/master/python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></div><div class="line">bash python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></div></pre></td></tr></table></figure>
-<h3 id="2-install-pip"><a href="#2-install-pip" class="headerlink" title="2. install pip"></a>2. install pip</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">curl </span><span class="string">https:</span>//<span class="string">bootstrap.</span><span class="string">pypa.</span><span class="string">io/</span><span class="built_in">get-pip.py</span> | <span class="string">python</span></div><div class="line"><span class="string">ln </span>-s /<span class="string">usr/</span><span class="string">local/</span><span class="string">bin/</span><span class="string">pip </span>/<span class="string">usr/</span><span class="string">bin/</span><span class="string">pip</span></div><div class="line"><span class="string">pip </span>-V</div></pre></td></tr></table></figure>
-<h3 id="3-install-mycli"><a href="#3-install-mycli" class="headerlink" title="3. install mycli"></a>3. install mycli</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> mycli</div></pre></td></tr></table></figure>
+        <h3 id="1-upgrade-python2-7"><a href="#1-upgrade-python2-7" class="headerlink" title="1. upgrade python2.7"></a>1. upgrade python2.7</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http<span class="variable">s:</span>//gitee.<span class="keyword">com</span>/bigsuperyu/git-test/raw/master/python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></span><br><span class="line">bash python2.<span class="number">7</span>_for_centos6.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-install-pip"><a href="#2-install-pip" class="headerlink" title="2. install pip"></a>2. install pip</h3><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">curl </span><span class="string">https:</span>//<span class="string">bootstrap.</span><span class="string">pypa.</span><span class="string">io/</span><span class="built_in">get-pip.py</span> | <span class="string">python</span></span><br><span class="line"><span class="string">ln </span>-s /<span class="string">usr/</span><span class="string">local/</span><span class="string">bin/</span><span class="string">pip </span>/<span class="string">usr/</span><span class="string">bin/</span><span class="string">pip</span></span><br><span class="line"><span class="string">pip </span>-V</span><br></pre></td></tr></table></figure>
+<h3 id="3-install-mycli"><a href="#3-install-mycli" class="headerlink" title="3. install mycli"></a>3. install mycli</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="keyword">install</span> mycli</span><br></pre></td></tr></table></figure>
 
         
         
@@ -215,13 +273,13 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2018-12-03T06:41:38.000Z" itemprop="datePublished"> 發表於 2018-12-03</time>
+    <time datetime="2018-12-03T06:41:38.000Z" itemprop="datePublished"> Published 2018-12-03</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 安装alsa相关应用：</span></div><div class="line">sudo apt install alsa-base alsa-utils alsa-oss alsa-tools</div><div class="line"></div><div class="line"><span class="comment">#查看系统中的声卡：</span></div><div class="line">cat /proc/asound/cards</div><div class="line"></div><div class="line">sudo alsamixer</div><div class="line"><span class="comment">#其中，Master和PCM是必须打开的，Master和PCM声道默认是静音的，标记是MM。用左右方向键选择设置项，按M健来修改为OO或开启调节，上下键调节音量大小。</span></div><div class="line"></div><div class="line">sudo alsactl store <span class="comment">#保存配置</span></div><div class="line">cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">alsa</span>/<span class="title">asound</span>.<span class="title">state</span> <span class="comment">#查看配置生效的内容</span></span></div></pre></td></tr></table></figure>
+        <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装alsa相关应用：</span></span><br><span class="line">sudo apt install alsa-base alsa-utils alsa-oss alsa-tools</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看系统中的声卡：</span></span><br><span class="line">cat /proc/asound/cards</span><br><span class="line"></span><br><span class="line">sudo alsamixer</span><br><span class="line"><span class="comment">#其中，Master和PCM是必须打开的，Master和PCM声道默认是静音的，标记是MM。用左右方向键选择设置项，按M健来修改为OO或开启调节，上下键调节音量大小。</span></span><br><span class="line"></span><br><span class="line">sudo alsactl store <span class="comment">#保存配置</span></span><br><span class="line">cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">alsa</span>/<span class="title">asound</span>.<span class="title">state</span> <span class="comment">#查看配置生效的内容</span></span></span><br></pre></td></tr></table></figure>
 
         
         
@@ -273,16 +331,16 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2018-10-15T02:56:40.000Z" itemprop="datePublished"> 發表於 2018-10-15</time>
+    <time datetime="2018-10-15T02:56:40.000Z" itemprop="datePublished"> Published 2018-10-15</time>
     
   </p>
 </header>
     <div class="article-content">
         
         <p><code>1.</code> docker mysql 配置</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">docker search mysql</div><div class="line">docker <span class="built_in">run</span> <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></div><div class="line">docker image ls</div><div class="line">docker exec -<span class="keyword">it</span> <span class="keyword">some</span>-mysql bash</div><div class="line"><span class="comment">#配置远程访问</span></div><div class="line">mysql&gt; grant all privileges <span class="keyword">on</span> *.* <span class="keyword">to</span> root@<span class="string">"%"</span> identified <span class="keyword">by</span> <span class="string">"password"</span> <span class="keyword">with</span> grant option; </div><div class="line">Query OK, <span class="number">0</span> rows affected, <span class="number">1</span> warning (<span class="number">0.04</span> sec)</div><div class="line">mysql&gt; flush privileges; </div><div class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)</div></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br><span class="line">docker <span class="built_in">run</span> <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></span><br><span class="line">docker image ls</span><br><span class="line">docker exec -<span class="keyword">it</span> <span class="keyword">some</span>-mysql bash</span><br><span class="line"><span class="comment">#配置远程访问</span></span><br><span class="line">mysql&gt; grant all privileges <span class="keyword">on</span> *.* <span class="keyword">to</span> root@<span class="string">"%"</span> identified <span class="keyword">by</span> <span class="string">"password"</span> <span class="keyword">with</span> grant option; </span><br><span class="line">Query OK, <span class="number">0</span> rows affected, <span class="number">1</span> warning (<span class="number">0.04</span> sec)</span><br><span class="line">mysql&gt; flush privileges; </span><br><span class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 <p><code>2.</code> docker tomcat 配置</p>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"># tomcat8 给内网服务器使用</div><div class="line">docker run --name tomcat8 -d \</div><div class="line">	-<span class="ruby">v ~<span class="regexp">/web/tomcat</span>8/<span class="symbol">webapps:</span>/usr/local/tomcat/webapps \</span></div><div class="line"><span class="ruby">	-v ~<span class="regexp">/web/tomcat</span>8/<span class="symbol">logs:</span>/usr/local/tomcat/logs \</span></div><div class="line"><span class="ruby">	-v /etc/<span class="symbol">localtime:</span>/etc/<span class="symbol">localtime:</span>ro \</span></div><div class="line"><span class="ruby">	-e TZ=<span class="string">"Asia/Shanghai"</span> \</span></div><div class="line"><span class="ruby">	-p <span class="number">8080</span><span class="symbol">:</span><span class="number">8080</span> <span class="symbol">tomcat:</span><span class="number">8.0</span></span></div><div class="line"><span class="ruby"></span></div><div class="line"><span class="ruby">docker logs --tail=<span class="number">100</span> -f tomcat8</span></div><div class="line"><span class="ruby">docker container stop tomcat8</span></div><div class="line"><span class="ruby">docker container start tomcat8</span></div></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tomcat8 给内网服务器使用</span></span><br><span class="line">docker run --name tomcat8 -d \</span><br><span class="line">	-v ~<span class="regexp">/web/</span>tomcat8<span class="regexp">/webapps:/u</span>sr<span class="regexp">/local/</span>tomcat<span class="regexp">/webapps \</span></span><br><span class="line"><span class="regexp">	-v ~/</span>web<span class="regexp">/tomcat8/</span>logs:<span class="regexp">/usr/</span>local<span class="regexp">/tomcat/</span>logs \</span><br><span class="line">	-v <span class="regexp">/etc/</span>localtime:<span class="regexp">/etc/</span>localtime:ro \</span><br><span class="line">	-e TZ=<span class="string">"Asia/Shanghai"</span> \</span><br><span class="line">	-p <span class="number">8080</span>:<span class="number">8080</span> tomcat:<span class="number">8.0</span></span><br><span class="line"></span><br><span class="line">docker logs --tail=<span class="number">100</span> -f tomcat8</span><br><span class="line">docker container stop tomcat8</span><br><span class="line">docker container start tomcat8</span><br></pre></td></tr></table></figure>
 
         
         
@@ -334,7 +392,7 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> 發表於 2017-11-08</time>
+    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> Published 2017-11-08</time>
     
   </p>
 </header>
@@ -342,8 +400,8 @@
         
         <h1 id="mysqlimport"><a href="#mysqlimport" class="headerlink" title="mysqlimport"></a>mysqlimport</h1><p>为MySQL服务器用命令行方式导入数据</p>
 <h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p><strong>mysqlimport命令</strong> 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></div></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">D：导入数据前清空表；</span></div><div class="line"><span class="ruby">-f：出现错误时继续处理剩余的操作；</span></div><div class="line"><span class="ruby">-h：MySQL服务器的ip地址或主机名；</span></div><div class="line"><span class="ruby">-u：连接MySQL服务器的用户名；</span></div><div class="line"><span class="ruby">-p：连接MySQL服务器的密码。</span></div></pre></td></tr></table></figure>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-D：导入数据前清空表；</span></span><br><span class="line"><span class="deletion">-f：出现错误时继续处理剩余的操作；</span></span><br><span class="line"><span class="deletion">-h：MySQL服务器的ip地址或主机名；</span></span><br><span class="line"><span class="deletion">-u：连接MySQL服务器的用户名；</span></span><br><span class="line"><span class="deletion">-p：连接MySQL服务器的密码。</span></span><br></pre></td></tr></table></figure>
 <h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
 <li>数据库名：指定要导入的数据库名称；</li>
 <li>文本文件：包含特定格式文本文件。</li>
@@ -399,29 +457,29 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-17T02:18:34.000Z" itemprop="datePublished"> 發表於 2017-08-17</time>
+    <time datetime="2017-08-17T02:18:34.000Z" itemprop="datePublished"> Published 2017-08-17</time>
     
   </p>
 </header>
     <div class="article-content">
         
         <h1 id="刷机指南"><a href="#刷机指南" class="headerlink" title="刷机指南"></a><strong>刷机指南</strong></h1><p>【适用性】此方法适用于K2 V22.4.5.39以上的新版本官方固件，包括当前最新固件V22.5.9.163、22.5.10.176、22.5.11.5。</p>
-<p>【功 能】根据输入的MAC地址自动生成配置文件，此配置文件用于为K2刷入breed（20170416版本）。你可以后续在breed中刷入<a href="http://pan.baidu.com/s/1geCr84N" target="_blank" rel="external">第三方固件</a>。</p>
+<p>【功 能】根据输入的MAC地址自动生成配置文件，此配置文件用于为K2刷入breed（20170416版本）。你可以后续在breed中刷入<a href="http://pan.baidu.com/s/1geCr84N" target="_blank" rel="noopener">第三方固件</a>。</p>
 <p>【操作步骤】</p>
 <p>1、输入WAN口MAC地址（格式为CC:81:DA:11:22:33，以冒号隔开），点“下载配置文件”将配置文件下载到本地计算机</p>
 <p>2、在K2 WEB管理页面“高级设置”-“系统设置”-“备份恢复”界面，导入下载的配置文件，然后点击“恢复备份”按钮即可。</p>
 <p>【使用说明】</p>
-<p>MAC地址可以在管理页面的“高级设置”-“系统状态”页面直接拷贝：<br><img src="http://iytc.net/img/br1.jpg" alt=""></p>
+<p>MAC地址可以在管理页面的“高级设置”-“系统状态”页面直接拷贝：<br><img src="http://iytc.net/img/br1.jpg" alt></p>
 <p>如果采用无线扩展组网或网页上的MAC不正确，可以查看K2机器底部的MAC地址，每隔两个字符加入冒号进行输入，如下图，MAC应该为“D8:C8:E9:1A:94:00”:</p>
-<p><img src="http://iytc.net/img/br3.jpg" alt=""></p>
+<p><img src="http://iytc.net/img/br3.jpg" alt></p>
 <p>配置文件使用方法：</p>
 <p>在K2 WEB管理页面“高级设置”-“系统设置”-“备份恢复”界面，导入下载的配置文件，然后点击“恢复备份”按钮即可。</p>
-<p><img src="http://iytc.net/img/br2.jpg" alt=""></p>
+<p><img src="http://iytc.net/img/br2.jpg" alt></p>
 <p>配置文件导入后，K2会复位两次，请耐心等待，不要断电或人工复位！</p>
 <p>【breed进入方式】</p>
-<p>导入配置两分钟后K2会正常启动，指示灯变黄或变蓝，此时断电，电脑连接K2的一个LAN口自动获取 IP 地址，按住K2复位键再通电，持续按住几秒，然后电脑访问<a href="http://192.168.1.1即可在WEB刷第三方固件" target="_blank" rel="external">http://192.168.1.1即可在WEB刷第三方固件</a><br><img src="http://iytc.net/img/br4.jpg" alt=""></p>
-<p>【进入路由器后台】<br><a href="http://192.168.123.1/" target="_blank" rel="external">http://192.168.123.1/</a><br>admin<br>admin</p>
-<p>【相关链接】<br><a href="http://iytc.net/k2.php" target="_blank" rel="external">http://iytc.net/k2.php</a></p>
+<p>导入配置两分钟后K2会正常启动，指示灯变黄或变蓝，此时断电，电脑连接K2的一个LAN口自动获取 IP 地址，按住K2复位键再通电，持续按住几秒，然后电脑访问<a href="http://192.168.1.1即可在WEB刷第三方固件" target="_blank" rel="noopener">http://192.168.1.1即可在WEB刷第三方固件</a><br><img src="http://iytc.net/img/br4.jpg" alt></p>
+<p>【进入路由器后台】<br><a href="http://192.168.123.1/" target="_blank" rel="noopener">http://192.168.123.1/</a><br>admin<br>admin</p>
+<p>【相关链接】<br><a href="http://iytc.net/k2.php" target="_blank" rel="noopener">http://iytc.net/k2.php</a></p>
 
         
         
@@ -473,13 +531,13 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-17T02:09:10.000Z" itemprop="datePublished"> 發表於 2017-08-17</time>
+    <time datetime="2017-08-17T02:09:10.000Z" itemprop="datePublished"> Published 2017-08-17</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">$ ./client_darwin_amd64 -h</div><div class="line">NAME:</div><div class="line">   kcptun - client(with SMUX)</div><div class="line"></div><div class="line">USAGE:</div><div class="line">   client_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</div><div class="line"></div><div class="line">VERSION:</div><div class="line">   20170120</div><div class="line"></div><div class="line">COMMANDS:</div><div class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</div><div class="line"></div><div class="line">GLOBAL OPTIONS:</div><div class="line">   --localaddr value, -l value      local listen<span class="built_in"> address </span>(default: <span class="string">":12948"</span>)</div><div class="line">   --remoteaddr value, -r value     kcp<span class="built_in"> server address </span>(default: <span class="string">"vps:29900"</span>)</div><div class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</div><div class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</div><div class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</div><div class="line">   --conn value                     <span class="builtin-name">set</span> num of UDP connections <span class="keyword">to</span><span class="built_in"> server </span>(default: 1)</div><div class="line">   --autoexpire value               <span class="builtin-name">set</span> auto expiration time(<span class="keyword">in</span> seconds) <span class="keyword">for</span> a single UDP connection, 0 <span class="keyword">to</span> <span class="builtin-name">disable</span> (default: 0)</div><div class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</div><div class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 128)</div><div class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 512)</div><div class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</div><div class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</div><div class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</div><div class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</div><div class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</div><div class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</div><div class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</div><div class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</div><div class="line">   --help, -h                       show help</div><div class="line">   --version, -v                    <span class="builtin-name">print</span> the version</div><div class="line"></div><div class="line">$ ./server_darwin_amd64 -h</div><div class="line">NAME:</div><div class="line">   kcptun - server(with SMUX)</div><div class="line"></div><div class="line">USAGE:</div><div class="line">   server_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</div><div class="line"></div><div class="line">VERSION:</div><div class="line">   20170120</div><div class="line"></div><div class="line">COMMANDS:</div><div class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</div><div class="line"></div><div class="line">GLOBAL OPTIONS:</div><div class="line">   --listen value, -l value         kcp<span class="built_in"> server </span>listen<span class="built_in"> address </span>(default: <span class="string">":29900"</span>)</div><div class="line">   --target value, -t value         target<span class="built_in"> server address </span>(default: <span class="string">"127.0.0.1:12948"</span>)</div><div class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</div><div class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</div><div class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</div><div class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</div><div class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 1024)</div><div class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 1024)</div><div class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</div><div class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</div><div class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</div><div class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</div><div class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</div><div class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</div><div class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</div><div class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</div><div class="line">   --help, -h                       show help</div><div class="line">   --version, -v                    <span class="builtin-name">print</span> the version</div></pre></td></tr></table></figure>
+        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">$ ./client_darwin_amd64 -h</span><br><span class="line">NAME:</span><br><span class="line">   kcptun - client(with SMUX)</span><br><span class="line"></span><br><span class="line">USAGE:</span><br><span class="line">   client_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</span><br><span class="line"></span><br><span class="line">VERSION:</span><br><span class="line">   20170120</span><br><span class="line"></span><br><span class="line">COMMANDS:</span><br><span class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</span><br><span class="line"></span><br><span class="line">GLOBAL OPTIONS:</span><br><span class="line">   --localaddr value, -l value      local listen<span class="built_in"> address </span>(default: <span class="string">":12948"</span>)</span><br><span class="line">   --remoteaddr value, -r value     kcp<span class="built_in"> server address </span>(default: <span class="string">"vps:29900"</span>)</span><br><span class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</span><br><span class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</span><br><span class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</span><br><span class="line">   --conn value                     <span class="builtin-name">set</span> num of UDP connections <span class="keyword">to</span><span class="built_in"> server </span>(default: 1)</span><br><span class="line">   --autoexpire value               <span class="builtin-name">set</span> auto expiration time(<span class="keyword">in</span> seconds) <span class="keyword">for</span> a single UDP connection, 0 <span class="keyword">to</span> <span class="builtin-name">disable</span> (default: 0)</span><br><span class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</span><br><span class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 128)</span><br><span class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 512)</span><br><span class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</span><br><span class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</span><br><span class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</span><br><span class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</span><br><span class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</span><br><span class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</span><br><span class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</span><br><span class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</span><br><span class="line">   --help, -h                       show help</span><br><span class="line">   --version, -v                    <span class="builtin-name">print</span> the version</span><br><span class="line"></span><br><span class="line">$ ./server_darwin_amd64 -h</span><br><span class="line">NAME:</span><br><span class="line">   kcptun - server(with SMUX)</span><br><span class="line"></span><br><span class="line">USAGE:</span><br><span class="line">   server_darwin_amd64 [global options] command [command options] [arguments<span class="built_in">..</span>.]</span><br><span class="line"></span><br><span class="line">VERSION:</span><br><span class="line">   20170120</span><br><span class="line"></span><br><span class="line">COMMANDS:</span><br><span class="line">     help, h  Shows a list of commands <span class="keyword">or</span> help <span class="keyword">for</span> one command</span><br><span class="line"></span><br><span class="line">GLOBAL OPTIONS:</span><br><span class="line">   --listen value, -l value         kcp<span class="built_in"> server </span>listen<span class="built_in"> address </span>(default: <span class="string">":29900"</span>)</span><br><span class="line">   --target value, -t value         target<span class="built_in"> server address </span>(default: <span class="string">"127.0.0.1:12948"</span>)</span><br><span class="line">   --key value                      pre-shared<span class="built_in"> secret </span>between<span class="built_in"> client </span><span class="keyword">and</span><span class="built_in"> server </span>(default: <span class="string">"it's a secrect"</span>) [<span class="variable">$KCPTUN_KEY</span>]</span><br><span class="line">   --crypt value                    aes, aes-128, aes-192, salsa20, blowfish, twofish, cast5, 3des, tea, xtea, xor, none (default: <span class="string">"aes"</span>)</span><br><span class="line">   --mode value                     profiles: fast3, fast2, fast, normal (default: <span class="string">"fast"</span>)</span><br><span class="line">   --mtu value                      <span class="builtin-name">set</span> maximum transmission unit <span class="keyword">for</span> UDP packets (default: 1350)</span><br><span class="line">   --sndwnd value                   <span class="builtin-name">set</span> send window size(num of packets) (default: 1024)</span><br><span class="line">   --rcvwnd value                   <span class="builtin-name">set</span> receive window size(num of packets) (default: 1024)</span><br><span class="line">   --datashard value, --ds value    <span class="builtin-name">set</span> reed-solomon erasure coding - datashard (default: 10)</span><br><span class="line">   --parityshard value, --ps value  <span class="builtin-name">set</span> reed-solomon erasure coding - parityshard (default: 3)</span><br><span class="line">   --dscp value                     <span class="builtin-name">set</span> DSCP(6bit) (default: 0)</span><br><span class="line">   --nocomp                         <span class="builtin-name">disable</span> compression</span><br><span class="line">   --snmplog value                  collect<span class="built_in"> snmp </span><span class="keyword">to</span> file, aware of timeformat <span class="keyword">in</span> golang, like: ./snmp-20060102.log</span><br><span class="line">   --snmpperiod value              <span class="built_in"> snmp </span>collect period, <span class="keyword">in</span> seconds (default: 60)</span><br><span class="line">   --log value                      specify a log file <span class="keyword">to</span> output,<span class="built_in"> default </span>goes <span class="keyword">to</span> stderr</span><br><span class="line">   -c value                        <span class="built_in"> config </span><span class="keyword">from</span> json file, which will override the command <span class="keyword">from</span> shell</span><br><span class="line">   --help, -h                       show help</span><br><span class="line">   --version, -v                    <span class="builtin-name">print</span> the version</span><br></pre></td></tr></table></figure>
 
         
         
@@ -531,16 +589,16 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> 發表於 2017-08-02</time>
+    <time datetime="2017-08-02T02:13:37.000Z" itemprop="datePublished"> Published 2017-08-02</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">cd ~ #切换到git目录下</div><div class="line">ssh-keygen -t rsa -C <span class="string">"xxxxx@xxxxx.com"</span>  </div><div class="line"></div><div class="line"># Generating public/private rsa key pair...</div><div class="line"># 三次回车即可生成 ssh key</div><div class="line"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</div><div class="line"></div><div class="line">cat ~/.ssh/id_rsa.pub</div><div class="line"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</div><div class="line"></div><div class="line">ssh -T git@git.oschina.net</div></pre></td></tr></table></figure>
-<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">$ touch config</div><div class="line"></div><div class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></div><div class="line"></div><div class="line">linux:</div><div class="line"><span class="comment"># github</span></div><div class="line">Host github.com</div><div class="line">	HostName github.com</div><div class="line"><span class="built_in">	User </span>    bigsuperangel</div><div class="line">	PreferredAuthentications publickey</div><div class="line">	IdentityFile ~/.ssh/github</div><div class="line">	ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</div><div class="line"></div><div class="line">window:</div><div class="line"><span class="comment"># oschina</span></div><div class="line">Host git.oschina.net</div><div class="line">    HostName git.oschina.net</div><div class="line">    PreferredAuthentications publickey</div><div class="line">   <span class="built_in"> User </span>bigsuperyu</div><div class="line">    IdentityFile ~/.ssh/id_rsa</div><div class="line"></div><div class="line"><span class="comment"># github</span></div><div class="line">Host github.com</div><div class="line">    HostName github.com</div><div class="line">   <span class="built_in"> User </span>    bigsuperangel</div><div class="line">    PreferredAuthentications publickey</div><div class="line">    IdentityFile ~/.ssh/github-rsa</div><div class="line">    ProxyCommand connect -H 127.0.0.1:1080 %h %p</div></pre></td></tr></table></figure>
-<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id -i id_rsa.pub root@host</div><div class="line">ssh-copy-id -i id_rsa.pub -p<span class="built_in"> port </span>root@host</div></pre></td></tr></table></figure>
-<h2 id="4-相关问题"><a href="#4-相关问题" class="headerlink" title="4. 相关问题"></a>4. 相关问题</h2><h4 id="a-git-fatal-early-EOF-fatal-index-pack-failed"><a href="#a-git-fatal-early-EOF-fatal-index-pack-failed" class="headerlink" title="a. git fatal: early EOF fatal: index-pack failed"></a>a. git fatal: early EOF fatal: index-pack failed</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">[core] </div><div class="line">packedGitLimit = 512m </div><div class="line">packedGitWindowSize = 512m </div><div class="line">[pack] </div><div class="line">deltaCacheSize = 2047m </div><div class="line">packSizeLimit = 2047m </div><div class="line">windowMemory = 2047m</div><div class="line"></div><div class="line">I have tried this in /etc/ssh/ssh_config for Linux and Mac:</div><div class="line">Host *</div><div class="line">ServerAliveInterval 120</div></pre></td></tr></table></figure>
+        <h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> <span class="regexp">~ #切换到git目录下</span></span><br><span class="line"><span class="regexp">ssh-keygen</span> -t rsa -C <span class="string">"xxxxx<span class="variable">@xxxxx</span>.com"</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br><span class="line"><span class="comment"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br><span class="line"></span><br><span class="line">ssh -T git<span class="variable">@git</span>.oschina.net</span><br></pre></td></tr></table></figure>
+<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ touch config</span><br><span class="line"></span><br><span class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></span><br><span class="line"></span><br><span class="line">linux:</span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line"><span class="built_in">	User </span>    bigsuperangel</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github</span><br><span class="line">	ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br><span class="line"></span><br><span class="line">window:</span><br><span class="line"><span class="comment"># oschina</span></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">   <span class="built_in"> User </span>bigsuperyu</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">   <span class="built_in"> User </span>    bigsuperangel</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/github-rsa</span><br><span class="line">    ProxyCommand connect -H 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i id_rsa.pub root@host</span><br><span class="line">ssh-copy-id -i id_rsa.pub -p<span class="built_in"> port </span>root@host</span><br></pre></td></tr></table></figure>
+<h2 id="4-相关问题"><a href="#4-相关问题" class="headerlink" title="4. 相关问题"></a>4. 相关问题</h2><h4 id="a-git-fatal-early-EOF-fatal-index-pack-failed"><a href="#a-git-fatal-early-EOF-fatal-index-pack-failed" class="headerlink" title="a. git fatal: early EOF fatal: index-pack failed"></a>a. git fatal: early EOF fatal: index-pack failed</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[core] </span><br><span class="line">packedGitLimit = 512m </span><br><span class="line">packedGitWindowSize = 512m </span><br><span class="line">[pack] </span><br><span class="line">deltaCacheSize = 2047m </span><br><span class="line">packSizeLimit = 2047m </span><br><span class="line">windowMemory = 2047m</span><br><span class="line"></span><br><span class="line">I have tried this in /etc/ssh/ssh_config for Linux and Mac:</span><br><span class="line">Host *</span><br><span class="line">ServerAliveInterval 120</span><br></pre></td></tr></table></figure>
 
         
         
@@ -592,15 +650,15 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-08-02T02:04:50.000Z" itemprop="datePublished"> 發表於 2017-08-02</time>
+    <time datetime="2017-08-02T02:04:50.000Z" itemprop="datePublished"> Published 2017-08-02</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="1-添加themes-submodule"><a href="#1-添加themes-submodule" class="headerlink" title="1. 添加themes submodule"></a>1. 添加themes submodule</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add git@github<span class="selector-class">.com</span>:bigsuperangel/jacman<span class="selector-class">.git</span> themes/jacman</div></pre></td></tr></table></figure>
-<h2 id="2-clone带submodule"><a href="#2-clone带submodule" class="headerlink" title="2. clone带submodule"></a>2. clone带submodule</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>init</div><div class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>update</div></pre></td></tr></table></figure>
-<h2 id="3-删除submodule"><a href="#3-删除submodule" class="headerlink" title="3. 删除submodule"></a>3. 删除submodule</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git rm --cached themes/jacman</div><div class="line">rm .gitmodule</div><div class="line">del .git<span class="built_in">/config </span>submodule</div></pre></td></tr></table></figure>
+        <h2 id="1-添加themes-submodule"><a href="#1-添加themes-submodule" class="headerlink" title="1. 添加themes submodule"></a>1. 添加themes submodule</h2><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add git<span class="meta">@github</span>.<span class="string">com:</span>bigsuperangel<span class="regexp">/jacman.git themes/</span>jacman</span><br></pre></td></tr></table></figure>
+<h2 id="2-clone带submodule"><a href="#2-clone带submodule" class="headerlink" title="2. clone带submodule"></a>2. clone带submodule</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>init</span><br><span class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>update</span><br></pre></td></tr></table></figure>
+<h2 id="3-删除submodule"><a href="#3-删除submodule" class="headerlink" title="3. 删除submodule"></a>3. 删除submodule</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached themes/jacman</span><br><span class="line">rm .gitmodule</span><br><span class="line">del .git<span class="built_in">/config </span>submodule</span><br></pre></td></tr></table></figure>
 
         
         
@@ -614,7 +672,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/git/">git</a><a href="/tags/hexo/">hexo</a><a href="/tags/submodule/">submodule</a>
+  <span></span> <a href="/tags/git/">git</a><a href="/tags/submodule/">submodule</a><a href="/tags/hexo/">hexo</a>
   </div>
 
 </div>
@@ -639,91 +697,21 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/03/10/jitpack/" title="利用jitpack.io发布Android、Java项目，通过gradle、maven方式引用" itemprop="url">利用jitpack.io发布Android、Java项目，通过gradle、maven方式引用</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-03-10T10:12:24.000Z" itemprop="datePublished"> 發表於 2017-03-10</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="Android、Java项目开源"><a href="#Android、Java项目开源" class="headerlink" title="Android、Java项目开源"></a>Android、Java项目开源</h3><p>这里就仅仅介绍如何发布一个Android、Java的项目到 <a href="https://jitpack.io/" target="_blank" rel="external">jitpack.io</a> 。</p>
-<h4 id="第一步：配置项目根目录的build-gradle"><a href="#第一步：配置项目根目录的build-gradle" class="headerlink" title="第一步：配置项目根目录的build.gradle"></a>第一步：配置项目根目录的build.gradle</h4><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">buildscript</span> &#123;</div><div class="line">   <span class="keyword">repositories</span> &#123;</div><div class="line">          jcenter()</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="keyword">dependencies</span> &#123;</div><div class="line">       <span class="keyword">classpath</span> <span class="string">'com.android.tools.build:gradle:1.5.0'</span></div><div class="line">       <span class="keyword">classpath</span> <span class="string">'com.github.dcendents:android-maven-gradle-plugin:1.3'</span><span class="comment">//ADD</span></div><div class="line">   &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="第二步：配置需要发布的Module-Lib的build-gradle"><a href="#第二步：配置需要发布的Module-Lib的build-gradle" class="headerlink" title="第二步：配置需要发布的Module Lib的build.gradle"></a>第二步：配置需要发布的Module Lib的build.gradle</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">apply <span class="string">plugin:</span> <span class="string">'java'</span></div><div class="line">apply <span class="string">plugin:</span> <span class="string">'com.github.dcendents.android-maven'</span><span class="comment">//ADD</span></div></pre></td></tr></table></figure>
-<h4 id="第三步：发布到github"><a href="#第三步：发布到github" class="headerlink" title="第三步：发布到github"></a>第三步：发布到github</h4><p>这个参考网络上git教程</p>
-<h4 id="第四步：创建Release版本"><a href="#第四步：创建Release版本" class="headerlink" title="第四步：创建Release版本"></a>第四步：创建Release版本</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/aa86b3db62434b3faf2adc73a1c211c4.png" alt="aa86b3db62434b3faf2adc73a1c211c4.png"><br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/d369db53afd74d338fcbaabea98f3627.png" alt="d369db53afd74d338fcbaabea98f3627.png"><br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/8f027d11d86e4ba1ae2d554138a1026f.png" alt="8f027d11d86e4ba1ae2d554138a1026f.png"></p>
-<h4 id="第五步：到-jitpack-io-构建"><a href="#第五步：到-jitpack-io-构建" class="headerlink" title="第五步：到 jitpack.io 构建"></a>第五步：到 <a href="https://jitpack.io/" target="_blank" rel="external">jitpack.io</a> 构建</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/64d617943ba64d2f8b079606ccadd245.png" alt="64d617943ba64d2f8b079606ccadd245.png"></p>
-<h4 id="第六步：完成，即可通过gradle或maven引入发布的Lib"><a href="#第六步：完成，即可通过gradle或maven引入发布的Lib" class="headerlink" title="第六步：完成，即可通过gradle或maven引入发布的Lib"></a>第六步：完成，即可通过gradle或maven引入发布的Lib</h4><p><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/3101ee3d460749989f948ea4300855ab.png" alt="3101ee3d460749989f948ea4300855ab.png"></p>
-<h4 id="第七步：添加仓库标识符"><a href="#第七步：添加仓库标识符" class="headerlink" title="第七步：添加仓库标识符"></a>第七步：添加仓库标识符</h4><p>把这段Markdown代码放到README.md页面，需要根据项目地址修改。<br><img src="//olrtj18qs.bkt.clouddn.com//file/2017/3/1a976650a6614ffb8359fb286b5bcfa0.png" alt="1a976650a6614ffb8359fb286b5bcfa0.png"></p>
-<h4 id="第八步：通过gradle引用"><a href="#第八步：通过gradle引用" class="headerlink" title="第八步：通过gradle引用"></a>第八步：通过gradle引用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">repository</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>jitpack.ioid<span class="tag">&lt;/<span class="name">id</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://jitpack.io<span class="tag">&lt;/<span class="name">url</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.bigsuperangel<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hiwetoptools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="示范代码"><a href="#示范代码" class="headerlink" title="示范代码"></a>示范代码</h4><ul>
-<li><a href="https://github.com/bigsuperangel/hiwetoptools" target="_blank" rel="external">https://github.com/bigsuperangel/hiwetoptools</a></li>
-<li><a href="https://github.com/bigsuperangel/robot" target="_blank" rel="external">https://github.com/bigsuperangel/robot</a></li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/maven/">maven</a><a href="/tags/jitpack/">jitpack</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/03/10/jitpack/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/03/10/jitpack/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -735,11 +723,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>16</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>17</sup></a></li>
 			
 		
 			
@@ -759,15 +747,23 @@
 			
 		
 			
+				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>3</sup></a></li>
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -783,14 +779,6 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
@@ -799,23 +787,23 @@
 			
 		
 			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gradle/" title="gradle">gradle<sup>1</sup></a></li>
+				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -823,7 +811,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -845,11 +833,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -890,7 +878,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
 		
 		<a href="/about" target="_blank" title="linyu">linyu</a>
 		
@@ -1000,7 +988,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

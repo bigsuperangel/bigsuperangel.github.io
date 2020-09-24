@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="linyu blog">
 <meta property="og:description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125; 2. python 运行配置1234567891011121314151617&amp;#123;    &quot;version&quot;: &quot;0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-01T09:29:10.401Z">
+<meta property="og:updated_time" content="2020-09-24T02:33:22.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode相关配置操作小结">
 <meta name="twitter:description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125; 2. python 运行配置1234567891011121314151617&amp;#123;    &quot;version&quot;: &quot;0">
@@ -45,7 +45,7 @@
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
+</html>
   <body>
     <header>
       
@@ -59,7 +59,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -77,7 +77,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -100,14 +100,14 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2017-02-20T12:26:04.000Z" itemprop="datePublished"> 發表於 2017-02-20</time>
+    <time datetime="2017-02-20T12:26:04.000Z" itemprop="datePublished"> Published 2017-02-20</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode下python-print-输出乱码"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-运行配置"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
 		
@@ -116,8 +116,8 @@
 		<h2 id="1-vscode下python-print-输出乱码"><a href="#1-vscode下python-print-输出乱码" class="headerlink" title="1. vscode下python print 输出乱码"></a>1. vscode下python print 输出乱码</h2><blockquote>
 <p>在task文件中加入环境变量，然后问题解决。</p>
 </blockquote>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="string">"options"</span>: &#123;</div><div class="line">  <span class="string">"env"</span>:&#123;</div><div class="line">      <span class="string">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="2-python-运行配置"><a href="#2-python-运行配置" class="headerlink" title="2. python 运行配置"></a>2. python 运行配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</div><div class="line">    <span class="attr">"command"</span>: <span class="string">"python"</span>,</div><div class="line">    <span class="attr">"windows"</span>: &#123;</div><div class="line">        <span class="attr">"command"</span>: <span class="string">"D:\\develop\\running\\Python35\\python.exe"</span> //python的安装路径</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"isShellCommand"</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">"args"</span>: [</div><div class="line">        <span class="string">"$&#123;file&#125;"</span></div><div class="line">    ],</div><div class="line">    <span class="attr">"showOutput"</span>: <span class="string">"always"</span>,</div><div class="line">    <span class="attr">"options"</span>: &#123;</div><div class="line">        <span class="attr">"env"</span>: &#123;</div><div class="line">            <span class="attr">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"options"</span>: &#123;</span><br><span class="line">  <span class="string">"env"</span>:&#123;</span><br><span class="line">      <span class="string">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-python-运行配置"><a href="#2-python-运行配置" class="headerlink" title="2. python 运行配置"></a>2. python 运行配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"python"</span>,</span><br><span class="line">    <span class="attr">"windows"</span>: &#123;</span><br><span class="line">        <span class="attr">"command"</span>: <span class="string">"D:\\develop\\running\\Python35\\python.exe"</span> <span class="comment">//python的安装路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"isShellCommand"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"args"</span>: [</span><br><span class="line">        <span class="string">"$&#123;file&#125;"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"showOutput"</span>: <span class="string">"always"</span>,</span><br><span class="line">    <span class="attr">"options"</span>: &#123;</span><br><span class="line">        <span class="attr">"env"</span>: &#123;</span><br><span class="line">            <span class="attr">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -174,22 +174,22 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode下python-print-输出乱码"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-运行配置"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -201,11 +201,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>16</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>17</sup></a></li>
 			
 		
 			
@@ -225,15 +225,23 @@
 			
 		
 			
+				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>3</sup></a></li>
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -249,14 +257,6 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
@@ -265,23 +265,23 @@
 			
 		
 			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gradle/" title="gradle">gradle<sup>1</sup></a></li>
+				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -289,7 +289,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -311,11 +311,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -356,7 +356,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
 		
 		<a href="/about" target="_blank" title="linyu">linyu</a>
 		
@@ -555,7 +555,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

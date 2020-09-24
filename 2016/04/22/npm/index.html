@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="linyu blog">
 <meta property="og:description" content="npm使用 设置国内代理12npm config set registry https://registry.npm.taobao.orgnpm install -g cnpm --registry=https://registry.npm.taobao.org    Window使用  npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-01T09:29:10.397Z">
+<meta property="og:updated_time" content="2020-09-24T02:33:22.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="npm">
 <meta name="twitter:description" content="npm使用 设置国内代理12npm config set registry https://registry.npm.taobao.orgnpm install -g cnpm --registry=https://registry.npm.taobao.org    Window使用  npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以">
@@ -45,7 +45,7 @@
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
-
+</html>
   <body>
     <header>
       
@@ -59,7 +59,7 @@
 				<h1 class="site-name"><a href="/" title="linyu blog">linyu blog</a></h1>
 				<h2 class="blog-motto">Where there is a will,there is a way</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -77,7 +77,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
 					</form>
 					
@@ -100,31 +100,33 @@
 		<a href="/about" title="linyu" target="_blank" itemprop="author">linyu</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-22T03:06:16.000Z" itemprop="datePublished"> 發表於 2016-04-22</time>
+    <time datetime="2016-04-22T03:06:16.000Z" itemprop="datePublished"> Published 2016-04-22</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm使用"><span class="toc-number">1.</span> <span class="toc-text">npm使用</span></a></li></ol>
 		
 		</div>
 		
 		<h3 id="npm使用"><a href="#npm使用" class="headerlink" title="npm使用"></a>npm使用</h3><blockquote>
-<p>设置国内代理<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm config <span class="keyword">set</span> registry <span class="comment">https:</span>//<span class="comment">registry.npm.taobao.org</span></div><div class="line">npm <span class="comment">install -g cnpm --registry=https:</span>//<span class="comment">registry.npm.taobao.org</span></div></pre></td></tr></table></figure></p>
+<p>设置国内代理<br><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="keyword">set</span> registry <span class="comment">https:</span>//<span class="comment">registry.npm.taobao.org</span></span><br><span class="line">npm <span class="comment">install -g cnpm --registry=https:</span>//<span class="comment">registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
 <blockquote>
 <p>Window使用</p>
 <ol>
-<li><p>npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以现在很有必要列出来记录下。我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立“node_global”及“node_cache”两个文件夹。我们就在cmd中键入两行命令：</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span><span class="built_in"> prefix </span><span class="string">"D:\develop\nodejs\node_global"</span></div><div class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span> cache <span class="string">"D:\develop\nodejs\node_cache"</span></div></pre></td></tr></table></figure>
+<li>npm作为一个NodeJS的模块管理，之前我由于没有系统地看资料所以导致安装配置模块的时候走了一大段弯路，所以现在很有必要列出来记录下。我们要先配置npm的全局模块的存放路径以及cache的路径，例如我希望将以上两个文件夹放在NodeJS的主目录下，便在NodeJs下建立“node_global”及“node_cache”两个文件夹。我们就在cmd中键入两行命令：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span><span class="built_in"> prefix </span><span class="string">"D:\develop\nodejs\node_global"</span></span><br><span class="line">npm<span class="built_in"> config </span><span class="builtin-name">set</span> cache <span class="string">"D:\develop\nodejs\node_cache"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。在系统变量下新建“NODE_PATH”,输入“D:\develop\nodejs\node_global\node_modules”</p>
-</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>下面这一步非常关键，我们需要设置系统变量。进入我的电脑→属性→高级→环境变量。在系统变量下新建“NODE_PATH”,输入“D:\develop\nodejs\node_global\node_modules”</li>
 <li>由于改变了module的默认地址，所以用户变量都要跟着改变一下（用户变量PATH修改为刚才我们设置的全局模块存放路径），要不使用module的时候会导致输入命令出现“xxx不是内部或外部命令，也不是可运行的程序或批处理文件”这个错误。我使用的全局模块存放路径为D:\develop\nodejs\node-global（见上方设置的prefix值）， 我将它添加到我的变量PATH里面</li>
 </ol>
 </blockquote>
@@ -132,7 +134,7 @@
 <blockquote>
 <p>Linux使用</p>
 <ul>
-<li>设置环境变量<figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vim /etc<span class="built_in">/profile </span></div><div class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="string">"<span class="variable">$PATH</span>:/home/linyu/soft/node-v5.10.1-linux-x86/bin"</span></div><div class="line">source /etc<span class="built_in">/profile </span> #设置生效</div></pre></td></tr></table></figure>
+<li>设置环境变量<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc<span class="built_in">/profile </span></span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="string">"<span class="variable">$PATH</span>:/home/linyu/soft/node-v5.10.1-linux-x86/bin"</span></span><br><span class="line">source /etc<span class="built_in">/profile </span> #设置生效</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
@@ -192,22 +194,22 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#npm使用"><span class="toc-number">1.</span> <span class="toc-text">npm使用</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
 <div class="github-card">
-<p class="asidetitle">Github 名片</p>
+<p class="asidetitle">Github Card</p>
 <div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
@@ -219,11 +221,11 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/linux/" title="linux">linux<sup>16</sup></a></li>
+				<li><a href="/tags/linux/" title="linux">linux<sup>17</sup></a></li>
 			
 		
 			
@@ -243,15 +245,23 @@
 			
 		
 			
+				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>3</sup></a></li>
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
 			
 		
 			
@@ -267,14 +277,6 @@
 			
 		
 			
-				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
@@ -283,23 +285,23 @@
 			
 		
 			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/gradle/" title="gradle">gradle<sup>1</sup></a></li>
+				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/ignore/" title="ignore">ignore<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/security/" title="security">security<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/jitpack/" title="jitpack">jitpack<sup>1</sup></a></li>
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -307,7 +309,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -329,11 +331,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=&dpc=1"></iframe>
 </div>
 
@@ -374,7 +376,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2019 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2020 
 		
 		<a href="/about" target="_blank" title="linyu">linyu</a>
 		
@@ -573,7 +575,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
