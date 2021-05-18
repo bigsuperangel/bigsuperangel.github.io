@@ -1,0 +1,570 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-84488915-1');
+  </script>
+  
+    <title>nodejs github-actions publish | 道不远人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="bigsuperangel">
+    
+
+    
+    <meta name="description" content="pre112ssh-keygen -t rsassh-copy-id -i xxx_rsa.pub root@x.x.x.x pre21github secrets add private-key example xxx_rsa sample1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+<meta name="keywords" content="actions,github,nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs github-actions publish">
+<meta property="og:url" content="http://bigsuperangel.github.io/2021/05/18/nodejs-github-actions/index.html">
+<meta property="og:site_name" content="道不远人">
+<meta property="og:description" content="pre112ssh-keygen -t rsassh-copy-id -i xxx_rsa.pub root@x.x.x.x pre21github secrets add private-key example xxx_rsa sample1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-05-18T08:52:57.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodejs github-actions publish">
+<meta name="twitter:description" content="pre112ssh-keygen -t rsassh-copy-id -i xxx_rsa.pub root@x.x.x.x pre21github secrets add private-key example xxx_rsa sample1234567891011121314151617181920212223242526272829303132333435363738394041424344">
+
+    
+    <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="道不远人" title="道不远人"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="道不远人">道不远人</a></h1>
+				<h2 class="blog-motto">Where there is a will,there is a way</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/tags/linux">linux</a></li>
+					
+						<li><a href="/tags/java">Java</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:bigsuperangel.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2021/05/18/nodejs-github-actions/" title="nodejs github-actions publish" itemprop="url">nodejs github-actions publish</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2021-05-18T08:36:24.000Z" itemprop="datePublished"> Published 2021-05-18</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pre1"><span class="toc-number">1.</span> <span class="toc-text">pre1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pre2"><span class="toc-number">2.</span> <span class="toc-text">pre2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sample"><span class="toc-number">3.</span> <span class="toc-text">sample</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GitHub-Action-SCP-another-example"><span class="toc-number"></span> <span class="toc-text">GitHub Action SCP , another example</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#✨-Example-Usage"><span class="toc-number">1.</span> <span class="toc-text">✨ Example Usage</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="pre1"><a href="#pre1" class="headerlink" title="pre1"></a>pre1</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id -<span class="selector-tag">i</span> xxx_rsa<span class="selector-class">.pub</span> root@x<span class="selector-class">.x</span><span class="selector-class">.x</span>.x</span><br></pre></td></tr></table></figure>
+<h2 id="pre2"><a href="#pre2" class="headerlink" title="pre2"></a>pre2</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">github secrets <span class="built_in">add</span> <span class="keyword">private</span>-<span class="built_in">key</span> example xxx_rsa</span><br></pre></td></tr></table></figure>
+<h2 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node</span></span><br><span class="line"><span class="comment"># For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">Node.js</span> <span class="string">CI</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">  <span class="attr">pull_request:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">  <span class="attr">watch:</span></span><br><span class="line">    <span class="attr">types:</span> <span class="string">[started]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">[12.x]</span></span><br><span class="line">        <span class="comment"># See supported Node.js release schedule at https://nodejs.org/en/about/releases/</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">tar</span> <span class="string">-zcvf</span> <span class="string">./dist.tar.gz</span> <span class="string">./dist</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">deploy</span> <span class="string">file</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">wlixcc/SFTP-Deploy-Action@v1.0</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">ssh_private_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">local_path:</span> <span class="string">'./dist.tar.gz'</span></span><br><span class="line">        <span class="attr">remote_path:</span> <span class="string">'/root/war'</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">executing</span> <span class="string">remote</span> <span class="string">ssh</span> <span class="string">commands</span> <span class="string">using</span> <span class="string">ssh</span> <span class="string">key</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">script:</span> <span class="string">/root/shell/default-jl.sh</span></span><br></pre></td></tr></table></figure>
+<h1 id="GitHub-Action-SCP-another-example"><a href="#GitHub-Action-SCP-another-example" class="headerlink" title="GitHub Action SCP , another example"></a>GitHub Action SCP , another example</h1><p>Simple GitHub Action to copy a folder or single file to a remote server using SSH. This is working with the latest <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub Actions</a>.</p>
+<h2 id="✨-Example-Usage"><a href="#✨-Example-Usage" class="headerlink" title="✨ Example Usage"></a>✨ Example Usage</h2><p><strong>Copy a folder recursively to a remote server</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copy</span> <span class="string">folder</span> <span class="string">content</span> <span class="string">recursively</span> <span class="string">to</span> <span class="string">remote</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">garygrossgarten/github-action-scp@release</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">local:</span> <span class="string">test</span></span><br><span class="line">          <span class="attr">remote:</span> <span class="string">scp/directory</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PASSWORD</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copy a single file to a remote server</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copy</span> <span class="string">single</span> <span class="string">file</span> <span class="string">to</span> <span class="string">remote</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">garygrossgarten/github-action-scp@release</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">local:</span> <span class="string">test/oof.txt</span></span><br><span class="line">          <span class="attr">remote:</span> <span class="string">scp/single/oof.txt</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PASSWORD</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/actions/">actions</a><a href="/tags/github/">github</a><a href="/tags/nodejs/">nodejs</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://bigsuperangel.github.io/2021/05/18/nodejs-github-actions/" data-title="nodejs github-actions publish | 道不远人" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2021/05/14/linux-onekey/"  title="一键脚本分享">
+ <strong>下一篇：</strong><br/> 
+ <span>一键脚本分享
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2021/05/18/nodejs-github-actions/" data-title="nodejs github-actions publish" data-url="http://bigsuperangel.github.io/2021/05/18/nodejs-github-actions/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pre1"><span class="toc-number">1.</span> <span class="toc-text">pre1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pre2"><span class="toc-number">2.</span> <span class="toc-text">pre2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sample"><span class="toc-number">3.</span> <span class="toc-text">sample</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GitHub-Action-SCP-another-example"><span class="toc-number"></span> <span class="toc-text">GitHub Action SCP , another example</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#✨-Example-Usage"><span class="toc-number">1.</span> <span class="toc-text">✨ Example Usage</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bigsuperangel" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">Tags</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/linux/" title="linux">linux<sup>18</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ubuntu/" title="ubuntu">ubuntu<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>11</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/maven/" title="maven">maven<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/tomcat/" title="tomcat">tomcat<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/alsamixer/" title="alsamixer">alsamixer<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/doc命令/" title="doc命令">doc命令<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/eclipse/" title="eclipse">eclipse<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/git/" title="git">git<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/github/" title="github">github<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://gitee.com" target="_blank" title="开源中国">开源中国</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://stackoverflow.com" target="_blank" title="stackoverflow">stackoverflow</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 知行合一 <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/bigsuperangel" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:bigsuperangel@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021 
+		
+		<a href="/about" target="_blank" title="bigsuperangel">bigsuperangel</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"道不远人"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-84488915-1', 'bigsuperangel.github.io');  
+ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

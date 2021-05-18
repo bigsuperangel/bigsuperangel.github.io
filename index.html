@@ -93,6 +93,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2021/05/18/nodejs-github-actions/" title="nodejs github-actions publish" itemprop="url">nodejs github-actions publish</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2021-05-18T08:36:24.000Z" itemprop="datePublished"> Published 2021-05-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="pre1"><a href="#pre1" class="headerlink" title="pre1"></a>pre1</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line">ssh-copy-id -<span class="selector-tag">i</span> xxx_rsa<span class="selector-class">.pub</span> root@x<span class="selector-class">.x</span><span class="selector-class">.x</span>.x</span><br></pre></td></tr></table></figure>
+<h2 id="pre2"><a href="#pre2" class="headerlink" title="pre2"></a>pre2</h2><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">github secrets <span class="built_in">add</span> <span class="keyword">private</span>-<span class="built_in">key</span> example xxx_rsa</span><br></pre></td></tr></table></figure>
+<h2 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node</span></span><br><span class="line"><span class="comment"># For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">Node.js</span> <span class="string">CI</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">  <span class="attr">pull_request:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">  <span class="attr">watch:</span></span><br><span class="line">    <span class="attr">types:</span> <span class="string">[started]</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">[12.x]</span></span><br><span class="line">        <span class="comment"># See supported Node.js release schedule at https://nodejs.org/en/about/releases/</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">--frozen-lockfile</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">run:</span> <span class="string">tar</span> <span class="string">-zcvf</span> <span class="string">./dist.tar.gz</span> <span class="string">./dist</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">deploy</span> <span class="string">file</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">wlixcc/SFTP-Deploy-Action@v1.0</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">ssh_private_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">local_path:</span> <span class="string">'./dist.tar.gz'</span></span><br><span class="line">        <span class="attr">remote_path:</span> <span class="string">'/root/war'</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">executing</span> <span class="string">remote</span> <span class="string">ssh</span> <span class="string">commands</span> <span class="string">using</span> <span class="string">ssh</span> <span class="string">key</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">script:</span> <span class="string">/root/shell/default-jl.sh</span></span><br></pre></td></tr></table></figure>
+<h1 id="GitHub-Action-SCP-another-example"><a href="#GitHub-Action-SCP-another-example" class="headerlink" title="GitHub Action SCP , another example"></a>GitHub Action SCP , another example</h1><p>Simple GitHub Action to copy a folder or single file to a remote server using SSH. This is working with the latest <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub Actions</a>.</p>
+<h2 id="✨-Example-Usage"><a href="#✨-Example-Usage" class="headerlink" title="✨ Example Usage"></a>✨ Example Usage</h2><p><strong>Copy a folder recursively to a remote server</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copy</span> <span class="string">folder</span> <span class="string">content</span> <span class="string">recursively</span> <span class="string">to</span> <span class="string">remote</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">garygrossgarten/github-action-scp@release</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">local:</span> <span class="string">test</span></span><br><span class="line">          <span class="attr">remote:</span> <span class="string">scp/directory</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PASSWORD</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<p><strong>Copy a single file to a remote server</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Copy</span> <span class="string">single</span> <span class="string">file</span> <span class="string">to</span> <span class="string">remote</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">garygrossgarten/github-action-scp@release</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">local:</span> <span class="string">test/oof.txt</span></span><br><span class="line">          <span class="attr">remote:</span> <span class="string">scp/single/oof.txt</span></span><br><span class="line">          <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PASSWORD</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/actions/">actions</a><a href="/tags/github/">github</a><a href="/tags/nodejs/">nodejs</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2021/05/18/nodejs-github-actions/#comments" class="ds-thread-count comments-count-link" data-thread-key="2021/05/18/nodejs-github-actions/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2021/05/14/linux-onekey/" title="一键脚本分享" itemprop="url">一键脚本分享</a>
   </h1>
   <p class="article-author">By
@@ -157,7 +222,7 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2020/09/24/maven-github-actions/" title="github actions maven打包部署" itemprop="url">github actions maven打包部署</a>
+      <a href="/2020/09/24/maven-github-actions/" title="maven github-actions publish" itemprop="url">maven github-actions publish</a>
   </h1>
   <p class="article-author">By
        
@@ -184,7 +249,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/java/">java</a><a href="/tags/actions/">actions</a><a href="/tags/maven/">maven</a>
+  <span></span> <a href="/tags/java/">java</a><a href="/tags/actions/">actions</a><a href="/tags/maven/">maven</a><a href="/tags/github/">github</a>
   </div>
 
 </div>
@@ -624,71 +689,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/11/08/mysqlimport/" title="linux 命令 -mysqlimport" itemprop="url">linux 命令 -mysqlimport</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2017-11-08T07:12:23.000Z" itemprop="datePublished"> Published 2017-11-08</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="mysqlimport"><a href="#mysqlimport" class="headerlink" title="mysqlimport"></a>mysqlimport</h1><p>为MySQL服务器用命令行方式导入数据</p>
-<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><p><strong>mysqlimport命令</strong> 为mysql数据库服务器提供了一种命令行方式导入数据工具，它从特定格式的文本文件中读取数据插入MySQL数据库表中。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">mysqlimport</span><span class="params">(选项)</span><span class="params">(参数)</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h3><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-D：导入数据前清空表；</span></span><br><span class="line"><span class="deletion">-f：出现错误时继续处理剩余的操作；</span></span><br><span class="line"><span class="deletion">-h：MySQL服务器的ip地址或主机名；</span></span><br><span class="line"><span class="deletion">-u：连接MySQL服务器的用户名；</span></span><br><span class="line"><span class="deletion">-p：连接MySQL服务器的密码。</span></span><br></pre></td></tr></table></figure>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
-<li>数据库名：指定要导入的数据库名称；</li>
-<li>文本文件：包含特定格式文本文件。</li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2017/11/08/mysqlimport/#comments" class="ds-thread-count comments-count-link" data-thread-key="2017/11/08/mysqlimport/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
@@ -747,7 +747,15 @@
 			
 		
 			
+				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -767,19 +775,15 @@
 			
 		
 			
-				<li><a href="/tags/actions/" title="actions">actions<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
+				<li><a href="/tags/github/" title="github">github<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>2</sup></a></li>
+				<li><a href="/tags/database/" title="database">database<sup>2</sup></a></li>
 			
 		
 			
@@ -792,10 +796,6 @@
 		
 			
 				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/proxy/" title="proxy">proxy<sup>1</sup></a></li>
 			
 		
 		</ul>
