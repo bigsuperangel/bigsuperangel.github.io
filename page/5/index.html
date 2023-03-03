@@ -93,6 +93,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/06/ubuntu-fixed-ip/" title="ubuntu 固定ip设置" itemprop="url">ubuntu 固定ip设置</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-06T06:37:11.000Z" itemprop="datePublished"> Published 2016-06-06</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ul>
+<li>前面提到固定IP的上网方式主要是修改/etc/network/interfaces这个文件，配置IP、网关什么的，其实这里面还有个参数可以配置，那就是DNS了，对应的参数名为dns-nameservers，这里设置的优先级比resolv.conf高，也就是网络会从这里读取DNS配置，如果没配置才去看resolv.conf里面的设置，因此在这里面配置DNS更简单。</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">opback<span class="built_in"> network </span>interface</span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">auto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp</span></span><br><span class="line"></span><br><span class="line">iface eth0 inet static</span><br><span class="line"></span><br><span class="line">address 192.168.0.114</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.0.1</span><br><span class="line"></span><br><span class="line">dns-nameservers 211.138.151.161</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重启网络</li>
+</ul>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>networking restart </span><br><span class="line">或者</span><br><span class="line">sudo /etc/init.d/networking restart</span><br><span class="line"></span><br><span class="line">sudo ifconfig eth0 down </span><br><span class="line">sudo ifconfig eth0 up</span><br></pre></td></tr></table></figure>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/ubuntu/">ubuntu</a><a href="/tags/ip/">ip</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/06/ubuntu-fixed-ip/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/06/ubuntu-fixed-ip/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/06/redis-command/" title="redis 相关命令" itemprop="url">redis 相关命令</a>
   </h1>
   <p class="article-author">By
@@ -731,83 +796,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/06/ubuntu-tomcat-80/" title="Ubuntu下Tomcat绑定80端口" itemprop="url">Ubuntu下Tomcat绑定80端口</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-06T03:12:09.000Z" itemprop="datePublished"> Published 2016-05-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<p>工作环境迁移到了Ubuntu,很多东西发生了变化,比如原先配置tomcat端口.只需要配置server.xml文件就可以了。但是在Ubuntu下，只修改了server.xml文件后发现无法访问到服务。起初以为是有别的进程占用了80端口，但是通过netstat -an | grep 80后并没有发现有进程在占用80,Google了一下，发现tomcat使用1023以下的端口时需要使用authbind来指定。</p>
-</blockquote>
-<ul>
-<li><p>authbind是GNU下的一个小工具，用于帮助系统管理员来为程序指定端口。如果你的机器没有安装authbind,那么首先要安装才可以: </p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install authbind</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>然后配置80端口: </p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo touch <span class="regexp">/etc/</span>authbind<span class="regexp">/byport/</span><span class="number">80</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接下来再启动tomcat就可以访问到80的服务了:</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo authbind <span class="params">--deep</span> <span class="string">./catalina.sh</span> start</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试是否运行</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -lnp <span class="string">| grep 80</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<blockquote>
-<p>Enjoy Youself</p>
-</blockquote>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/tomcat/">tomcat</a><a href="/tags/authbind/">authbind</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/06/ubuntu-tomcat-80/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/06/ubuntu-tomcat-80/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next<span></span></a>
@@ -989,7 +977,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2021 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2023 
 		
 		<a href="/about" target="_blank" title="bigsuperangel">bigsuperangel</a>
 		
