@@ -13,25 +13,27 @@
         gtag('config', 'UA-84488915-1');
   </script>
   
-    <title>vim 命令大全 | 道不远人</title>
+    <title>hexo使用说明 | 道不远人</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="bigsuperangel">
     
 
     
-    <meta name="description" content="第一级 – 存活 基本使用  i → Insert 模式，按 ESC 回到 Normal 模式.x → 删当前光标所在的一个字符。:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （注：:w 后可以跟文件名）dd → 删除当前行，并把删除的行存到剪贴板里p → 粘贴剪贴板   推荐:  hjkl (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像">
+    <meta name="description" content="Command123456hexo new &lt;title&gt; &#x2F; hexo n &lt;title&gt; #生成文章，或者source\_posts手动编辑hexo server &#x2F; hexo s #本地发布预览效果hexo generate &#x2F; hexo g #生成public静态文件hexo cleanhexo list &lt;type&gt;hexo version  Buil">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim 命令大全">
-<meta property="og:url" content="http://bigsuperangel.github.io/2016/06/01/linux-vim/index.html">
+<meta property="og:title" content="hexo使用说明">
+<meta property="og:url" content="http://bigsuperangel.github.io/2023/03/03/hexo-info-1/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="第一级 – 存活 基本使用  i → Insert 模式，按 ESC 回到 Normal 模式.x → 删当前光标所在的一个字符。:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （注：:w 后可以跟文件名）dd → 删除当前行，并把删除的行存到剪贴板里p → 粘贴剪贴板   推荐:  hjkl (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像">
+<meta property="og:description" content="Command123456hexo new &lt;title&gt; &#x2F; hexo n &lt;title&gt; #生成文章，或者source\_posts手动编辑hexo server &#x2F; hexo s #本地发布预览效果hexo generate &#x2F; hexo g #生成public静态文件hexo cleanhexo list &lt;type&gt;hexo version  Buil">
 <meta property="og:locale">
-<meta property="article:published_time" content="2016-06-01T03:30:06.000Z">
+<meta property="article:published_time" content="2023-03-03T08:33:37.000Z">
 <meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
 <meta property="article:author" content="bigsuperangel">
-<meta property="article:tag" content="linux">
-<meta property="article:tag" content="vim">
+<meta property="article:tag" content="submodule">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="nodejs">
+<meta property="article:tag" content="npm">
 <meta name="twitter:card" content="summary">
 
     
@@ -96,14 +98,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/01/linux-vim/" title="vim 命令大全" itemprop="url">vim 命令大全</a>
+      <a href="/2023/03/03/hexo-info-1/" title="hexo使用说明" itemprop="url">hexo使用说明</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-01T03:30:06.000Z" itemprop="datePublished"> Published 2016-06-01</time>
+    <time datetime="2023-03-03T08:33:37.000Z" itemprop="datePublished"> Published 2023-03-03</time>
     
   </p>
 </header>
@@ -112,62 +114,19 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BA%A7-%E2%80%93-%E5%AD%98%E6%B4%BB"><span class="toc-number">1.</span> <span class="toc-text">第一级 – 存活</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%BA%A7-%E2%80%93-%E6%84%9F%E8%A7%89%E8%89%AF%E5%A5%BD"><span class="toc-number">2.</span> <span class="toc-text">第二级 – 感觉良好</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%BA%A7-%E8%B6%85%E8%83%BD%E5%8A%9B"><span class="toc-number">3.</span> <span class="toc-text">第三级-超能力</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Command"><span class="toc-number">1.</span> <span class="toc-text">Command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build"><span class="toc-number">2.</span> <span class="toc-text">Build</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Publish"><span class="toc-number">3.</span> <span class="toc-text">Publish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Themes-submodule"><span class="toc-number">4.</span> <span class="toc-text">Themes submodule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update"><span class="toc-number">5.</span> <span class="toc-text">Update</span></a></li></ol>
 		
 		</div>
 		
-		<h3 id="第一级-–-存活"><a href="#第一级-–-存活" class="headerlink" title="第一级 – 存活"></a>第一级 – 存活</h3><ol>
-<li><p>基本使用</p>
-<blockquote>
-<p>i → Insert 模式，按 ESC 回到 Normal 模式.<br>x → 删当前光标所在的一个字符。<br>:wq → 存盘 + 退出 (:w 存盘, :q 退出)   （注：:w 后可以跟文件名）<br>dd → 删除当前行，并把删除的行存到剪贴板里<br>p → 粘贴剪贴板</p>
-</blockquote>
-</li>
-<li><p>推荐:</p>
-<blockquote>
-<p>hjkl (强例推荐使用其移动光标，但不必需) →你也可以使用光标键 (←↓↑→). 注: j 就像下箭头。<br>:help <command> → 显示相关命令的帮助。你也可以就输入 :help 而不跟命令。（注：退出帮助需要输入:q）</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="第二级-–-感觉良好"><a href="#第二级-–-感觉良好" class="headerlink" title="第二级 – 感觉良好"></a>第二级 – 感觉良好</h3><ol>
-<li><p>各种插入模式</p>
-<blockquote>
-<p>a → 在光标后插入<br>o → 在当前行后插入一个新行<br>O → 在当前行前插入一个新行<br>cw → 替换从光标所在位置后到一个单词结尾的字符</p>
-</blockquote>
-</li>
-<li><p>简单的移动光标</p>
-<blockquote>
-<p>0 → 数字零，到行头<br>^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）<br>$ → 到本行行尾<br>g_ → 到本行最后一个不是blank字符的位置。<br>&#x2F;pattern → 搜索 pattern 的字符串（注：如果搜索出多个匹配，可按n键到下一个）</p>
-</blockquote>
-</li>
-<li><p>拷贝&#x2F;粘贴 （注：p&#x2F;P都可以，p是表示在当前位置之后，P表示在当前位置之前）</p>
-<blockquote>
-<p>P → 粘贴<br>yy → 拷贝当前行当行于 ddP</p>
-</blockquote>
-</li>
-<li><p>Undo&#x2F;Redo</p>
-<blockquote>
-<p>u → undo<br><C-r> → redo</p>
-</blockquote>
-</li>
-<li><p>打开&#x2F;保存&#x2F;退出&#x2F;改变文件(Buffer)</p>
-<blockquote>
-<p>:e &lt;path&#x2F;to&#x2F;file&gt; → 打开一个文件<br>:w → 存盘<br>:saveas &lt;path&#x2F;to&#x2F;file&gt; → 另存为 &lt;path&#x2F;to&#x2F;file&gt;<br>:x， ZZ 或 :wq → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)<br>:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br>:bn 和 :bp → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（注：我喜欢使用:n到下一个文件）</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="第三级-超能力"><a href="#第三级-超能力" class="headerlink" title="第三级-超能力"></a>第三级-超能力</h3><ol>
-<li><p>按键操作：</p>
-<blockquote>
-<p>注释：ctrl+v 进入列编辑模式,向下或向上移动光标,把需要注释的行的开头标记起来,然后按大写的I,再插入注释符,比如”#”,再按Esc,就会全部注释了。<br>删除：先按v,进入visual模式,横向选中列的个数(如”#”注释符号,需要选中两列),再按Esc,再按ctrl+v 进入列编辑模式,向下或向上移动光标,选中注释部分,然后按d, 就会删除注释符号（#）。<br>PS：当然不一定是shell的注释符”#”，也可以是”&#x2F;&#x2F;“，或者其他任意的字符；vim才不知道什么是注释符呢，都是字符而已。</p>
-</blockquote>
-</li>
-<li><p>使用替换命令：</p>
-<blockquote>
-<p>:% s&#x2F;^&#x2F;//&#x2F;g     在全部内容的行首添加&#x2F;&#x2F;号注释<br>:2,50 s&#x2F;^&#x2F;//&#x2F;g  在2<del>50行首添加&#x2F;&#x2F;号注释<br>:2,50 s&#x2F;^//&#x2F;&#x2F;g  在2</del>50行首删除&#x2F;&#x2F;号</p>
-</blockquote>
-</li>
-</ol>
-  
+		<h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a><strong>Command</strong></h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> &lt;<span class="built_in">title</span>&gt; / hexo n &lt;<span class="built_in">title</span>&gt; <span class="meta">#生成文章，或者source\_posts手动编辑</span></span><br><span class="line">hexo server / hexo s <span class="meta">#本地发布预览效果</span></span><br><span class="line">hexo generate / hexo g <span class="meta">#生成public静态文件</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo list &lt;<span class="built_in">type</span>&gt;</span><br><span class="line">hexo version</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Build"><a href="#Build" class="headerlink" title="Build"></a><strong>Build</strong></h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">install</span> nodejs</span><br><span class="line"><span class="keyword">install</span> npm </span><br><span class="line">npm <span class="keyword">install</span> hexo-cli -g</span><br><span class="line">npm <span class="keyword">install</span> hexo --save</span><br><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Publish"><a href="#Publish" class="headerlink" title="Publish"></a><strong>Publish</strong></h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean</span><br><span class="line">hexo d -g</span><br><span class="line">hexo s --<span class="literal">debug</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Themes-submodule"><a href="#Themes-submodule" class="headerlink" title="Themes submodule"></a><strong>Themes submodule</strong></h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone </span>git@github.com:<span class="keyword">bigsuperangel/hexo_md.git</span></span><br><span class="line"><span class="keyword"></span>git <span class="keyword">submodule </span>init</span><br><span class="line">git <span class="keyword">submodule </span>update</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Update"><a href="#Update" class="headerlink" title="Update"></a><strong>Update</strong></h3><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g hexo-cli</span><br><span class="line"><span class="built_in">npm</span> i -g <span class="built_in">npm</span>-check-updates</span><br><span class="line">ncu -u</span><br><span class="line"><span class="built_in">npm</span> install</span><br></pre></td></tr></table></figure>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -175,7 +134,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/vim/">vim</a>
+  <span></span> <a href="/tags/submodule/">submodule</a><a href="/tags/hexo/">hexo</a><a href="/tags/nodejs/">nodejs</a><a href="/tags/npm/">npm</a>
   </div>
 
 </div>
@@ -184,7 +143,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bigsuperangel.github.io/2016/06/01/linux-vim/" data-title="vim 命令大全 | 道不远人" data-tsina="" class="share clearfix">
+	  <div data-url="http://bigsuperangel.github.io/2023/03/03/hexo-info-1/" data-title="hexo使用说明 | 道不远人" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -197,19 +156,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/06/06/redis-command/" title="redis 相关命令">
-  <strong>上一篇：</strong><br/>
-  <span>
-  redis 相关命令</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/06/01/ubuntu-root-pwd/"  title="ubuntu 默认 root 密码">
+<a href="/2023/03/03/window-basesoft/"  title="window快速装机软件">
  <strong>下一篇：</strong><br/> 
- <span>ubuntu 默认 root 密码
+ <span>window快速装机软件
 </span>
 </a>
 </div>
@@ -218,7 +169,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/06/01/linux-vim/" data-title="vim 命令大全" data-url="http://bigsuperangel.github.io/2016/06/01/linux-vim/"></div>
+	<div class="ds-thread" data-thread-key="2023/03/03/hexo-info-1/" data-title="hexo使用说明" data-url="http://bigsuperangel.github.io/2023/03/03/hexo-info-1/"></div>
 </section>
 
 
@@ -228,7 +179,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%BA%A7-%E2%80%93-%E5%AD%98%E6%B4%BB"><span class="toc-number">1.</span> <span class="toc-text">第一级 – 存活</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%BA%A7-%E2%80%93-%E6%84%9F%E8%A7%89%E8%89%AF%E5%A5%BD"><span class="toc-number">2.</span> <span class="toc-text">第二级 – 感觉良好</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%BA%A7-%E8%B6%85%E8%83%BD%E5%8A%9B"><span class="toc-number">3.</span> <span class="toc-text">第三级-超能力</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Command"><span class="toc-number">1.</span> <span class="toc-text">Command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Build"><span class="toc-number">2.</span> <span class="toc-text">Build</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Publish"><span class="toc-number">3.</span> <span class="toc-text">Publish</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Themes-submodule"><span class="toc-number">4.</span> <span class="toc-text">Themes submodule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Update"><span class="toc-number">5.</span> <span class="toc-text">Update</span></a></li></ol>
  
   </div>
 

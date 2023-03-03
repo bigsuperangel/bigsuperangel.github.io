@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -21,17 +21,18 @@
 
     
     <meta name="description" content="在刚接触Linux时最怕的就是SSH远程登录Linux VPS编译安装程序时网络突然断开，或者其他情况导致不得不与远程SSH服务器链接断开，远程执行的命令也被迫停止，只能重新连接，重新运行。Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的t">
-<meta name="keywords" content="linux,screen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="screen 使用教程">
 <meta property="og:url" content="http://bigsuperangel.github.io/2016/05/04/screen/index.html">
 <meta property="og:site_name" content="道不远人">
 <meta property="og:description" content="在刚接触Linux时最怕的就是SSH远程登录Linux VPS编译安装程序时网络突然断开，或者其他情况导致不得不与远程SSH服务器链接断开，远程执行的命令也被迫停止，只能重新连接，重新运行。Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的t">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-05-04T02:57:53.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="screen">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="screen 使用教程">
-<meta name="twitter:description" content="在刚接触Linux时最怕的就是SSH远程登录Linux VPS编译安装程序时网络突然断开，或者其他情况导致不得不与远程SSH服务器链接断开，远程执行的命令也被迫停止，只能重新连接，重新运行。Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的t">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +44,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -109,25 +112,26 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、screen命令是什么？"><span class="toc-number">1.</span> <span class="toc-text">一、screen命令是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、如何安装screen命令？"><span class="toc-number">2.</span> <span class="toc-text">二、如何安装screen命令？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、screen命令使用方法？"><span class="toc-number">3.</span> <span class="toc-text">三、screen命令使用方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-常用的使用方法"><span class="toc-number">3.1.</span> <span class="toc-text">1、 常用的使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-创建screen会话"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1 创建screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-暂时离开，保留screen会话中的任务或程序"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 暂时离开，保留screen会话中的任务或程序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-恢复screen会话"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 恢复screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-关闭screen的会话"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 关闭screen的会话</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、-远程演示"><span class="toc-number">3.2.</span> <span class="toc-text">2、 远程演示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、常用快捷键"><span class="toc-number">3.3.</span> <span class="toc-text">3、常用快捷键</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81screen%E5%91%BD%E4%BB%A4%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一、screen命令是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85screen%E5%91%BD%E4%BB%A4%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">二、如何安装screen命令？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81screen%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">三、screen命令使用方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81-%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">1、 常用的使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E5%88%9B%E5%BB%BAscreen%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1 创建screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E6%9A%82%E6%97%B6%E7%A6%BB%E5%BC%80%EF%BC%8C%E4%BF%9D%E7%95%99screen%E4%BC%9A%E8%AF%9D%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%88%96%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 暂时离开，保留screen会话中的任务或程序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-%E6%81%A2%E5%A4%8Dscreen%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 恢复screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-%E5%85%B3%E9%97%ADscreen%E7%9A%84%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 关闭screen的会话</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81-%E8%BF%9C%E7%A8%8B%E6%BC%94%E7%A4%BA"><span class="toc-number">3.2.</span> <span class="toc-text">2、 远程演示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">3.3.</span> <span class="toc-text">3、常用快捷键</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>　　在刚接触Linux时最怕的就是SSH远程登录Linux VPS编译安装程序时网络突然断开，或者其他情况导致不得不与远程SSH服务器链接断开，远程执行的命令也被迫停止，只能重新连接，重新运行。Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的telnet/SSH连接窗口那样。</p>
-<h3 id="一、screen命令是什么？"><a href="#一、screen命令是什么？" class="headerlink" title="一、screen命令是什么？"></a>一、screen命令是什么？</h3><p>Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的telnet/SSH连接窗口那样。</p>
-<h3 id="二、如何安装screen命令？"><a href="#二、如何安装screen命令？" class="headerlink" title="二、如何安装screen命令？"></a>二、如何安装screen命令？</h3><p>除部分精简的系统或者定制的系统大部分都安装了screen命令，如果没有安装，<br>CentOS系统可以执行：yum install screen ；<br>Debian/Ubuntu系统执行：apt-get install screen 。</p>
+		<p>　　在刚接触Linux时最怕的就是SSH远程登录Linux VPS编译安装程序时网络突然断开，或者其他情况导致不得不与远程SSH服务器链接断开，远程执行的命令也被迫停止，只能重新连接，重新运行。Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的telnet&#x2F;SSH连接窗口那样。</p>
+<h3 id="一、screen命令是什么？"><a href="#一、screen命令是什么？" class="headerlink" title="一、screen命令是什么？"></a>一、screen命令是什么？</h3><p>Screen是一个可以在多个进程之间多路复用一个物理终端的全屏窗口管理器。Screen中有会话的概念，用户可以在一个screen会话中创建多个screen窗口，在每一个screen窗口中就像操作一个真实的telnet&#x2F;SSH连接窗口那样。</p>
+<h3 id="二、如何安装screen命令？"><a href="#二、如何安装screen命令？" class="headerlink" title="二、如何安装screen命令？"></a>二、如何安装screen命令？</h3><p>除部分精简的系统或者定制的系统大部分都安装了screen命令，如果没有安装，<br>CentOS系统可以执行：yum install screen ；<br>Debian&#x2F;Ubuntu系统执行：apt-get install screen 。</p>
 <h3 id="三、screen命令使用方法？"><a href="#三、screen命令使用方法？" class="headerlink" title="三、screen命令使用方法？"></a>三、screen命令使用方法？</h3><h4 id="1、-常用的使用方法"><a href="#1、-常用的使用方法" class="headerlink" title="1、 常用的使用方法"></a>1、 常用的使用方法</h4><p>用来解决文章开始我们遇到的问题，比如在安装lnmp时。</p>
 <h5 id="1-1-创建screen会话"><a href="#1-1-创建screen会话" class="headerlink" title="1.1 创建screen会话"></a>1.1 创建screen会话</h5><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">screen -S ngrok</span></span><br></pre></td></tr></table></figure>
 <p>可以先执行：screen -S lnmp ，screen就会创建一个名字为lnmp的会话。</p>
-<h5 id="1-2-暂时离开，保留screen会话中的任务或程序"><a href="#1-2-暂时离开，保留screen会话中的任务或程序" class="headerlink" title="1.2 暂时离开，保留screen会话中的任务或程序"></a>1.2 暂时离开，保留screen会话中的任务或程序</h5><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+<span class="keyword">a</span> d</span><br></pre></td></tr></table></figure>
+<h5 id="1-2-暂时离开，保留screen会话中的任务或程序"><a href="#1-2-暂时离开，保留screen会话中的任务或程序" class="headerlink" title="1.2 暂时离开，保留screen会话中的任务或程序"></a>1.2 暂时离开，保留screen会话中的任务或程序</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+<span class="selector-tag">a</span> d</span><br></pre></td></tr></table></figure>
 <p>当需要临时离开时（会话中的程序不会关闭，仍在运行）可以用快捷键Ctrl+a d(即按住Ctrl，依次再按a,d)</p>
-<h5 id="1-3-恢复screen会话"><a href="#1-3-恢复screen会话" class="headerlink" title="1.3 恢复screen会话"></a>1.3 恢复screen会话</h5><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -ls </span><br><span class="line">screen -r ngrok</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-恢复screen会话"><a href="#1-3-恢复screen会话" class="headerlink" title="1.3 恢复screen会话"></a>1.3 恢复screen会话</h5><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">screen</span> -ls </span><br><span class="line"><span class="keyword">screen</span> -r ngrok</span><br></pre></td></tr></table></figure>
 <p>当回来时可以再执行执行：screen -r lnmp 即可恢复到离开前创建的lnmp会话的工作界面。如果忘记了，或者当时没有指定会话名，可以执行：screen -ls screen会列出当前存在的会话列表：<br>11791.lnmp即为刚才的screen创建的lnmp会话，目前已经暂时退出了lnmp会话，所以状态为Detached，当使用screen -r lnmp后状态就会变为Attached，11791是这个screen的会话的进程ID，恢复会话时也可以使用：screen -r 11791</p>
 <h5 id="1-4-关闭screen的会话"><a href="#1-4-关闭screen的会话" class="headerlink" title="1.4 关闭screen的会话"></a>1.4 关闭screen的会话</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">exit</span></span><br></pre></td></tr></table></figure>
-<p>执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。VPS侦探 <a href="http://www.vpser.net/" target="_blank" rel="noopener">http://www.vpser.net/</a></p>
-<h4 id="2、-远程演示"><a href="#2、-远程演示" class="headerlink" title="2、 远程演示"></a>2、 远程演示</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -S test</span><br><span class="line">screen -x test</span><br></pre></td></tr></table></figure>
+<p>执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。VPS侦探 <a target="_blank" rel="noopener" href="http://www.vpser.net/">http://www.vpser.net/</a></p>
+<h4 id="2、-远程演示"><a href="#2、-远程演示" class="headerlink" title="2、 远程演示"></a>2、 远程演示</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -S <span class="built_in">test</span></span><br><span class="line">screen -x <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
 <p>首先演示者先在服务器上执行 screen -S test 创建一个screen会话，观众可以链接到远程服务器上执行screen -x test 观众屏幕上就会出现和演示者同步。</p>
-<h4 id="3、常用快捷键"><a href="#3、常用快捷键" class="headerlink" title="3、常用快捷键"></a>3、常用快捷键</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+<span class="selector-tag">a</span> c ：在当前screen会话中创建窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> w ：窗口列表</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> n ：下一个窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> <span class="selector-tag">p</span> ：上一个窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> <span class="number">0</span>-<span class="number">9</span> ：在第<span class="number">0</span>个窗口和第<span class="number">9</span>个窗口之间切换</span><br></pre></td></tr></table></figure>
+<h4 id="3、常用快捷键"><a href="#3、常用快捷键" class="headerlink" title="3、常用快捷键"></a>3、常用快捷键</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Ctrl+<span class="selector-tag">a</span> c ：在当前screen会话中创建窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> w ：窗口列表</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> n ：下一个窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> <span class="selector-tag">p</span> ：上一个窗口</span><br><span class="line">Ctrl+<span class="selector-tag">a</span> <span class="number">0</span>-<span class="number">9</span> ：在第<span class="number">0</span>个窗口和第<span class="number">9</span>个窗口之间切换</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -189,7 +193,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、screen命令是什么？"><span class="toc-number">1.</span> <span class="toc-text">一、screen命令是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、如何安装screen命令？"><span class="toc-number">2.</span> <span class="toc-text">二、如何安装screen命令？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、screen命令使用方法？"><span class="toc-number">3.</span> <span class="toc-text">三、screen命令使用方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、-常用的使用方法"><span class="toc-number">3.1.</span> <span class="toc-text">1、 常用的使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-创建screen会话"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1 创建screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-暂时离开，保留screen会话中的任务或程序"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 暂时离开，保留screen会话中的任务或程序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-恢复screen会话"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 恢复screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-关闭screen的会话"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 关闭screen的会话</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、-远程演示"><span class="toc-number">3.2.</span> <span class="toc-text">2、 远程演示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、常用快捷键"><span class="toc-number">3.3.</span> <span class="toc-text">3、常用快捷键</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81screen%E5%91%BD%E4%BB%A4%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">一、screen命令是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85screen%E5%91%BD%E4%BB%A4%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">二、如何安装screen命令？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81screen%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">三、screen命令使用方法？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81-%E5%B8%B8%E7%94%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">3.1.</span> <span class="toc-text">1、 常用的使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-1-%E5%88%9B%E5%BB%BAscreen%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.1 创建screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-2-%E6%9A%82%E6%97%B6%E7%A6%BB%E5%BC%80%EF%BC%8C%E4%BF%9D%E7%95%99screen%E4%BC%9A%E8%AF%9D%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%88%96%E7%A8%8B%E5%BA%8F"><span class="toc-number">3.1.2.</span> <span class="toc-text">1.2 暂时离开，保留screen会话中的任务或程序</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-3-%E6%81%A2%E5%A4%8Dscreen%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.3.</span> <span class="toc-text">1.3 恢复screen会话</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#1-4-%E5%85%B3%E9%97%ADscreen%E7%9A%84%E4%BC%9A%E8%AF%9D"><span class="toc-number">3.1.4.</span> <span class="toc-text">1.4 关闭screen的会话</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81-%E8%BF%9C%E7%A8%8B%E6%BC%94%E7%A4%BA"><span class="toc-number">3.2.</span> <span class="toc-text">2、 远程演示</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">3.3.</span> <span class="toc-text">3、常用快捷键</span></a></li></ol></li></ol>
  
   </div>
 
@@ -231,6 +235,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -239,19 +251,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -271,6 +275,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -284,14 +296,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

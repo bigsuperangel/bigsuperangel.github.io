@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,20 @@
     
 
     
-    <meta name="description" content="12345678910111213141516apply plugin: &apos;jetty&apos;jettyRun &amp;#123;    reload = &quot;automatic&quot;    scanIntervalSeconds = 1&amp;#125;task watchfiles &amp;#123;    inputs.files &apos;src&apos;    doLast &amp;#123;        compileJava">
-<meta name="keywords" content="gradle,idea,hotswap">
+    <meta name="description" content="12345678910111213141516apply plugin: &amp;#x27;jetty&amp;#x27;jettyRun &amp;#123;    reload &#x3D; &quot;automatic&quot;    scanIntervalSeconds &#x3D; 1&amp;#125;task watchfiles &amp;#123;    inputs.files &amp;#x27;src&amp;#x27;    doLast">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gradle idea 设置hotswap">
 <meta property="og:url" content="http://bigsuperangel.github.io/2016/06/12/gradle-hotswap/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="12345678910111213141516apply plugin: &apos;jetty&apos;jettyRun &amp;#123;    reload = &quot;automatic&quot;    scanIntervalSeconds = 1&amp;#125;task watchfiles &amp;#123;    inputs.files &apos;src&apos;    doLast &amp;#123;        compileJava">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="12345678910111213141516apply plugin: &amp;#x27;jetty&amp;#x27;jettyRun &amp;#123;    reload &#x3D; &quot;automatic&quot;    scanIntervalSeconds &#x3D; 1&amp;#125;task watchfiles &amp;#123;    inputs.files &amp;#x27;src&amp;#x27;    doLast">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-06-12T08:11:58.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="gradle">
+<meta property="article:tag" content="idea">
+<meta property="article:tag" content="hotswap">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gradle idea 设置hotswap">
-<meta name="twitter:description" content="12345678910111213141516apply plugin: &apos;jetty&apos;jettyRun &amp;#123;    reload = &quot;automatic&quot;    scanIntervalSeconds = 1&amp;#125;task watchfiles &amp;#123;    inputs.files &apos;src&apos;    doLast &amp;#123;        compileJava">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +45,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -113,7 +117,7 @@
 		
 		</div>
 		
-		<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'jetty'</span></span><br><span class="line"><span class="keyword">jettyRun</span> &#123;</span><br><span class="line">    reload = <span class="string">"automatic"</span></span><br><span class="line">    scanIntervalSeconds = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> <span class="keyword">watchfiles</span> &#123;</span><br><span class="line">    inputs.files <span class="string">'src'</span></span><br><span class="line">    doLast &#123;</span><br><span class="line">        compileJava</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">watchfiles.finalizedBy compileJava</span><br></pre></td></tr></table></figure>
+		<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">&#x27;jetty&#x27;</span></span><br><span class="line">jettyRun &#123;</span><br><span class="line">    reload = <span class="string">&quot;automatic&quot;</span></span><br><span class="line">    scanIntervalSeconds = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> watchfiles &#123;</span><br><span class="line">    inputs.files <span class="string">&#x27;src&#x27;</span></span><br><span class="line">    <span class="keyword">doLast</span> &#123;</span><br><span class="line">        compileJava</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">watchfiles.finalizedBy compileJava</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -217,6 +221,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -225,19 +237,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -257,6 +261,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -270,14 +282,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,19 @@
     
 
     
-    <meta name="description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
-<meta name="keywords" content="linux,tomcat">
+    <meta name="description" content="12netstat -anp | grep 8081 | awk &amp;#x27;&amp;#123;printf $7&amp;#125;&amp;#x27; | cut -d &quot;&#x2F;&quot; -f 1ps -ef | grep &quot;&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;&quot; | grep -v &amp;#x27;grep\|tail\|more\|bash\|le    ss&amp;#x27;| awk &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tomcat 命令启动关闭">
 <meta property="og:url" content="http://bigsuperangel.github.io/2019/06/20/tomcat/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="12netstat -anp | grep 8081 | awk &amp;#x27;&amp;#123;printf $7&amp;#125;&amp;#x27; | cut -d &quot;&#x2F;&quot; -f 1ps -ef | grep &quot;&#x2F;usr&#x2F;local&#x2F;tomcat&#x2F;&quot; | grep -v &amp;#x27;grep\|tail\|more\|bash\|le    ss&amp;#x27;| awk &amp;">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-06-20T02:43:28.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="tomcat">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tomcat 命令启动关闭">
-<meta name="twitter:description" content="12netstat -anp | grep 8081 | awk &apos;&amp;#123;printf $7&amp;#125;&apos; | cut -d &quot;/&quot; -f 1ps -ef | grep &quot;/usr/local/tomcat/&quot; | grep -v &apos;grep\|tail\|more\|bash\|le    ss&apos;| awk &apos;&amp;#123;print $2&amp;#125;&apos;">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +44,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -113,7 +116,7 @@
 		
 		</div>
 		
-		<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | <span class="type">grep</span> <span class="number">8081</span> | <span class="type">awk</span> '&#123;printf $<span class="number">7</span>&#125;' | <span class="type">cut</span> -d <span class="string">"/"</span> -f <span class="number">1</span></span><br><span class="line">ps -ef | <span class="type">grep</span> <span class="string">"/usr/local/tomcat/"</span> | <span class="type">grep</span> -v 'grep\|<span class="type">tail</span>\|<span class="type">more</span>\|<span class="type">bash</span>\|<span class="type">le</span>    ss'| <span class="type">awk</span> '&#123;print $<span class="number">2</span>&#125;'</span><br></pre></td></tr></table></figure>
+		<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | <span class="type">grep</span> <span class="number">8081</span> | <span class="type">awk</span> &#x27;&#123;printf $<span class="number">7</span>&#125;&#x27; | <span class="type">cut</span> -d <span class="string">&quot;/&quot;</span> -f <span class="number">1</span></span><br><span class="line">ps -ef | <span class="type">grep</span> <span class="string">&quot;/usr/local/tomcat/&quot;</span> | <span class="type">grep</span> -v &#x27;grep\|<span class="type">tail</span>\|<span class="type">more</span>\|<span class="type">bash</span>\|<span class="type">le</span>    ss&#x27;| <span class="type">awk</span> &#x27;&#123;print $<span class="number">2</span>&#125;&#x27;</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -217,6 +220,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -225,19 +236,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -257,6 +260,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -270,14 +281,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

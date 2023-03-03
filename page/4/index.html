@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -26,10 +26,9 @@
 <meta property="og:url" content="http://bigsuperangel.github.io/page/4/index.html">
 <meta property="og:site_name" content="道不远人">
 <meta property="og:description" content="道不远人，人之为道而远人，不可以为道。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
+<meta property="article:author" content="bigsuperangel">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="道不远人">
-<meta name="twitter:description" content="道不远人，人之为道而远人，不可以为道。">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -41,9 +40,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -93,6 +94,70 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/07/26/shadowsocks-server/" title="通过shadowsocks科学上网" itemprop="url">通过shadowsocks科学上网</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-26T02:50:01.000Z" itemprop="datePublished"> Published 2016-07-26</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <blockquote>
+<p>搬瓦工搭建流程</p>
+</blockquote>
+<p>搬瓦工搭建shadowsocks比较简单，博主之前并没有任何经验，也轻松搞定，使用其他方案获得账号的可忽略此章。</p>
+<p>Linode的VPS网上也有一键安装脚本之类的，但都没有搬瓦工便捷，官方自带一键安装，还支持支付宝，简直是对墙内用户的贴心关照。</p>
+<p>去<a target="_blank" rel="noopener" href="https://bandwagonhost.com/aff.php?aff=9506">搬瓦工官网</a>购买一个最便宜的VPS，之所买便宜的，是因为如果你的VPS只是用来翻墙的话，没必要买高性能的。</p>
+<p>点击Shadowsocks Server，在右边再点击Install Shadowsocks Server，稍等一会就安装完成了，太简单，我就不贴图了。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/shdowsocks/">shdowsocks</a><a href="/tags/科学上网/">科学上网</a><a href="/tags/翻墙/">翻墙</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/07/26/shadowsocks-server/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/07/26/shadowsocks-server/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/07/26/shadowsocks-client/" title="shadowsocks客户端配置" itemprop="url">shadowsocks客户端配置</a>
   </h1>
   <p class="article-author">By
@@ -113,17 +178,21 @@
 <li>安装python库</li>
 </ul>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">apt-<span class="built_in">get</span> install <span class="keyword">python</span>-pip</span><br><span class="line"><span class="keyword">python</span>-setuptools m2crypto</span><br><span class="line">pip install shadowsocks</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>启动shadowsocks</li>
 </ul>
 <p>A. 命令行启动</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal -s <span class="number">11.22</span><span class="number">.33</span><span class="number">.44</span> -p <span class="number">50003</span> -k <span class="string">"123456"</span> -l <span class="number">1080</span> -t <span class="number">600</span> -m aes<span class="number">-256</span>-cfb</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sslocal</span> -s <span class="number">11.22.33.44</span> -p <span class="number">50003</span> -k <span class="string">&quot;123456&quot;</span> -l <span class="number">1080</span> -t <span class="number">600</span> -m aes-<span class="number">256</span>-cfb</span><br></pre></td></tr></table></figure>
+
 <p>B. 配置文件启动</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c /<span class="built_in">home</span>/mudao/shadowsocks.json</span><br></pre></td></tr></table></figure>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">"server"</span>:<span class="string">"11.22.33.44"</span>,</span><br><span class="line"><span class="attr">"server_port"</span>:<span class="number">50003</span>,</span><br><span class="line"><span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line"><span class="attr">"password"</span>:<span class="string">"123456"</span>,</span><br><span class="line"><span class="attr">"timeout"</span>:<span class="number">600</span>,</span><br><span class="line"><span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sslocal -c <span class="regexp">/home/mu</span>dao/shadowsocks.json</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;server&quot;</span><span class="punctuation">:</span><span class="string">&quot;11.22.33.44&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;server_port&quot;</span><span class="punctuation">:</span><span class="number">50003</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;local_port&quot;</span><span class="punctuation">:</span><span class="number">1080</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;password&quot;</span><span class="punctuation">:</span><span class="string">&quot;123456&quot;</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;timeout&quot;</span><span class="punctuation">:</span><span class="number">600</span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;method&quot;</span><span class="punctuation">:</span><span class="string">&quot;aes-256-cfb&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>server  你服务端的IP<br>servier_port  你服务端的端口<br>local_port  本地端口，一般默认1080<br>passwd  ss服务端设置的密码<br>timeout  超时设置 和服务端一样<br>method  加密方法 和服务端一样</p>
 <h5 id="二、shadowsocks-qt5-安装"><a href="#二、shadowsocks-qt5-安装" class="headerlink" title="二、shadowsocks-qt5 安装"></a>二、shadowsocks-qt5 安装</h5><p>在ubuntu上可以这样，通过PPA源安装，仅支持Ubuntu 14.04或更高版本。</p>
 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> add-apt-repository </span>ppa:hzwhuang/ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
+
 <p>由于是图形界面，配置和windows基本没啥差别就不赘述了。经过上面的配置，你只是启动了sslocal 但是要上网你还需要配置下浏览器到指定到代理端口比如1080才可以正式上网。</p>
 
         
@@ -186,30 +255,33 @@
 <li>从远程复制文件到本地目录。</li>
 </ol>
 <blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/的目录中下载nginx-0.5.38.tar.gz 文件到本地/opt/soft/目录中</p>
+<p>说明：从192.168.120.204机器上的&#x2F;opt&#x2F;soft&#x2F;的目录中下载nginx-0.5.38.tar.gz 文件到本地&#x2F;opt&#x2F;soft&#x2F;目录中</p>
 </blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/nginx-</span>0.<span class="number">5.38</span>.tar.gz /opt/soft/</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/nginx-</span><span class="number">0.5</span>.<span class="number">38</span>.tar.gz /opt/soft/</span><br></pre></td></tr></table></figure>
+
 <ol start="2">
 <li>从远程复制目录到本地目录。</li>
 </ol>
 <blockquote>
-<p>说明：从192.168.120.204机器上的/opt/soft/中下载mongodb 目录到本地的/opt/soft/目录来。</p>
+<p>说明：从192.168.120.204机器上的&#x2F;opt&#x2F;soft&#x2F;中下载mongodb 目录到本地的&#x2F;opt&#x2F;soft&#x2F;目录来。</p>
 </blockquote>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> -r root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/mongodb</span> /opt/soft/</span><br></pre></td></tr></table></figure>
 <ol start="3">
 <li>上传本地文件到远程目录。</li>
 </ol>
 <blockquote>
-<p>说明：复制本地opt/soft/目录下的文件nginx-0.5.38.tar.gz 到远程机器192.168.120.204的opt/soft/scptest目录</p>
+<p>说明：复制本地opt&#x2F;soft&#x2F;目录下的文件nginx-0.5.38.tar.gz 到远程机器192.168.120.204的opt&#x2F;soft&#x2F;scptest目录</p>
 </blockquote>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> /opt/soft/nginx-0.<span class="number">5.38</span>.tar.gz root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> /opt/soft/nginx<span class="number">-0.5</span>.<span class="number">38</span>.tar.gz root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></span><br></pre></td></tr></table></figure>
+
 <ol start="4">
 <li>上传本地目录到远程目录。</li>
 </ol>
 <blockquote>
-<p>说明：上传本地目录 /opt/soft/mongodb到远程机器192.168.120.204上/opt/soft/scptest的目录中去</p>
+<p>说明：上传本地目录 &#x2F;opt&#x2F;soft&#x2F;mongodb到远程机器192.168.120.204上&#x2F;opt&#x2F;soft&#x2F;scptest的目录中去</p>
 </blockquote>
 <figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$scp</span> -r /opt/soft/mongodb root<span class="variable">@192</span>.<span class="number">168.120</span>.<span class="number">204</span><span class="symbol">:/opt/soft/scptest</span></span><br></pre></td></tr></table></figure>
+
 
         
         
@@ -270,7 +342,7 @@
         <blockquote>
 <p>在linux下替换hosts,上google</p>
 </blockquote>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/racaljk/</span>hosts<span class="regexp">/master/</span>hosts -qO <span class="regexp">/tmp/</span>hosts &amp;&amp; sudo sh -c <span class="string">'cat /tmp/hosts &gt; /etc/hosts'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/racaljk/</span>hosts<span class="regexp">/master/</span>hosts -qO <span class="regexp">/tmp/</span>hosts &amp;&amp; sudo sh -c <span class="string">&#x27;cat /tmp/hosts &gt; /etc/hosts&#x27;</span></span><br></pre></td></tr></table></figure>
 
         
         
@@ -332,6 +404,7 @@
 <p>在加解密类中引入</p>
 </blockquote>
 <figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">	Security.addProvider(<span class="keyword">new</span> <span class="type">BouncyCastleProvider</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.bouncycastle<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>bcprov-jdk15<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.45<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
         
@@ -393,19 +466,24 @@
         <h3 id="一、日期函数"><a href="#一、日期函数" class="headerlink" title="一、日期函数"></a>一、日期函数</h3><ul>
 <li>mysql</li>
 </ul>
-<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str_to_date() </span><br><span class="line"><span class="keyword">select</span> str_to_date('<span class="number">2008</span><span class="number">-4</span><span class="number">-2</span> <span class="number">15</span>:<span class="number">3</span>:<span class="number">28</span>','<span class="symbol">%Y-</span><span class="symbol">%m-</span><span class="symbol">%d</span> <span class="symbol">%H</span>:<span class="symbol">%i</span>:<span class="symbol">%s</span>')<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str_to_date() </span><br><span class="line"><span class="keyword">select</span> str_to_date(&#x27;<span class="number">2008</span><span class="number">-4</span><span class="number">-2</span> <span class="number">15</span>:<span class="number">3</span>:<span class="number">28</span>&#x27;<span class="punctuation">,</span>&#x27;<span class="variable">%Y-</span><span class="variable">%m-</span><span class="variable">%d</span> <span class="variable">%H</span>:<span class="variable">%i</span>:<span class="variable">%s</span>&#x27;)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>oracle</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">to_date()</span><br><span class="line"><span class="keyword">select</span> <span class="keyword">to_date</span>(<span class="string">'2005-01-01 13:14:20'</span>,<span class="string">'yyyy-MM-dd HH24:mm:ss'</span>) <span class="keyword">from</span> dual;</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">to</span><span class="constructor">_date()</span></span><br><span class="line">select <span class="keyword">to</span><span class="constructor">_date(&#x27;2005-01-01 13:14:20&#x27;,&#x27;<span class="params">yyyy</span>-MM-<span class="params">dd</span> HH24:<span class="params">mm</span>:<span class="params">ss</span>&#x27;)</span> from dual; </span><br></pre></td></tr></table></figure>
+
 <h3 id="二、聚合函数"><a href="#二、聚合函数" class="headerlink" title="二、聚合函数"></a>二、聚合函数</h3><ul>
 <li>mysql</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">group_concat()</span><br><span class="line">select id,group_concat(name) <span class="keyword">from</span> aa<span class="built_in"> group </span>by id;</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">group_concat()</span><br><span class="line"><span class="keyword">select</span> id,group_concat(<span class="type">name</span>) <span class="keyword">from</span> aa <span class="keyword">group</span> <span class="keyword">by</span> id;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>oracle</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wm_concat()</span><br><span class="line">select aa,wmsys.wm_concat(t1.name) <span class="keyword">from</span> (</span><br><span class="line">select t.name,to_char(t.createdate,<span class="string">'yyyy-mm-dd'</span>) aa <span class="keyword">from</span> td_user t where t.td_conference_id = 3218 <span class="keyword">and</span> t.status = 1 <span class="keyword">and</span> t.createdate &gt; to_date(<span class="string">'2012-10-28'</span>,<span class="string">'yyyy-mm-dd'</span>) order by createdate desc</span><br><span class="line">) t1<span class="built_in"> group </span>by t1.aa</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wm_concat()</span><br><span class="line"><span class="keyword">select</span> aa,wmsys.wm_concat(t1.name) <span class="keyword">from</span> (</span><br><span class="line"><span class="keyword">select</span> t.name,to_char(t.createdate,<span class="string">&#x27;yyyy-mm-dd&#x27;</span>) aa <span class="keyword">from</span> td_user t <span class="keyword">where</span> t.td_conference_id = <span class="number">3218</span> <span class="keyword">and</span> t.status = <span class="number">1</span> <span class="keyword">and</span> t.createdate &gt; to_date(<span class="string">&#x27;2012-10-28&#x27;</span>,<span class="string">&#x27;yyyy-mm-dd&#x27;</span>) <span class="keyword">order</span> <span class="keyword">by</span> createdate <span class="keyword">desc</span></span><br><span class="line">) t1 <span class="keyword">group</span> <span class="keyword">by</span> t1.aa </span><br></pre></td></tr></table></figure>
+
+
 
         
         
@@ -466,19 +544,24 @@
         <h3 id="一、server-xml"><a href="#一、server-xml" class="headerlink" title="一、server.xml"></a>一、server.xml</h3><ul>
 <li>设置全局resource</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">GlobalNamingResources</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">Resource</span> <span class="attr">name</span>=<span class="string">"hd_jndi"</span> <span class="attr">auth</span>=<span class="string">"Container"</span> <span class="attr">type</span>=<span class="string">"javax.sql.DataSource"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">maxTotal</span>=<span class="string">"100"</span> <span class="attr">maxIdle</span>=<span class="string">"30"</span> <span class="attr">maxWaitMillis</span>=<span class="string">"10000"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">username</span>=<span class="string">"root"</span> <span class="attr">password</span>=<span class="string">"login"</span> <span class="attr">driverClassName</span>=<span class="string">"com.mysql.jdbc.Driver"</span></span></span><br><span class="line"><span class="tag">		<span class="attr">url</span>=<span class="string">"jdbc:mysql://192.168.0.114:3306/fss?useUnicode=true<span class="symbol">&amp;amp;</span>characterEncoding=UTF-8"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">GlobalNamingResources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;GlobalNamingResources&gt;</span><br><span class="line"></span><br><span class="line">	&lt;Resource name<span class="operator">=</span><span class="string">&quot;hd_jndi&quot;</span> auth<span class="operator">=</span><span class="string">&quot;Container&quot;</span> type<span class="operator">=</span><span class="string">&quot;javax.sql.DataSource&quot;</span></span><br><span class="line">		maxTotal<span class="operator">=</span><span class="string">&quot;100&quot;</span> maxIdle<span class="operator">=</span><span class="string">&quot;30&quot;</span> maxWaitMillis<span class="operator">=</span><span class="string">&quot;10000&quot;</span></span><br><span class="line">		username<span class="operator">=</span><span class="string">&quot;root&quot;</span> password<span class="operator">=</span><span class="string">&quot;login&quot;</span> driverClassName<span class="operator">=</span><span class="string">&quot;com.mysql.jdbc.Driver&quot;</span></span><br><span class="line">		url<span class="operator">=</span><span class="string">&quot;jdbc:mysql://192.168.0.114:3306/fss?useUnicode=true&amp;amp;characterEncoding=UTF-8&quot;</span>/&gt;</span><br><span class="line">&lt;/GlobalNamingResources&gt;</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>在Engine下面加入realm结点</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Realm <span class="attribute">className</span>=<span class="string">"org.apache.catalina.realm.DataSourceRealm"</span></span><br><span class="line">	<span class="attribute">dataSourceName</span>=<span class="string">"hd_jndi"</span></span><br><span class="line">	<span class="attribute">userTable</span>=<span class="string">"v_account_password"</span> <span class="attribute">userNameCol</span>=<span class="string">"account"</span> <span class="attribute">userCredCol</span>=<span class="string">"password"</span>  </span><br><span class="line">	<span class="attribute">userRoleTable</span>=<span class="string">"v_user_role"</span> <span class="attribute">roleNameCol</span>=<span class="string">"role_name"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;Realm <span class="attribute">className</span>=<span class="string">&quot;org.apache.catalina.realm.DataSourceRealm&quot;</span></span><br><span class="line">	<span class="attribute">dataSourceName</span>=<span class="string">&quot;hd_jndi&quot;</span></span><br><span class="line">	<span class="attribute">userTable</span>=<span class="string">&quot;v_account_password&quot;</span> <span class="attribute">userNameCol</span>=<span class="string">&quot;account&quot;</span> <span class="attribute">userCredCol</span>=<span class="string">&quot;password&quot;</span>  </span><br><span class="line">	<span class="attribute">userRoleTable</span>=<span class="string">&quot;v_user_role&quot;</span> <span class="attribute">roleNameCol</span>=<span class="string">&quot;role_name&quot;</span>/&gt; </span><br></pre></td></tr></table></figure>
+
 <h3 id="二、context-xml"><a href="#二、context-xml" class="headerlink" title="二、context.xml"></a>二、context.xml</h3><ul>
 <li>在context中引用全局resource</li>
 </ul>
-<figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;ResourceLink <span class="keyword">global</span>=<span class="string">"hd_jndi"</span> name=<span class="string">"hd_jndi"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"javax.sql.DataSource"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;ResourceLink global<span class="operator">=</span><span class="string">&quot;hd_jndi&quot;</span> name<span class="operator">=</span><span class="string">&quot;hd_jndi&quot;</span> type<span class="operator">=</span><span class="string">&quot;javax.sql.DataSource&quot;</span> /&gt;  </span><br></pre></td></tr></table></figure>
+
 <h3 id="三、servlet-api-与-jsp-api-与tomcat冲突"><a href="#三、servlet-api-与-jsp-api-与tomcat冲突" class="headerlink" title="三、servlet-api 与 jsp-api 与tomcat冲突"></a>三、servlet-api 与 jsp-api 与tomcat冲突</h3><ul>
-<li>在context节点下加入 </li>
+<li>在context节点下加入</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Loader</span> <span class="attr">delegate</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">Loader</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Loader</span> <span class="attr">delegate</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">Loader</span>&gt;</span>  </span><br></pre></td></tr></table></figure>
+
+
 
         
         
@@ -539,7 +622,7 @@
         <blockquote>
 <p>设置mysql的连接需要加上编码</p>
 </blockquote>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">jdbc:</span><span class="string">mysql:</span><span class="comment">//192.168.0.114:3306/fss?useUnicode=true&amp;amp;characterEncoding=UTF-8</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">jdbc</span>:mysql://<span class="number">192.168.0.114:3306</span>/fss?useUnicode=true&amp;amp;characterEncoding=UTF-<span class="number">8</span></span><br></pre></td></tr></table></figure>
 
         
         
@@ -597,7 +680,7 @@
 </header>
     <div class="article-content">
         
-        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>mysql stop</span><br><span class="line">sudo<span class="built_in"> service </span>mysql start</span><br><span class="line">sudo<span class="built_in"> service </span>mysql restart</span><br></pre></td></tr></table></figure>
+        <figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">service </span><span class="title class_">mysql</span> stop</span><br><span class="line">sudo <span class="keyword">service </span><span class="title class_">mysql</span> start</span><br><span class="line">sudo <span class="keyword">service </span><span class="title class_">mysql</span> restart</span><br></pre></td></tr></table></figure>
 
         
         
@@ -655,7 +738,7 @@
 </header>
     <div class="article-content">
         
-        <figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">'jetty'</span></span><br><span class="line"><span class="keyword">jettyRun</span> &#123;</span><br><span class="line">    reload = <span class="string">"automatic"</span></span><br><span class="line">    scanIntervalSeconds = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> <span class="keyword">watchfiles</span> &#123;</span><br><span class="line">    inputs.files <span class="string">'src'</span></span><br><span class="line">    doLast &#123;</span><br><span class="line">        compileJava</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">watchfiles.finalizedBy compileJava</span><br></pre></td></tr></table></figure>
+        <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: <span class="string">&#x27;jetty&#x27;</span></span><br><span class="line">jettyRun &#123;</span><br><span class="line">    reload = <span class="string">&quot;automatic&quot;</span></span><br><span class="line">    scanIntervalSeconds = <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> watchfiles &#123;</span><br><span class="line">    inputs.files <span class="string">&#x27;src&#x27;</span></span><br><span class="line">    <span class="keyword">doLast</span> &#123;</span><br><span class="line">        compileJava</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">watchfiles.finalizedBy compileJava</span><br></pre></td></tr></table></figure>
 
         
         
@@ -694,71 +777,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/06/06/linux-search-command/" title="linux搜索命令" itemprop="url">linux搜索命令</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2016-06-06T07:58:37.000Z" itemprop="datePublished"> Published 2016-06-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h3 id="一、locate"><a href="#一、locate" class="headerlink" title="一、locate"></a>一、locate</h3><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta-keyword">/etc/</span>updatedb.conf <span class="meta">#locate配置文件筛选规则</span></span><br><span class="line">locate file </span><br><span class="line"><span class="meta-keyword">/var/</span>lib/mlocate <span class="meta">#筛选数据库</span></span><br><span class="line">updatedb <span class="meta">#更新数据库，以用来搜索最新的文件</span></span><br></pre></td></tr></table></figure>
-<h3 id="二、whereis"><a href="#二、whereis" class="headerlink" title="二、whereis"></a>二、whereis</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">whereis</span> -<span class="keyword">b </span>-m</span><br></pre></td></tr></table></figure>
-<h3 id="三、which"><a href="#三、which" class="headerlink" title="三、which"></a>三、which</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> ll  <span class="comment">#会搜索文件别名</span></span><br></pre></td></tr></table></figure>
-<h3 id="四、find"><a href="#四、find" class="headerlink" title="四、find"></a>四、find</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">find</span> / -name install.log</span><br><span class="line"><span class="builtin-name">find</span> /root -name <span class="string">"install.log*"</span></span><br><span class="line"><span class="builtin-name">find</span> /root -iname install.log #不区分大小写</span><br><span class="line"><span class="builtin-name">find</span> /root -nouser #搜索没有所有的文件</span><br><span class="line"><span class="builtin-name">find</span> /var/log/ -mtime +10  #查找10天前修改的文件</span><br><span class="line"></span><br><span class="line">-10 10天以内</span><br><span class="line">10 </span><br><span class="line">+10 10天前</span><br><span class="line"></span><br><span class="line">atime </span><br><span class="line">ctime</span><br><span class="line">mtime 修改文件内容</span><br><span class="line"></span><br><span class="line"><span class="builtin-name">find</span> /root -size -25k</span><br><span class="line"><span class="builtin-name">find</span> /root -inum 22222 #通过i结点查找文件</span><br><span class="line">-a <span class="keyword">and</span> </span><br><span class="line">-o <span class="keyword">or</span></span><br><span class="line"><span class="builtin-name">find</span> /etc -size +20k -a -size -50k -exec ls -lh &#123;&#125; \</span><br></pre></td></tr></table></figure>
-<h3 id="五、grep"><a href="#五、grep" class="headerlink" title="五、grep"></a>五、grep</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grep</span> -i <span class="comment">#不区别大小写</span></span><br><span class="line"><span class="keyword">grep</span> -v <span class="comment">#取反</span></span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/locate/">locate</a><a href="/tags/find/">find</a><a href="/tags/grep/">grep</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/06/06/linux-search-command/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/06/linux-search-command/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/3/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next<span></span></a>
+    <a class="extend prev" rel="prev" href="/page/3/">&lt;span&gt;&lt;&#x2F;span&gt;Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next&lt;span&gt;&lt;&#x2F;span&gt;</a>
   </nav>
 
 </div>
@@ -802,6 +823,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -810,19 +839,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -842,6 +863,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -855,14 +884,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

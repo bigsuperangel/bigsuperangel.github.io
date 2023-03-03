@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,21 @@
     
 
     
-    <meta name="description" content="sample1234567891011121314151617181920212223242526272829303132333435363738394041# This workflow will build a Java project with Maven# For more information see: https://help.github.com/actions/language-">
-<meta name="keywords" content="java,actions,maven,github">
+    <meta name="description" content="sample123456789101112131415161718192021222324252627282930313233343536373839404142# This workflow will build a Java project with Maven# For more information see: https:&#x2F;&#x2F;help.github.com&#x2F;actions&#x2F;languag">
 <meta property="og:type" content="article">
 <meta property="og:title" content="maven github-actions publish">
 <meta property="og:url" content="http://bigsuperangel.github.io/2020/09/24/maven-github-actions/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="sample1234567891011121314151617181920212223242526272829303132333435363738394041# This workflow will build a Java project with Maven# For more information see: https://help.github.com/actions/language-">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="sample123456789101112131415161718192021222324252627282930313233343536373839404142# This workflow will build a Java project with Maven# For more information see: https:&#x2F;&#x2F;help.github.com&#x2F;actions&#x2F;languag">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-09-24T08:36:24.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="actions">
+<meta property="article:tag" content="maven">
+<meta property="article:tag" content="github">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="maven github-actions publish">
-<meta name="twitter:description" content="sample1234567891011121314151617181920212223242526272829303132333435363738394041# This workflow will build a Java project with Maven# For more information see: https://help.github.com/actions/language-">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +46,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -113,7 +118,7 @@
 		
 		</div>
 		
-		<h2 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This workflow will build a Java project with Maven</span></span><br><span class="line"><span class="comment"># For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">Java</span> <span class="string">CI</span> <span class="string">with</span> <span class="string">Maven</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> <span class="string">[</span> <span class="string">master</span> <span class="string">]</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"doc/auto_deploy.txt"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">JDK</span> <span class="number">1.8</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/setup-java@v1</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">java-version:</span> <span class="number">1.8</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">with</span> <span class="string">Maven</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">mvn</span> <span class="string">-B</span> <span class="string">package</span> <span class="string">--file</span> <span class="string">pom_github.xml</span> <span class="string">-P</span> <span class="string">sample_profile</span> <span class="string">-Dmaven.test.skip=true</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">deploy</span> <span class="string">file</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">wlixcc/SFTP-Deploy-Action@v1.0</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">ssh_private_key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span> </span><br><span class="line">        <span class="attr">local_path:</span> <span class="string">'./target/ROOT.war'</span></span><br><span class="line">        <span class="attr">remote_path:</span> <span class="string">'/root/war'</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">executing</span> <span class="string">remote</span> <span class="string">ssh</span> <span class="string">commands</span> <span class="string">using</span> <span class="string">ssh</span> <span class="string">key</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SSH_PRIVATE_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">port:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PORT</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">script:</span> <span class="string">ls</span> <span class="string">-al</span></span><br></pre></td></tr></table></figure>
+		<h2 id="sample"><a href="#sample" class="headerlink" title="sample"></a>sample</h2><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This workflow will build a Java project with Maven</span></span><br><span class="line"><span class="comment"># For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">name</span><span class="punctuation">:</span> <span class="string">Java CI with Maven</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">on</span><span class="punctuation">:</span></span><br><span class="line">  <span class="attribute">push</span><span class="punctuation">:</span></span><br><span class="line">    <span class="attribute">branches</span><span class="punctuation">:</span> <span class="string">[ master ]</span></span><br><span class="line">    <span class="attribute">paths</span><span class="punctuation">:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;doc/auto_deploy.txt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attribute">jobs</span><span class="punctuation">:</span></span><br><span class="line">  <span class="attribute">build</span><span class="punctuation">:</span></span><br><span class="line"><span class="punctuation"></span></span><br><span class="line">    <span class="attribute">runs-on</span><span class="punctuation">:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line">    <span class="attribute">steps</span><span class="punctuation">:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">uses: actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">name: Set up JDK 1.8</span></span><br><span class="line">      <span class="attribute">uses</span><span class="punctuation">:</span> <span class="string">actions/setup-java@v1</span></span><br><span class="line">      <span class="attribute">with</span><span class="punctuation">:</span></span><br><span class="line">        <span class="attribute">java-version</span><span class="punctuation">:</span> <span class="string">1.8</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">name: Build with Maven</span></span><br><span class="line">      <span class="attribute">run</span><span class="punctuation">:</span> <span class="string">mvn -B package --file pom_github.xml -P sample_profile -Dmaven.test.skip=true</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">name: deploy file</span></span><br><span class="line">      <span class="attribute">uses</span><span class="punctuation">:</span> <span class="string">wlixcc/SFTP-Deploy-Action@v1.0</span></span><br><span class="line">      <span class="attribute">with</span><span class="punctuation">:</span></span><br><span class="line">        <span class="attribute">username</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.USERNAME &#125;&#125;</span></span><br><span class="line">        <span class="attribute">server</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.HOST &#125;&#125;</span></span><br><span class="line">        <span class="attribute">ssh_private_key</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.SSH_PRIVATE_KEY &#125;&#125; </span></span><br><span class="line">        <span class="attribute">port</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.PORT &#125;&#125; </span></span><br><span class="line">        <span class="attribute">local_path</span><span class="punctuation">:</span> <span class="string">&#x27;./target/ROOT.war&#x27;</span></span><br><span class="line">        <span class="attribute">remote_path</span><span class="punctuation">:</span> <span class="string">&#x27;/root/war&#x27;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">name: executing remote ssh commands using ssh key</span></span><br><span class="line">      <span class="attribute">uses</span><span class="punctuation">:</span> <span class="string">appleboy/ssh-action@master</span></span><br><span class="line">      <span class="attribute">with</span><span class="punctuation">:</span></span><br><span class="line">        <span class="attribute">host</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.HOST &#125;&#125;</span></span><br><span class="line">        <span class="attribute">username</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.USERNAME &#125;&#125;</span></span><br><span class="line">        <span class="attribute">key</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.SSH_PRIVATE_KEY &#125;&#125;</span></span><br><span class="line">        <span class="attribute">port</span><span class="punctuation">:</span> <span class="string">$&#123;&#123; secrets.PORT &#125;&#125;</span></span><br><span class="line">        <span class="attribute">script</span><span class="punctuation">:</span> <span class="string">ls -al</span></span><br><span class="line">   </span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -217,6 +222,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -225,19 +238,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -257,6 +262,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -270,14 +283,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,19 @@
     
 
     
-    <meta name="description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125; 2. python 运行配置1234567891011121314151617&amp;#123;    &quot;version&quot;: &quot;0">
-<meta name="keywords" content="python,vscode">
+    <meta name="description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125;  2. python 运行配置1234567">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode相关配置操作小结">
 <meta property="og:url" content="http://bigsuperangel.github.io/2017/02/20/vscode/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125; 2. python 运行配置1234567891011121314151617&amp;#123;    &quot;version&quot;: &quot;0">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125;  2. python 运行配置1234567">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-02-20T12:26:04.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="vscode">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vscode相关配置操作小结">
-<meta name="twitter:description" content="1. vscode下python print 输出乱码 在task文件中加入环境变量，然后问题解决。  12345&quot;options&quot;: &amp;#123;  &quot;env&quot;:&amp;#123;      &quot;PYTHONIOENCODING&quot;: &quot;UTF-8&quot;    &amp;#125;&amp;#125; 2. python 运行配置1234567891011121314151617&amp;#123;    &quot;version&quot;: &quot;0">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +44,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -109,15 +112,17 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode下python-print-输出乱码"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-运行配置"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode%E4%B8%8Bpython-print-%E8%BE%93%E5%87%BA%E4%B9%B1%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-%E8%BF%90%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
 		
 		</div>
 		
 		<h2 id="1-vscode下python-print-输出乱码"><a href="#1-vscode下python-print-输出乱码" class="headerlink" title="1. vscode下python print 输出乱码"></a>1. vscode下python print 输出乱码</h2><blockquote>
 <p>在task文件中加入环境变量，然后问题解决。</p>
 </blockquote>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"options"</span>: &#123;</span><br><span class="line">  <span class="string">"env"</span>:&#123;</span><br><span class="line">      <span class="string">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-python-运行配置"><a href="#2-python-运行配置" class="headerlink" title="2. python 运行配置"></a>2. python 运行配置</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"version"</span>: <span class="string">"0.1.0"</span>,</span><br><span class="line">    <span class="attr">"command"</span>: <span class="string">"python"</span>,</span><br><span class="line">    <span class="attr">"windows"</span>: &#123;</span><br><span class="line">        <span class="attr">"command"</span>: <span class="string">"D:\\develop\\running\\Python35\\python.exe"</span> <span class="comment">//python的安装路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"isShellCommand"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"args"</span>: [</span><br><span class="line">        <span class="string">"$&#123;file&#125;"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"showOutput"</span>: <span class="string">"always"</span>,</span><br><span class="line">    <span class="attr">"options"</span>: &#123;</span><br><span class="line">        <span class="attr">"env"</span>: &#123;</span><br><span class="line">            <span class="attr">"PYTHONIOENCODING"</span>: <span class="string">"UTF-8"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;env&quot;</span><span class="punctuation">:</span><span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;PYTHONIOENCODING&quot;</span><span class="punctuation">:</span> <span class="string">&quot;UTF-8&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-python-运行配置"><a href="#2-python-运行配置" class="headerlink" title="2. python 运行配置"></a>2. python 运行配置</h2><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.1.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;command&quot;</span>: <span class="string">&quot;python&quot;</span>,</span><br><span class="line">    <span class="string">&quot;windows&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;command&quot;</span>: <span class="string">&quot;D:<span class="subst">\\</span>develop<span class="subst">\\</span>running<span class="subst">\\</span>Python35<span class="subst">\\</span>python.exe&quot;</span> <span class="comment">//python的安装路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;isShellCommand&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">&quot;args&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;$&#123;file&#125;&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;showOutput&quot;</span>: <span class="string">&quot;always&quot;</span>,</span><br><span class="line">    <span class="string">&quot;options&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;env&quot;</span>: &#123;</span><br><span class="line">            <span class="string">&quot;PYTHONIOENCODING&quot;</span>: <span class="string">&quot;UTF-8&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -179,7 +184,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode下python-print-输出乱码"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-运行配置"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-vscode%E4%B8%8Bpython-print-%E8%BE%93%E5%87%BA%E4%B9%B1%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">1. vscode下python print 输出乱码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-python-%E8%BF%90%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">2. python 运行配置</span></a></li></ol>
  
   </div>
 
@@ -221,6 +226,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -229,19 +242,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -261,6 +266,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -274,14 +287,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

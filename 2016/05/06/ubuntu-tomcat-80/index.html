@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -21,17 +21,18 @@
 
     
     <meta name="description" content="工作环境迁移到了Ubuntu,很多东西发生了变化,比如原先配置tomcat端口.只需要配置server.xml文件就可以了。但是在Ubuntu下，只修改了server.xml文件后发现无法访问到服务。起初以为是有别的进程占用了80端口，但是通过netstat -an | grep 80后并没有发现有进程在占用80,Google了一下，发现tomcat使用1023以下的端口时需要使用authbin">
-<meta name="keywords" content="tomcat,authbind">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu下Tomcat绑定80端口">
 <meta property="og:url" content="http://bigsuperangel.github.io/2016/05/06/ubuntu-tomcat-80/index.html">
 <meta property="og:site_name" content="道不远人">
 <meta property="og:description" content="工作环境迁移到了Ubuntu,很多东西发生了变化,比如原先配置tomcat端口.只需要配置server.xml文件就可以了。但是在Ubuntu下，只修改了server.xml文件后发现无法访问到服务。起初以为是有别的进程占用了80端口，但是通过netstat -an | grep 80后并没有发现有进程在占用80,Google了一下，发现tomcat使用1023以下的端口时需要使用authbin">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-05-06T03:12:09.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="tomcat">
+<meta property="article:tag" content="authbind">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu下Tomcat绑定80端口">
-<meta name="twitter:description" content="工作环境迁移到了Ubuntu,很多东西发生了变化,比如原先配置tomcat端口.只需要配置server.xml文件就可以了。但是在Ubuntu下，只修改了server.xml文件后发现无法访问到服务。起初以为是有别的进程占用了80端口，但是通过netstat -an | grep 80后并没有发现有进程在占用80,Google了一下，发现tomcat使用1023以下的端口时需要使用authbin">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +44,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -118,7 +121,7 @@
 </blockquote>
 <ul>
 <li><p>authbind是GNU下的一个小工具，用于帮助系统管理员来为程序指定端口。如果你的机器没有安装authbind,那么首先要安装才可以: </p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install authbind</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="built_in">get</span> install authbind</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>然后配置80端口: </p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo touch <span class="regexp">/etc/</span>authbind<span class="regexp">/byport/</span><span class="number">80</span></span><br></pre></td></tr></table></figure>
@@ -127,8 +130,7 @@
 <figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo authbind <span class="params">--deep</span> <span class="string">./catalina.sh</span> start</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>测试是否运行</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -lnp <span class="string">| grep 80</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -lnp <span class="string">| grep 80</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <blockquote>
 <p>Enjoy Youself</p>
@@ -236,6 +238,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -244,19 +254,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -276,6 +278,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -289,14 +299,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

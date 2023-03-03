@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,18 @@
     
 
     
-    <meta name="description" content="About Setupubuntu12curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -sudo apt-get install -y nodejs yum1234567yum -y install gcc make gcc-c++ openssl-devel wget python #下载并解压wget https://n">
-<meta name="keywords" content="nodejs">
+    <meta name="description" content="About Setupubuntu12curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_5.x | sudo -E bash -sudo apt-get install -y nodejs yum1234567yum -y install gcc make gcc-c++ openssl-devel wget python #下载并解压wget https:&#x2F;&#x2F;n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nodejs">
 <meta property="og:url" content="http://bigsuperangel.github.io/2016/04/19/nodejs/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="About Setupubuntu12curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -sudo apt-get install -y nodejs yum1234567yum -y install gcc make gcc-c++ openssl-devel wget python #下载并解压wget https://n">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="About Setupubuntu12curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_5.x | sudo -E bash -sudo apt-get install -y nodejs yum1234567yum -y install gcc make gcc-c++ openssl-devel wget python #下载并解压wget https:&#x2F;&#x2F;n">
+<meta property="og:locale">
+<meta property="article:published_time" content="2016-04-19T08:28:40.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="nodejs">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nodejs">
-<meta name="twitter:description" content="About Setupubuntu12curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -sudo apt-get install -y nodejs yum1234567yum -y install gcc make gcc-c++ openssl-devel wget python #下载并解压wget https://n">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +43,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -113,9 +115,9 @@
 		
 		</div>
 		
-		<h3 id="About-Setup"><a href="#About-Setup" class="headerlink" title="About Setup"></a><strong>About Setup</strong></h3><h4 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL http<span class="variable">s:</span>//<span class="keyword">deb</span>.nodesource.<span class="keyword">com</span>/setup_5.<span class="keyword">x</span> | sudo -E bash -</span><br><span class="line">sudo apt-<span class="built_in">get</span> install -<span class="keyword">y</span> nodejs</span><br></pre></td></tr></table></figure>
-<h4 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc make gcc-c++ openssl-devel wget python <span class="comment">#下载并解压</span></span><br><span class="line">wget https://nodejs.org/dist/v4.<span class="number">2.1</span>/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz</span><br><span class="line">tar zxvf <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz  <span class="comment">#在解压后文件夹里的bin文件夹中已经存在node以及npm，如果你进入到对应文件的中执行命令行一点问题都没有，说明是编译好的文件</span></span><br><span class="line">cd <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin</span><br><span class="line">ln -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/bin/<span class="keyword">node</span><span class="title"></span></span><br><span class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/local/bin/<span class="keyword">node</span><span class="title"></span></span><br><span class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
-<h3 id="Git-remember-password"><a href="#Git-remember-password" class="headerlink" title="Git remember password"></a>Git remember password</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置记住密码（默认15分钟）</span></span><br><span class="line">git<span class="built_in"> config </span>--global credential.helper cache</span><br><span class="line"><span class="comment">#设置记住密码（时间自定义） 一小时有效期</span></span><br><span class="line">git<span class="built_in"> config </span>credential.helper <span class="string">'cache --timeout=3600'</span></span><br><span class="line"><span class="comment">#设置记住密码（长期有效）</span></span><br><span class="line">git<span class="built_in"> config </span>--global credential.helper store</span><br></pre></td></tr></table></figure>
+		<h3 id="About-Setup"><a href="#About-Setup" class="headerlink" title="About Setup"></a><strong>About Setup</strong></h3><h4 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h4><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">curl</span> -<span class="built_in">sL</span> https:<span class="comment">//deb.nodesource.com/setup_5.x | sudo -E bash -</span></span><br><span class="line"><span class="symbol">sudo</span> apt-<span class="meta">get</span> install -y nodejs</span><br></pre></td></tr></table></figure>
+<h4 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h4><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc make gcc-c++ openssl-devel wget python <span class="comment">#下载并解压</span></span><br><span class="line">wget https://nodejs.org/dist/v4.<span class="number">2.1</span>/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz</span><br><span class="line">tar zxvf <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64.tar.gz  <span class="comment">#在解压后文件夹里的bin文件夹中已经存在node以及npm，如果你进入到对应文件的中执行命令行一点问题都没有，说明是编译好的文件</span></span><br><span class="line">cd <span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin</span><br><span class="line">ln -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/bin/<span class="keyword">node</span></span><br><span class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/<span class="keyword">node</span> <span class="title">/usr</span>/local/bin/<span class="keyword">node</span></span><br><span class="line"><span class="title">ln</span> -s/root/<span class="keyword">node</span><span class="title">-v4</span>.<span class="number">2.1</span>-linux-x64/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
+<h3 id="Git-remember-password"><a href="#Git-remember-password" class="headerlink" title="Git remember password"></a>Git remember password</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置记住密码（默认15分钟）</span></span><br><span class="line">git <span class="built_in">config</span> --global credential.helper <span class="keyword">cache</span></span><br><span class="line"><span class="keyword"></span><span class="comment">#设置记住密码（时间自定义） 一小时有效期</span></span><br><span class="line">git <span class="built_in">config</span> credential.helper <span class="string">&#x27;cache --timeout=3600&#x27;</span></span><br><span class="line"><span class="comment">#设置记住密码（长期有效）</span></span><br><span class="line">git <span class="built_in">config</span> --global credential.helper store</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -219,6 +221,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -227,19 +237,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -259,6 +261,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -272,14 +282,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

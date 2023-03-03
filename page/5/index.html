@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -26,10 +26,9 @@
 <meta property="og:url" content="http://bigsuperangel.github.io/page/5/index.html">
 <meta property="og:site_name" content="道不远人">
 <meta property="og:description" content="道不远人，人之为道而远人，不可以为道。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
+<meta property="article:author" content="bigsuperangel">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="道不远人">
-<meta name="twitter:description" content="道不远人，人之为道而远人，不可以为道。">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -41,9 +40,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -93,6 +94,74 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/06/06/linux-search-command/" title="linux搜索命令" itemprop="url">linux搜索命令</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
+		
+  <p class="article-time">
+    <time datetime="2016-06-06T07:58:37.000Z" itemprop="datePublished"> Published 2016-06-06</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="一、locate"><a href="#一、locate" class="headerlink" title="一、locate"></a>一、locate</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/etc/u</span>pdatedb.conf <span class="comment">#locate配置文件筛选规则</span></span><br><span class="line">locate file </span><br><span class="line"><span class="regexp">/var/</span>lib/mlocate <span class="comment">#筛选数据库</span></span><br><span class="line">updatedb <span class="comment">#更新数据库，以用来搜索最新的文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="二、whereis"><a href="#二、whereis" class="headerlink" title="二、whereis"></a>二、whereis</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">whereis</span> -<span class="keyword">b</span> -m </span><br></pre></td></tr></table></figure>
+
+<h3 id="三、which"><a href="#三、which" class="headerlink" title="三、which"></a>三、which</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">which</span> ll  <span class="comment">#会搜索文件别名</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="四、find"><a href="#四、find" class="headerlink" title="四、find"></a>四、find</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">find</span> / -name install.log</span><br><span class="line"><span class="built_in">find</span> /root -name <span class="string">&quot;install.log*&quot;</span></span><br><span class="line"><span class="built_in">find</span> /root -iname install.log #不区分大小写</span><br><span class="line"><span class="built_in">find</span> /root -nouser #搜索没有所有的文件</span><br><span class="line"><span class="built_in">find</span> /var/log/ -mtime +10  #查找10天前修改的文件</span><br><span class="line"></span><br><span class="line">-10 10天以内</span><br><span class="line">10 </span><br><span class="line">+10 10天前</span><br><span class="line"></span><br><span class="line">atime </span><br><span class="line">ctime</span><br><span class="line">mtime 修改文件内容</span><br><span class="line"></span><br><span class="line"><span class="built_in">find</span> /root -size -25k</span><br><span class="line"><span class="built_in">find</span> /root -inum 22222 #通过i结点查找文件</span><br><span class="line">-a <span class="keyword">and</span> </span><br><span class="line">-o <span class="keyword">or</span></span><br><span class="line"><span class="built_in">find</span> /etc -size +20k -a -size -50k -exec ls -lh &#123;&#125; \</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="五、grep"><a href="#五、grep" class="headerlink" title="五、grep"></a>五、grep</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grep</span> -i <span class="comment">#不区别大小写</span></span><br><span class="line"><span class="keyword">grep</span> -v <span class="comment">#取反</span></span><br></pre></td></tr></table></figure>
+
+
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/locate/">locate</a><a href="/tags/find/">find</a><a href="/tags/grep/">grep</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/06/06/linux-search-command/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/06/06/linux-search-command/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/06/06/ubuntu-fixed-ip/" title="ubuntu 固定ip设置" itemprop="url">ubuntu 固定ip设置</a>
   </h1>
   <p class="article-author">By
@@ -107,13 +176,17 @@
     <div class="article-content">
         
         <ul>
-<li>前面提到固定IP的上网方式主要是修改/etc/network/interfaces这个文件，配置IP、网关什么的，其实这里面还有个参数可以配置，那就是DNS了，对应的参数名为dns-nameservers，这里设置的优先级比resolv.conf高，也就是网络会从这里读取DNS配置，如果没配置才去看resolv.conf里面的设置，因此在这里面配置DNS更简单。</li>
+<li>前面提到固定IP的上网方式主要是修改&#x2F;etc&#x2F;network&#x2F;interfaces这个文件，配置IP、网关什么的，其实这里面还有个参数可以配置，那就是DNS了，对应的参数名为dns-nameservers，这里设置的优先级比resolv.conf高，也就是网络会从这里读取DNS配置，如果没配置才去看resolv.conf里面的设置，因此在这里面配置DNS更简单。</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">opback<span class="built_in"> network </span>interface</span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">auto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp</span></span><br><span class="line"></span><br><span class="line">iface eth0 inet static</span><br><span class="line"></span><br><span class="line">address 192.168.0.114</span><br><span class="line">netmask 255.255.255.0</span><br><span class="line">gateway 192.168.0.1</span><br><span class="line"></span><br><span class="line">dns-nameservers 211.138.151.161</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">opback</span> network interface</span><br><span class="line">auto lo</span><br><span class="line">iface lo inet loopback</span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">auto eth0</span><br><span class="line"><span class="comment">#iface eth0 inet dhcp</span></span><br><span class="line"></span><br><span class="line">iface eth0 inet static</span><br><span class="line"></span><br><span class="line">address <span class="number">192.168.0.114</span></span><br><span class="line">netmask <span class="number">255.255.255.0</span></span><br><span class="line">gateway <span class="number">192.168.0.1</span></span><br><span class="line"></span><br><span class="line">dns-nameservers <span class="number">211.138.151.161</span></span><br></pre></td></tr></table></figure>
+
+
 <ul>
 <li>重启网络</li>
 </ul>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> service </span>networking restart </span><br><span class="line">或者</span><br><span class="line">sudo /etc/init.d/networking restart</span><br><span class="line"></span><br><span class="line">sudo ifconfig eth0 down </span><br><span class="line">sudo ifconfig eth0 up</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo service networking restart </span><br><span class="line">或者</span><br><span class="line">sudo <span class="regexp">/etc/i</span>nit.d/networking restart</span><br><span class="line"></span><br><span class="line">sudo ifconfig eth0 down </span><br><span class="line">sudo ifconfig eth0 up</span><br></pre></td></tr></table></figure>
+
+
 
         
         
@@ -171,7 +244,7 @@
 </header>
     <div class="article-content">
         
-        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h host -p<span class="built_in"> port </span>-a password  #针对redis设置了密码</span><br><span class="line">keys * #查看所有的key</span><br><span class="line"><span class="builtin-name">SET</span> KEY_NAME VALUE</span><br><span class="line"><span class="builtin-name">GET</span> KEY_NAME</span><br></pre></td></tr></table></figure>
+        <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h host -p<span class="built_in"> port </span>-a password  #针对redis设置了密码</span><br><span class="line">keys * #查看所有的key</span><br><span class="line"><span class="built_in">SET</span> KEY_NAME VALUE</span><br><span class="line"><span class="built_in">GET</span> KEY_NAME</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
         
         
@@ -249,34 +322,34 @@
 </li>
 <li><p>简单的移动光标</p>
 <blockquote>
-<p>0 → 数字零，到行头<br>^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）<br>$ → 到本行行尾<br>g_ → 到本行最后一个不是blank字符的位置。<br>/pattern → 搜索 pattern 的字符串（注：如果搜索出多个匹配，可按n键到下一个）</p>
+<p>0 → 数字零，到行头<br>^ → 到本行第一个不是blank字符的位置（所谓blank字符就是空格，tab，换行，回车等）<br>$ → 到本行行尾<br>g_ → 到本行最后一个不是blank字符的位置。<br>&#x2F;pattern → 搜索 pattern 的字符串（注：如果搜索出多个匹配，可按n键到下一个）</p>
 </blockquote>
 </li>
-<li><p>拷贝/粘贴 （注：p/P都可以，p是表示在当前位置之后，P表示在当前位置之前）</p>
+<li><p>拷贝&#x2F;粘贴 （注：p&#x2F;P都可以，p是表示在当前位置之后，P表示在当前位置之前）</p>
 <blockquote>
 <p>P → 粘贴<br>yy → 拷贝当前行当行于 ddP</p>
 </blockquote>
 </li>
-<li><p>Undo/Redo</p>
+<li><p>Undo&#x2F;Redo</p>
 <blockquote>
-<p>u → undo<br><c-r> → redo</c-r></p>
+<p>u → undo<br><C-r> → redo</p>
 </blockquote>
 </li>
-<li><p>打开/保存/退出/改变文件(Buffer)</p>
+<li><p>打开&#x2F;保存&#x2F;退出&#x2F;改变文件(Buffer)</p>
 <blockquote>
-<p>:e &lt;path/to/file&gt; → 打开一个文件<br>:w → 存盘<br>:saveas &lt;path/to/file&gt; → 另存为 &lt;path/to/file&gt;<br>:x， ZZ 或 :wq → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)<br>:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br>:bn 和 :bp → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（注：我喜欢使用:n到下一个文件）</p>
+<p>:e &lt;path&#x2F;to&#x2F;file&gt; → 打开一个文件<br>:w → 存盘<br>:saveas &lt;path&#x2F;to&#x2F;file&gt; → 另存为 &lt;path&#x2F;to&#x2F;file&gt;<br>:x， ZZ 或 :wq → 保存并退出 (:x 表示仅在需要时保存，ZZ不需要输入冒号并回车)<br>:q! → 退出不保存 :qa! 强行退出所有的正在编辑的文件，就算别的文件有更改。<br>:bn 和 :bp → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（注：我喜欢使用:n到下一个文件）</p>
 </blockquote>
 </li>
 </ol>
 <h3 id="第三级-超能力"><a href="#第三级-超能力" class="headerlink" title="第三级-超能力"></a>第三级-超能力</h3><ol>
 <li><p>按键操作：</p>
 <blockquote>
-<p>注释：ctrl+v 进入列编辑模式,向下或向上移动光标,把需要注释的行的开头标记起来,然后按大写的I,再插入注释符,比如”#”,再按Esc,就会全部注释了。<br>删除：先按v,进入visual模式,横向选中列的个数(如”#”注释符号,需要选中两列),再按Esc,再按ctrl+v 进入列编辑模式,向下或向上移动光标,选中注释部分,然后按d, 就会删除注释符号（#）。<br>PS：当然不一定是shell的注释符”#”，也可以是”//“，或者其他任意的字符；vim才不知道什么是注释符呢，都是字符而已。</p>
+<p>注释：ctrl+v 进入列编辑模式,向下或向上移动光标,把需要注释的行的开头标记起来,然后按大写的I,再插入注释符,比如”#”,再按Esc,就会全部注释了。<br>删除：先按v,进入visual模式,横向选中列的个数(如”#”注释符号,需要选中两列),再按Esc,再按ctrl+v 进入列编辑模式,向下或向上移动光标,选中注释部分,然后按d, 就会删除注释符号（#）。<br>PS：当然不一定是shell的注释符”#”，也可以是”&#x2F;&#x2F;“，或者其他任意的字符；vim才不知道什么是注释符呢，都是字符而已。</p>
 </blockquote>
 </li>
 <li><p>使用替换命令：</p>
 <blockquote>
-<p>:% s/^/\/\//g     在全部内容的行首添加//号注释<br>:2,50 s/^/\/\//g  在2~50行首添加//号注释<br>:2,50 s/^\/\///g  在2~50行首删除//号</p>
+<p>:% s&#x2F;^&#x2F;//&#x2F;g     在全部内容的行首添加&#x2F;&#x2F;号注释<br>:2,50 s&#x2F;^&#x2F;//&#x2F;g  在2<del>50行首添加&#x2F;&#x2F;号注释<br>:2,50 s&#x2F;^//&#x2F;&#x2F;g  在2</del>50行首删除&#x2F;&#x2F;号</p>
 </blockquote>
 </li>
 </ol>
@@ -340,6 +413,8 @@
         <p> 安装完Ubuntu后忽然意识到没有设置root密码，不知道密码自然就无法进入根用户下。到网上搜了一下，原来是这麽回事。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。我们可以在终端输入命令 sudo passwd，然后输入当前用户的密码，enter，终端会提示我们输入新的密码并确认，此时的密码就是root新密码。修改成功后，输入命令 su root，再输入新的密码就ok了。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> passwd  <span class="comment">#更改原来root密码</span></span><br><span class="line">su root      <span class="comment">#root帐号登陆</span></span><br></pre></td></tr></table></figure>
 
+
+
         
         
         <p class="article-more-link">
@@ -396,14 +471,22 @@
 </header>
     <div class="article-content">
         
-        <h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># uname -a               # 查看内核/操作系统/CPU信息</span><br><span class="line"># head -n <span class="number">1</span> /etc/issue   # 查看操作系统版本 </span><br><span class="line"># cat /proc/cpuinfo      # 查看CPU信息</span><br><span class="line"># hostname               # 查看计算机名 </span><br><span class="line"># lspci -tv              # 列出所有PCI设备</span><br><span class="line"># lsusb -tv              # 列出所有USB设备 </span><br><span class="line"># lsmod                  # 列出加载的内核模块</span><br><span class="line"># env                    # 查看环境变量</span><br></pre></td></tr></table></figure>
-<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># free -m                # 查看内存使用量和交换区使用量 </span><br><span class="line"># df -h                  # 查看各分区使用情况 </span><br><span class="line"># du -sh &lt;目录名&gt;        # 查看指定目录的大小 </span><br><span class="line"># grep MemTotal /proc/meminfo   # 查看内存总量</span><br><span class="line"># grep MemFree /proc/meminfo    # 查看空闲内存量</span><br><span class="line"># uptime                 # 查看系统运行时间、用户数、负载 </span><br><span class="line"># cat /proc/loadavg      # 查看系统负载</span><br></pre></td></tr></table></figure>
-<h3 id="磁盘和分区"><a href="#磁盘和分区" class="headerlink" title="磁盘和分区"></a>磁盘和分区</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># mount | column -t      # 查看挂接的分区状态 </span><br><span class="line"># fdisk -l               # 查看所有分区 </span><br><span class="line"># swapon -s              # 查看所有交换分区</span><br><span class="line"># hdparm -i /dev/hda     # 查看磁盘参数(仅适用于IDE设备) </span><br><span class="line"># dmesg | grep IDE       # 查看启动时IDE设备检测状况</span><br></pre></td></tr></table></figure>
+        <h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">uname</span> -a               <span class="comment"># 查看内核/操作系统/CPU信息</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">head</span> -n 1 /etc/issue   <span class="comment"># 查看操作系统版本</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cat</span> /proc/cpuinfo      <span class="comment"># 查看CPU信息</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hostname               <span class="comment"># 查看计算机名</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">lspci -tv              <span class="comment"># 列出所有PCI设备</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">lsusb -tv              <span class="comment"># 列出所有USB设备</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">lsmod                  <span class="comment"># 列出加载的内核模块</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">env</span>                    <span class="comment"># 查看环境变量</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">free -m                <span class="comment"># 查看内存使用量和交换区使用量</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">df</span> -h                  <span class="comment"># 查看各分区使用情况</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">du</span> -sh &lt;目录名&gt;        <span class="comment"># 查看指定目录的大小</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">grep MemTotal /proc/meminfo   <span class="comment"># 查看内存总量</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">grep MemFree /proc/meminfo    <span class="comment"># 查看空闲内存量</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">uptime</span>                 <span class="comment"># 查看系统运行时间、用户数、负载</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cat</span> /proc/loadavg      <span class="comment"># 查看系统负载</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="磁盘和分区"><a href="#磁盘和分区" class="headerlink" title="磁盘和分区"></a>磁盘和分区</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">mount | column -t      <span class="comment"># 查看挂接的分区状态</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">fdisk -l               <span class="comment"># 查看所有分区</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">swapon -s              <span class="comment"># 查看所有交换分区</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hdparm -i /dev/hda     <span class="comment"># 查看磁盘参数(仅适用于IDE设备)</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">dmesg | grep IDE       <span class="comment"># 查看启动时IDE设备检测状况</span></span></span><br></pre></td></tr></table></figure>
+
 <h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># ifconfig               # 查看所有网络接口的属性</span><br><span class="line"># iptables -L            # 查看防火墙设置 </span><br><span class="line"># route -n               # 查看路由表 </span><br><span class="line"># netstat -lntp          # 查看所有监听端口 </span><br><span class="line"># netstat -antp          # 查看所有已经建立的连接</span><br><span class="line"># netstat -s             # 查看网络统计信息</span><br></pre></td></tr></table></figure>
+
 <h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># ps -ef                 # 查看所有进程 </span><br><span class="line"># top                    # 实时显示进程状态</span><br></pre></td></tr></table></figure>
-<h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># w                      # 查看活动用户 </span><br><span class="line"># id &lt;用户名&gt;            # 查看指定用户信息 </span><br><span class="line"># last                   # 查看用户登录日志 </span><br><span class="line"># cut -d: -f1 /etc/passwd   # 查看系统所有用户 </span><br><span class="line"># cut -d: -f1 /etc/group    # 查看系统所有组 </span><br><span class="line"># crontab -l             # 查看当前用户的计划任务</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">w                      <span class="comment"># 查看活动用户</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">id</span> &lt;用户名&gt;            <span class="comment"># 查看指定用户信息</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">last                   <span class="comment"># 查看用户登录日志</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cut</span> -d: -f1 /etc/passwd   <span class="comment"># 查看系统所有用户</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">cut</span> -d: -f1 /etc/group    <span class="comment"># 查看系统所有组</span></span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">crontab -l             <span class="comment"># 查看当前用户的计划任务</span></span></span><br></pre></td></tr></table></figure>
+
 <h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># chkconfig --list       # 列出所有系统服务 </span><br><span class="line"># chkconfig --list | grep on    # 列出所有启动的系统服务</span><br></pre></td></tr></table></figure>
+
 <h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># rpm -qa                # 查看所有安装的软件包</span><br></pre></td></tr></table></figure>
+
 
         
         
@@ -462,47 +545,46 @@
     <div class="article-content">
         
         <ul>
-<li>提示所有快捷键的快捷键是 <figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ctrl+shift+L </span><br><span class="line">菜单是在: </span><br><span class="line"><span class="function"><span class="title">window</span>--&gt;</span><span class="function"><span class="title">preferences</span>--&gt;</span><span class="function"><span class="title">general</span>--&gt;</span>keys </span><br><span class="line"></span><br><span class="line">提供能容帮助是 </span><br><span class="line">alt+/</span><br></pre></td></tr></table></figure>
-</li>
+<li>提示所有快捷键的快捷键是 <figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ctrl+shift+L </span><br><span class="line">菜单是在: </span><br><span class="line"><span class="function"><span class="title">window</span>--&gt;</span><span class="function"><span class="title">preferences</span>--&gt;</span><span class="function"><span class="title">general</span>--&gt;</span>keys </span><br><span class="line"></span><br><span class="line">提供能容帮助是 </span><br><span class="line">alt+/</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">1</span> 快速修复(最经典的快捷键,就不用多说了)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">D</span>: 删除当前行 </span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Alt</span>+↓ 复制当前行到下一行(复制增加)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Alt</span>+↑ 复制当前行到上一行(复制增加)</span><br><span class="line"><span class="selector-tag">Alt</span>+↓ 当前行和下面一行交互位置(特别实用,可以省去先剪切,再粘贴了)</span><br><span class="line"><span class="selector-tag">Alt</span>+↑ 当前行和上面一行交互位置(同上)</span><br><span class="line"><span class="selector-tag">Alt</span>+← 前一个编辑的页面</span><br><span class="line"><span class="selector-tag">Alt</span>+→ 下一个编辑的页面(当然是针对上面那条来说了)</span><br><span class="line"><span class="selector-tag">Alt</span>+<span class="selector-tag">Enter</span> 显示当前选择资源(工程,or 文件 or文件)的属性</span><br><span class="line"><span class="selector-tag">Shift</span>+<span class="selector-tag">Enter</span> 在当前行的下一行插入空行(这时鼠标可以在当前行的任一位置,不一定是最后)</span><br><span class="line"><span class="selector-tag">Shift</span>+<span class="selector-tag">Ctrl</span>+<span class="selector-tag">Enter</span> 在当前行插入空行(原理同上条)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Q</span> 定位到最后编辑的地方</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">L</span> 定位在某行 (对于程序超过<span class="number">100</span>的人就有福音了)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">M</span> 最大化当前的<span class="selector-tag">Edit</span>或<span class="selector-tag">View</span> (再按则反之)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+/ 注释当前行,再按则取消注释</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">O</span> 快速显示 <span class="selector-tag">OutLine</span></span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">T</span> 快速显示当前类的继承结构</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">W</span> 关闭当前<span class="selector-tag">Editer</span></span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">K</span> 参照选中的<span class="selector-tag">Word</span>快速定位到下一个</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">E</span> 快速显示当前<span class="selector-tag">Editer</span>的下拉列表(如果当前页面没有显示的用黑体表示)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+/(小键盘) 折叠当前类中的所有代码</span><br><span class="line"><span class="selector-tag">Ctrl</span>+×(小键盘) 展开当前类中的所有代码</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Space</span> 代码助手完成一些代码的插入(但一般和输入法有冲突,可以修改输入法的热键,也可以暂用Alt+/来代替)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">E</span> 显示管理当前打开的所有的<span class="selector-tag">View</span>的管理器(可以选择关闭,激活等操作)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">J</span> 正向增量查找(按下Ctrl+J后,你所输入的每个字母编辑器都提供快速匹配定位到某个单词,如果没有,则在stutes line中显示没有找到了,查一个单词时,特别实用,这个功能Idea两年前就有了)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">J</span> 反向增量查找(和上条相同,只不过是从后往前查)</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">F4</span> 关闭所有打开的<span class="selector-tag">Editer</span></span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">X</span> 把当前选中的文本全部变味小写</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">Y</span> 把当前选中的文本全部变为小写</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">F</span> 格式化当前代码</span><br><span class="line"><span class="selector-tag">Ctrl</span>+<span class="selector-tag">Shift</span>+<span class="selector-tag">P</span> 定位到对于的匹配符(譬如&#123;&#125;) (从前面定位后面时,光标要在匹配符里面,后面到前面,则反之)</span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="number">1</span> 快速修复<span class="punctuation">(</span>最经典的快捷键<span class="operator">,</span>就不用多说了<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">D</span><span class="operator">:</span> 删除当前行 </span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Alt</span><span class="operator">+</span>↓ 复制当前行到下一行<span class="punctuation">(</span>复制增加<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Alt</span><span class="operator">+</span>↑ 复制当前行到上一行<span class="punctuation">(</span>复制增加<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Alt</span><span class="operator">+</span>↓ 当前行和下面一行交互位置<span class="punctuation">(</span>特别实用<span class="operator">,</span>可以省去先剪切<span class="operator">,</span>再粘贴了<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Alt</span><span class="operator">+</span>↑ 当前行和上面一行交互位置<span class="punctuation">(</span>同上<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Alt</span><span class="operator">+</span>← 前一个编辑的页面</span><br><span class="line"><span class="variable">Alt</span><span class="operator">+</span>→ 下一个编辑的页面<span class="punctuation">(</span>当然是针对上面那条来说了<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Alt</span><span class="operator">+</span><span class="built_in">Enter</span> 显示当前选择资源<span class="punctuation">(</span>工程<span class="operator">,</span><span class="variable">or</span> 文件 <span class="variable">or</span>文件<span class="punctuation">)</span>的属性</span><br><span class="line"><span class="variable">Shift</span><span class="operator">+</span><span class="built_in">Enter</span> 在当前行的下一行插入空行<span class="punctuation">(</span>这时鼠标可以在当前行的任一位置<span class="operator">,</span>不一定是最后<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Shift</span><span class="operator">+</span><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">Enter</span> 在当前行插入空行<span class="punctuation">(</span>原理同上条<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Q</span> 定位到最后编辑的地方</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">L</span> 定位在某行 <span class="punctuation">(</span>对于程序超过<span class="number">100</span>的人就有福音了<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">M</span> 最大化当前的<span class="variable">Edit</span>或<span class="variable">View</span> <span class="punctuation">(</span>再按则反之<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+/</span> 注释当前行<span class="operator">,</span>再按则取消注释</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">O</span> 快速显示 <span class="variable">OutLine</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">T</span> 快速显示当前类的继承结构</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">W</span> 关闭当前<span class="variable">Editer</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">K</span> 参照选中的<span class="built_in">Word</span>快速定位到下一个</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">E</span> 快速显示当前<span class="variable">Editer</span>的下拉列表<span class="punctuation">(</span>如果当前页面没有显示的用黑体表示<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+/</span><span class="punctuation">(</span>小键盘<span class="punctuation">)</span> 折叠当前类中的所有代码</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span>×<span class="punctuation">(</span>小键盘<span class="punctuation">)</span> 展开当前类中的所有代码</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="built_in">Space</span> 代码助手完成一些代码的插入<span class="punctuation">(</span>但一般和输入法有冲突<span class="operator">,</span>可以修改输入法的热键<span class="operator">,</span>也可以暂用<span class="variable">Alt</span><span class="operator">+/</span>来代替<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="built_in">E</span> 显示管理当前打开的所有的<span class="variable">View</span>的管理器<span class="punctuation">(</span>可以选择关闭<span class="operator">,</span>激活等操作<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">J</span> 正向增量查找<span class="punctuation">(</span>按下<span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">J</span>后<span class="operator">,</span>你所输入的每个字母编辑器都提供快速匹配定位到某个单词<span class="operator">,</span>如果没有<span class="operator">,</span>则在<span class="variable">stutes</span> <span class="variable">line</span>中显示没有找到了<span class="operator">,</span>查一个单词时<span class="operator">,</span>特别实用<span class="operator">,</span>这个功能<span class="variable">Idea</span>两年前就有了<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">J</span> 反向增量查找<span class="punctuation">(</span>和上条相同<span class="operator">,</span>只不过是从后往前查<span class="punctuation">)</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">F4</span> 关闭所有打开的<span class="variable">Editer</span></span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">X</span> 把当前选中的文本全部变味小写</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">Y</span> 把当前选中的文本全部变为小写</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">F</span> 格式化当前代码</span><br><span class="line"><span class="variable">Ctrl</span><span class="operator">+</span><span class="variable">Shift</span><span class="operator">+</span><span class="variable">P</span> 定位到对于的匹配符<span class="punctuation">(</span>譬如<span class="punctuation">&#123;</span><span class="punctuation">&#125;</span><span class="punctuation">)</span> <span class="punctuation">(</span>从前面定位后面时<span class="operator">,</span>光标要在匹配符里面<span class="operator">,</span>后面到前面<span class="operator">,</span>则反之<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>下面的快捷键是重构里面常用的,本人就自己喜欢且常用的整理一下(注:一般重构的快捷键都是Alt+Shift开头的了)</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Alt+<span class="built_in">Shift</span>+R 重命名 (是我自己最爱用的一个了,尤其是变量和类的<span class="built_in">Rename</span>,比手工方法能节省很多劳动力)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+M 抽取方法 (这是重构里面最常用的方法之一了,尤其是对一大堆泥团代码有用)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+C 修改函数结构(比较实用,有N个函数调用了这个方法,修改一次搞定)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+L 抽取本地变量( 可以直接把一些魔法数字和字符串抽取成一个变量,尤其是多处调用的时候)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+F 把Class中的local变量变为field变量 (比较实用的功能)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+I 合并变量(可能这样说有点不妥Inline)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+V 移动函数和变量(不怎么常用)</span><br><span class="line">Alt+<span class="built_in">Shift</span>+Z 重构的后悔药(Undo)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编辑</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 查找并替换 Ctrl+F </span><br><span class="line">文本编辑器 查找上一个 Ctrl+<span class="built_in">Shift</span>+K </span><br><span class="line">文本编辑器 查找下一个 Ctrl+K </span><br><span class="line">全局 撤销 Ctrl+Z </span><br><span class="line">全局 复制 Ctrl+C </span><br><span class="line">全局 恢复上一个选择 Alt+<span class="built_in">Shift</span>+↓ </span><br><span class="line">全局 剪切 Ctrl+X </span><br><span class="line">全局 快速修正 Ctrl1+<span class="number">1</span> </span><br><span class="line">全局 内容辅助 Alt+/ </span><br><span class="line">全局 全部选中 Ctrl+A </span><br><span class="line">全局 删除 Delete </span><br><span class="line">全局 上下文信息 Alt+？</span><br><span class="line">Alt+<span class="built_in">Shift</span>+?</span><br><span class="line">Ctrl+<span class="built_in">Shift</span>+Space </span><br><span class="line">Java编辑器 显示工具提示描述 F2 </span><br><span class="line">Java编辑器 选择封装元素 Alt+<span class="built_in">Shift</span>+↑ </span><br><span class="line">Java编辑器 选择上一个元素 Alt+<span class="built_in">Shift</span>+← </span><br><span class="line">Java编辑器 选择下一个元素 Alt+<span class="built_in">Shift</span>+→ </span><br><span class="line">文本编辑器 增量查找 Ctrl+J </span><br><span class="line">文本编辑器 增量逆向查找 Ctrl+<span class="built_in">Shift</span>+J </span><br><span class="line">全局 粘贴 Ctrl+V </span><br><span class="line">全局 重做 Ctrl+Y</span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 查找并替换 Ctrl+F </span><br><span class="line">文本编辑器 查找上一个 Ctrl+<span class="built_in">Shift</span>+K </span><br><span class="line">文本编辑器 查找下一个 Ctrl+K </span><br><span class="line">全局 撤销 Ctrl+Z </span><br><span class="line">全局 复制 Ctrl+C </span><br><span class="line">全局 恢复上一个选择 Alt+<span class="built_in">Shift</span>+↓ </span><br><span class="line">全局 剪切 Ctrl+X </span><br><span class="line">全局 快速修正 Ctrl1+<span class="number">1</span> </span><br><span class="line">全局 内容辅助 Alt+/ </span><br><span class="line">全局 全部选中 Ctrl+A </span><br><span class="line">全局 删除 Delete </span><br><span class="line">全局 上下文信息 Alt+？</span><br><span class="line">Alt+<span class="built_in">Shift</span>+?</span><br><span class="line">Ctrl+<span class="built_in">Shift</span>+Space </span><br><span class="line">Java编辑器 显示工具提示描述 F2 </span><br><span class="line">Java编辑器 选择封装元素 Alt+<span class="built_in">Shift</span>+↑ </span><br><span class="line">Java编辑器 选择上一个元素 Alt+<span class="built_in">Shift</span>+← </span><br><span class="line">Java编辑器 选择下一个元素 Alt+<span class="built_in">Shift</span>+→ </span><br><span class="line">文本编辑器 增量查找 Ctrl+J </span><br><span class="line">文本编辑器 增量逆向查找 Ctrl+<span class="built_in">Shift</span>+J </span><br><span class="line">全局 粘贴 Ctrl+V </span><br><span class="line">全局 重做 Ctrl+Y </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看</p>
-<figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">作用域 功能 快捷键 </span></span><br><span class="line"><span class="attr">全局 放大 Ctrl+</span>=<span class="string"> </span></span><br><span class="line"><span class="string">全局 缩小 Ctrl+-</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight fix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">作用域 功能 快捷键 </span></span><br><span class="line"><span class="attr">全局 放大 Ctrl+</span>=<span class="string"> </span></span><br><span class="line"><span class="string">全局 缩小 Ctrl+- </span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>窗口</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 激活编辑器 F12 </span><br><span class="line">全局 切换编辑器 Ctrl+Shift+W </span><br><span class="line">全局 上一个编辑器 Ctrl+Shift+<span class="built_in">F6</span> </span><br><span class="line">全局 上一个视图 Ctrl+Shift+<span class="built_in">F7</span> </span><br><span class="line">全局 上一个透视图 Ctrl+Shift+F8 </span><br><span class="line">全局 下一个编辑器 Ctrl+<span class="built_in">F6</span> </span><br><span class="line">全局 下一个视图 Ctrl+<span class="built_in">F7</span> </span><br><span class="line">全局 下一个透视图 Ctrl+F8 </span><br><span class="line">文本编辑器 显示标尺上下文菜单 Ctrl+W </span><br><span class="line">全局 显示视图菜单 Ctrl+F10 </span><br><span class="line">全局 显示系统菜单 Alt+-</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 激活编辑器 F12 </span><br><span class="line">全局 切换编辑器 Ctrl+Shift+W </span><br><span class="line">全局 上一个编辑器 Ctrl+Shift+<span class="built_in">F6</span> </span><br><span class="line">全局 上一个视图 Ctrl+Shift+<span class="built_in">F7</span> </span><br><span class="line">全局 上一个透视图 Ctrl+Shift+F8 </span><br><span class="line">全局 下一个编辑器 Ctrl+<span class="built_in">F6</span> </span><br><span class="line">全局 下一个视图 Ctrl+<span class="built_in">F7</span> </span><br><span class="line">全局 下一个透视图 Ctrl+F8 </span><br><span class="line">文本编辑器 显示标尺上下文菜单 Ctrl+W </span><br><span class="line">全局 显示视图菜单 Ctrl+F10 </span><br><span class="line">全局 显示系统菜单 Alt+- </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导航</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line"><span class="keyword">Java编辑器 </span>打开结构 Ctrl+F3 </span><br><span class="line">全局 打开类型 Ctrl+<span class="keyword">Shift+T </span></span><br><span class="line">全局 打开类型层次结构 F4 </span><br><span class="line">全局 打开声明 F3 </span><br><span class="line">全局 打开外部<span class="keyword">javadoc </span><span class="keyword">Shift+F2 </span></span><br><span class="line">全局 打开资源 Ctrl+<span class="keyword">Shift+R </span></span><br><span class="line">全局 后退历史记录 Alt+← </span><br><span class="line">全局 前进历史记录 Alt+→ </span><br><span class="line">全局 上一个 Ctrl+, </span><br><span class="line">全局 下一个 Ctrl+. </span><br><span class="line"><span class="keyword">Java编辑器 </span>显示大纲 Ctrl+O </span><br><span class="line">全局 在层次结构中打开类型 Ctrl+<span class="keyword">Shift+H </span></span><br><span class="line">全局 转至匹配的括号 Ctrl+<span class="keyword">Shift+P </span></span><br><span class="line">全局 转至上一个编辑位置 Ctrl+Q </span><br><span class="line"><span class="keyword">Java编辑器 </span>转至上一个成员 Ctrl+<span class="keyword">Shift+↑ </span></span><br><span class="line"><span class="keyword">Java编辑器 </span>转至下一个成员 Ctrl+<span class="keyword">Shift+↓ </span></span><br><span class="line">文本编辑器 转至行 Ctrl+L</span><br></pre></td></tr></table></figure>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line"><span class="keyword">Java编辑器 </span>打开结构 Ctrl+F3 </span><br><span class="line">全局 打开类型 Ctrl+<span class="keyword">Shift+T </span></span><br><span class="line">全局 打开类型层次结构 F4 </span><br><span class="line">全局 打开声明 F3 </span><br><span class="line">全局 打开外部<span class="keyword">javadoc </span><span class="keyword">Shift+F2 </span></span><br><span class="line">全局 打开资源 Ctrl+<span class="keyword">Shift+R </span></span><br><span class="line">全局 后退历史记录 Alt+← </span><br><span class="line">全局 前进历史记录 Alt+→ </span><br><span class="line">全局 上一个 Ctrl+, </span><br><span class="line">全局 下一个 Ctrl+. </span><br><span class="line"><span class="keyword">Java编辑器 </span>显示大纲 Ctrl+O </span><br><span class="line">全局 在层次结构中打开类型 Ctrl+<span class="keyword">Shift+H </span></span><br><span class="line">全局 转至匹配的括号 Ctrl+<span class="keyword">Shift+P </span></span><br><span class="line">全局 转至上一个编辑位置 Ctrl+Q </span><br><span class="line"><span class="keyword">Java编辑器 </span>转至上一个成员 Ctrl+<span class="keyword">Shift+↑ </span></span><br><span class="line"><span class="keyword">Java编辑器 </span>转至下一个成员 Ctrl+<span class="keyword">Shift+↓ </span></span><br><span class="line">文本编辑器 转至行 Ctrl+L </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>搜索</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 出现在文件中 Ctrl+<span class="built_in">Shift</span>+U </span><br><span class="line">全局 打开搜索对话框 Ctrl+H </span><br><span class="line">全局 工作区中的声明 Ctrl+G </span><br><span class="line">全局 工作区中的引用 Ctrl+<span class="built_in">Shift</span>+G</span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 出现在文件中 Ctrl+<span class="built_in">Shift</span>+U </span><br><span class="line">全局 打开搜索对话框 Ctrl+H </span><br><span class="line">全局 工作区中的声明 Ctrl+G </span><br><span class="line">全局 工作区中的引用 Ctrl+<span class="built_in">Shift</span>+G </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>文本编辑</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">文本编辑器 改写切换 <span class="keyword">Insert</span> </span><br><span class="line">文本编辑器 上滚行 Ctrl+↑ </span><br><span class="line">文本编辑器 下滚行 Ctrl+↓</span><br></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">文本编辑器 改写切换 <span class="built_in">Insert</span> </span><br><span class="line">文本编辑器 上滚行 Ctrl+↑ </span><br><span class="line">文本编辑器 下滚行 Ctrl+↓ </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>文件</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 保存 Ctrl+X </span><br><span class="line"><span class="symbol">Ctrl</span>+S </span><br><span class="line">全局 打印 Ctrl+P </span><br><span class="line">全局 关闭 Ctrl+<span class="built_in">F4</span> </span><br><span class="line">全局 全部保存 Ctrl+Shift+S </span><br><span class="line">全局 全部关闭 Ctrl+Shift+<span class="built_in">F4</span> </span><br><span class="line">全局 属性 Alt+Enter </span><br><span class="line">全局 新建 Ctrl+N</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 保存 Ctrl+X </span><br><span class="line"><span class="symbol">Ctrl</span>+S </span><br><span class="line">全局 打印 Ctrl+P </span><br><span class="line">全局 关闭 Ctrl+<span class="built_in">F4</span> </span><br><span class="line">全局 全部保存 Ctrl+Shift+S </span><br><span class="line">全局 全部关闭 Ctrl+Shift+<span class="built_in">F4</span> </span><br><span class="line">全局 属性 Alt+Enter </span><br><span class="line">全局 新建 Ctrl+N </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 全部构建 Ctrl+B</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 全部构建 Ctrl+<span class="keyword">B</span> </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>源代码</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">Java编辑器 格式化 Ctrl+<span class="built_in">Shift</span>+F </span><br><span class="line">Java编辑器 取消注释 Ctrl+\ </span><br><span class="line">Java编辑器 注释 Ctrl+/ </span><br><span class="line">Java编辑器 添加导入 Ctrl+<span class="built_in">Shift</span>+M </span><br><span class="line">Java编辑器 组织导入 Ctrl+<span class="built_in">Shift</span>+O </span><br><span class="line">Java编辑器 使用try/catch块来包围 未设置，太常用了，所以在这里列出,建议自己设置。</span><br><span class="line">也可以使用Ctrl+<span class="number">1</span>自动修正。</span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">Java编辑器 格式化 Ctrl+<span class="built_in">Shift</span>+F </span><br><span class="line">Java编辑器 取消注释 Ctrl+\ </span><br><span class="line">Java编辑器 注释 Ctrl+/ </span><br><span class="line">Java编辑器 添加导入 Ctrl+<span class="built_in">Shift</span>+M </span><br><span class="line">Java编辑器 组织导入 Ctrl+<span class="built_in">Shift</span>+O </span><br><span class="line">Java编辑器 使用try/catch块来包围 未设置，太常用了，所以在这里列出,建议自己设置。</span><br><span class="line">也可以使用Ctrl+<span class="number">1</span>自动修正。 </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>运行</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 单步返回 <span class="built_in">F7</span> </span><br><span class="line">全局 单步跳过 <span class="built_in">F6</span> </span><br><span class="line">全局 单步跳入 <span class="built_in">F5</span> </span><br><span class="line">全局 单步跳入选择 Ctrl+<span class="built_in">F5</span> </span><br><span class="line">全局 调试上次启动 F11 </span><br><span class="line">全局 继续 F8 </span><br><span class="line">全局 使用过滤器单步执行 Shift+<span class="built_in">F5</span> </span><br><span class="line">全局 添加/去除断点 Ctrl+Shift+<span class="keyword">B </span></span><br><span class="line">全局 显示 Ctrl+D </span><br><span class="line">全局 运行上次启动 Ctrl+F11 </span><br><span class="line">全局 运行至行 Ctrl+R </span><br><span class="line">全局 执行 Ctrl+U</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 单步返回 <span class="built_in">F7</span> </span><br><span class="line">全局 单步跳过 <span class="built_in">F6</span> </span><br><span class="line">全局 单步跳入 <span class="built_in">F5</span> </span><br><span class="line">全局 单步跳入选择 Ctrl+<span class="built_in">F5</span> </span><br><span class="line">全局 调试上次启动 F11 </span><br><span class="line">全局 继续 F8 </span><br><span class="line">全局 使用过滤器单步执行 Shift+<span class="built_in">F5</span> </span><br><span class="line">全局 添加/去除断点 Ctrl+Shift+<span class="keyword">B</span> </span><br><span class="line">全局 显示 Ctrl+D </span><br><span class="line">全局 运行上次启动 Ctrl+F11 </span><br><span class="line">全局 运行至行 Ctrl+R </span><br><span class="line">全局 执行 Ctrl+U </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重构</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 撤销重构 Alt+<span class="built_in">Shift</span>+Z </span><br><span class="line">全局 抽取方法 Alt+<span class="built_in">Shift</span>+M </span><br><span class="line">全局 抽取局部变量 Alt+<span class="built_in">Shift</span>+L </span><br><span class="line">全局 内联 Alt+<span class="built_in">Shift</span>+I </span><br><span class="line">全局 移动 Alt+<span class="built_in">Shift</span>+V </span><br><span class="line">全局 重命名 Alt+<span class="built_in">Shift</span>+R </span><br><span class="line">全局 重做 Alt+<span class="built_in">Shift</span>+Y</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">作用域 功能 快捷键 </span><br><span class="line">全局 撤销重构 Alt+<span class="built_in">Shift</span>+Z </span><br><span class="line">全局 抽取方法 Alt+<span class="built_in">Shift</span>+M </span><br><span class="line">全局 抽取局部变量 Alt+<span class="built_in">Shift</span>+L </span><br><span class="line">全局 内联 Alt+<span class="built_in">Shift</span>+I </span><br><span class="line">全局 移动 Alt+<span class="built_in">Shift</span>+V </span><br><span class="line">全局 重命名 Alt+<span class="built_in">Shift</span>+R </span><br><span class="line">全局 重做 Alt+<span class="built_in">Shift</span>+Y</span><br></pre></td></tr></table></figure></li>
 </ul>
 
         
@@ -624,7 +706,10 @@
     <div class="article-content">
         
         <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">finalName</span>&gt;</span>boot-web<span class="tag">&lt;/<span class="name">finalName</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">fork</span>&gt;</span>true<span class="tag">&lt;/<span class="name">fork</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>org.boot.web.Application<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">layout</span>&gt;</span>ZIP<span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goal</span>&gt;</span>repackage<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h6 id="springboot-devtools需要配置fock-为true才能正常运行"><a href="#springboot-devtools需要配置fock-为true才能正常运行" class="headerlink" title="springboot devtools需要配置fock 为true才能正常运行"></a>springboot devtools需要配置fock 为true才能正常运行</h6><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring-boot :<span class="keyword">run</span></span><br></pre></td></tr></table></figure>
+
+
+<h6 id="springboot-devtools需要配置fock-为true才能正常运行"><a href="#springboot-devtools需要配置fock-为true才能正常运行" class="headerlink" title="springboot devtools需要配置fock 为true才能正常运行"></a>springboot devtools需要配置fock 为true才能正常运行</h6><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring-<span class="keyword">boot</span> :<span class="keyword">run</span></span><br></pre></td></tr></table></figure>
+
 
         
         
@@ -683,20 +768,24 @@
     <div class="article-content">
         
         <ul>
-<li><p>If you really want to use OpenJDK, you have to compile from source. There is not still any PPA for OpenJDK. It has been requested at  <a href="https://bugs.launchpad.net/ubuntu/+bug/1297065" target="_blank" rel="noopener">https://bugs.launchpad.net/ubuntu/+bug/1297065</a></p>
+<li><p>If you really want to use OpenJDK, you have to compile from source. There is not still any PPA for OpenJDK. It has been requested at  <a target="_blank" rel="noopener" href="https://bugs.launchpad.net/ubuntu/+bug/1297065">https://bugs.launchpad.net/ubuntu/+bug/1297065</a></p>
 </li>
 <li><p><strong>I recommend you to use Webup8 Oracle Java8 Installer</strong></p>
 </li>
 </ul>
 <figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo<span class="built_in"> add-apt-repository </span>ppa:webupd8team/java -y</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>To automatically set up the Java 8 environment variables</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get <span class="keyword">install</span> <span class="keyword">oracle</span>-java8-<span class="keyword">set</span>-<span class="keyword">default</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install oracle-java8-<span class="keyword">set</span>-<span class="keyword">default</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>Check it</li>
 </ul>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -<span class="built_in">version</span></span><br></pre></td></tr></table></figure>
+
+
 <h5 id="So-you-have-to-wait-to-use-OpenJDK8"><a href="#So-you-have-to-wait-to-use-OpenJDK8" class="headerlink" title="So you have to wait to use OpenJDK8"></a>So you have to wait to use OpenJDK8</h5>
         
         
@@ -735,70 +824,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/05/06/nginx/" title="nginx相关配置" itemprop="url">nginx相关配置</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="bigsuperangel" target="_blank" itemprop="author">bigsuperangel</a>
-		
-  <p class="article-time">
-    <time datetime="2016-05-06T03:22:30.000Z" itemprop="datePublished"> Published 2016-05-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <blockquote>
-<p>nginx 配置80端口转向，间接启用tomcat，不需要用authbind</p>
-</blockquote>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">  <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">  <span class="attribute">server_name</span> bigsuperangel.ngrok.cc;  <span class="comment"># 写上你的虚拟主机域名</span></span><br><span class="line"></span><br><span class="line">  <span class="attribute">location</span> /&#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> http://127.0.0.1:8080/;  <span class="comment"># 写上要转发到的地址，可以是http也可以是https，注意不要遗漏了最后的斜杠</span></span><br><span class="line">    <span class="attribute">proxy_pass_header</span> Set-Cookie;                           <span class="comment"># 带cookie转发</span></span><br><span class="line">    <span class="attribute">proxy_set_header</span> Host <span class="variable">$host</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/linux/">linux</a><a href="/tags/nginx/">nginx</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/05/06/nginx/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/05/06/nginx/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next<span></span></a>
+    <a class="extend prev" rel="prev" href="/page/4/">&lt;span&gt;&lt;&#x2F;span&gt;Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">Next&lt;span&gt;&lt;&#x2F;span&gt;</a>
   </nav>
 
 </div>
@@ -842,6 +870,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -850,19 +886,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -882,6 +910,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -895,14 +931,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

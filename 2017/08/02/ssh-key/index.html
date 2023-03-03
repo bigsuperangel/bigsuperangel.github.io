@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,19 @@
     
 
     
-    <meta name="description" content="1. 如何生成ssh公钥1234567891011cd ~ #切换到git目录下ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  # Generating public/private rsa key pair...# 三次回车即可生成 ssh key# 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址cat ~/.ssh">
-<meta name="keywords" content="linux,ssh">
+    <meta name="description" content="1. 如何生成ssh公钥1234567891011cd ~ #切换到git目录下ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  # Generating public&#x2F;private rsa key pair...# 三次回车即可生成 ssh key# 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="生成ssh key">
 <meta property="og:url" content="http://bigsuperangel.github.io/2017/08/02/ssh-key/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="1. 如何生成ssh公钥1234567891011cd ~ #切换到git目录下ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  # Generating public/private rsa key pair...# 三次回车即可生成 ssh key# 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址cat ~/.ssh">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="1. 如何生成ssh公钥1234567891011cd ~ #切换到git目录下ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  # Generating public&#x2F;private rsa key pair...# 三次回车即可生成 ssh key# 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址">
+<meta property="og:locale">
+<meta property="article:published_time" content="2017-08-02T02:13:37.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="ssh">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="生成ssh key">
-<meta name="twitter:description" content="1. 如何生成ssh公钥1234567891011cd ~ #切换到git目录下ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;  # Generating public/private rsa key pair...# 三次回车即可生成 ssh key# 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址cat ~/.ssh">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +44,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -109,14 +112,19 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-如何生成ssh公钥"><span class="toc-number">1.</span> <span class="toc-text">1. 如何生成ssh公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置多个git仓库"><span class="toc-number">2.</span> <span class="toc-text">2. 配置多个git仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-linux互信"><span class="toc-number">3.</span> <span class="toc-text">3. linux互信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-相关问题"><span class="toc-number">4.</span> <span class="toc-text">4. 相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-git-fatal-early-EOF-fatal-index-pack-failed"><span class="toc-number">4.0.1.</span> <span class="toc-text">a. git fatal: early EOF fatal: index-pack failed</span></a></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90ssh%E5%85%AC%E9%92%A5"><span class="toc-number">1.</span> <span class="toc-text">1. 如何生成ssh公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">2. 配置多个git仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-linux%E4%BA%92%E4%BF%A1"><span class="toc-number">3.</span> <span class="toc-text">3. linux互信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">4. 相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-git-fatal-early-EOF-fatal-index-pack-failed"><span class="toc-number">4.0.1.</span> <span class="toc-text">a. git fatal: early EOF fatal: index-pack failed</span></a></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">cd</span> <span class="regexp">~ #切换到git目录下</span></span><br><span class="line"><span class="regexp">ssh-keygen</span> -t rsa -C <span class="string">"xxxxx<span class="variable">@xxxxx</span>.com"</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br><span class="line"><span class="comment"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</span></span><br><span class="line"></span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br><span class="line"></span><br><span class="line">ssh -T git<span class="variable">@git</span>.oschina.net</span><br></pre></td></tr></table></figure>
-<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ touch config</span><br><span class="line"></span><br><span class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></span><br><span class="line"></span><br><span class="line">linux:</span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line"><span class="built_in">	User </span>    bigsuperangel</span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github</span><br><span class="line">	ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br><span class="line"></span><br><span class="line">window:</span><br><span class="line"><span class="comment"># oschina</span></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">   <span class="built_in"> User </span>bigsuperyu</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">   <span class="built_in"> User </span>    bigsuperangel</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/github-rsa</span><br><span class="line">    ProxyCommand connect -H 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
-<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -i id_rsa.pub root@host</span><br><span class="line">ssh-copy-id -i id_rsa.pub -p<span class="built_in"> port </span>root@host</span><br></pre></td></tr></table></figure>
+		<h2 id="1-如何生成ssh公钥"><a href="#1-如何生成ssh公钥" class="headerlink" title="1. 如何生成ssh公钥"></a>1. 如何生成ssh公钥</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~ <span class="comment">#切换到git目录下</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;xxxxx@xxxxx.com&quot;</span>  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Generating public/private rsa key pair...</span></span><br><span class="line"><span class="comment"># 三次回车即可生成 ssh key</span></span><br><span class="line"><span class="comment"># 查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub</span><br><span class="line"><span class="comment"># ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....</span></span><br><span class="line"></span><br><span class="line">ssh -T git@git.oschina.net</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置多个git仓库"><a href="#2-配置多个git仓库" class="headerlink" title="2. 配置多个git仓库"></a>2. 配置多个git仓库</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$ touch config</span><br><span class="line"></span><br><span class="line"><span class="comment"># window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc</span></span><br><span class="line"></span><br><span class="line">linux:</span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	<span class="keyword">User</span>     <span class="title">bigsuperangel</span></span><br><span class="line">	PreferredAuthentications publickey</span><br><span class="line">	IdentityFile ~/.ssh/github</span><br><span class="line">	ProxyCommand nc -v -x <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">1080</span> %h %p</span><br><span class="line"></span><br><span class="line">window:</span><br><span class="line"><span class="comment"># oschina</span></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    <span class="keyword">User</span> <span class="title">bigsuperyu</span></span><br><span class="line">    IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># github</span></span><br><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    <span class="keyword">User</span>     <span class="title">bigsuperangel</span></span><br><span class="line">    PreferredAuthentications publickey</span><br><span class="line">    IdentityFile ~/.ssh/github-rsa</span><br><span class="line">    ProxyCommand connect -H <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">1080</span> %h %p</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-linux互信"><a href="#3-linux互信" class="headerlink" title="3. linux互信"></a>3. linux互信</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -<span class="selector-tag">i</span> id_rsa<span class="selector-class">.pub</span> root@host</span><br><span class="line">ssh-copy-id -<span class="selector-tag">i</span> id_rsa<span class="selector-class">.pub</span> -<span class="selector-tag">p</span> port root@host</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-相关问题"><a href="#4-相关问题" class="headerlink" title="4. 相关问题"></a>4. 相关问题</h2><h4 id="a-git-fatal-early-EOF-fatal-index-pack-failed"><a href="#a-git-fatal-early-EOF-fatal-index-pack-failed" class="headerlink" title="a. git fatal: early EOF fatal: index-pack failed"></a>a. git fatal: early EOF fatal: index-pack failed</h4><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[core] </span><br><span class="line">packedGitLimit = 512m </span><br><span class="line">packedGitWindowSize = 512m </span><br><span class="line">[pack] </span><br><span class="line">deltaCacheSize = 2047m </span><br><span class="line">packSizeLimit = 2047m </span><br><span class="line">windowMemory = 2047m</span><br><span class="line"></span><br><span class="line">I have tried this in /etc/ssh/ssh_config for Linux and Mac:</span><br><span class="line">Host *</span><br><span class="line">ServerAliveInterval 120</span><br></pre></td></tr></table></figure>
+
+
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -178,7 +186,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-如何生成ssh公钥"><span class="toc-number">1.</span> <span class="toc-text">1. 如何生成ssh公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-配置多个git仓库"><span class="toc-number">2.</span> <span class="toc-text">2. 配置多个git仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-linux互信"><span class="toc-number">3.</span> <span class="toc-text">3. linux互信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-相关问题"><span class="toc-number">4.</span> <span class="toc-text">4. 相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-git-fatal-early-EOF-fatal-index-pack-failed"><span class="toc-number">4.0.1.</span> <span class="toc-text">a. git fatal: early EOF fatal: index-pack failed</span></a></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90ssh%E5%85%AC%E9%92%A5"><span class="toc-number">1.</span> <span class="toc-text">1. 如何生成ssh公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AAgit%E4%BB%93%E5%BA%93"><span class="toc-number">2.</span> <span class="toc-text">2. 配置多个git仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-linux%E4%BA%92%E4%BF%A1"><span class="toc-number">3.</span> <span class="toc-text">3. linux互信</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">4. 相关问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#a-git-fatal-early-EOF-fatal-index-pack-failed"><span class="toc-number">4.0.1.</span> <span class="toc-text">a. git fatal: early EOF fatal: index-pack failed</span></a></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -220,6 +228,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -228,19 +244,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -260,6 +268,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -273,14 +289,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -1,7 +1,7 @@
 
  <!DOCTYPE HTML>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84488915-1"></script>
@@ -20,18 +20,18 @@
     
 
     
-    <meta name="description" content="1. docker mysql 配置 123456789docker search mysqldocker run --name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5docker image lsdocker exec -it some-mysql b">
-<meta name="keywords" content="docker">
+    <meta name="description" content="1.  docker mysql 配置 123456789docker search mysqldocker run --name some-mysql -p 3306:3306 -v &#x2F;root&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql -e MYSQL_ROOT_PASSWORD&#x3D;xxx -d mysql:5.5docker image lsdocker exec -it some-mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker">
 <meta property="og:url" content="http://bigsuperangel.github.io/2018/10/15/docker/index.html">
 <meta property="og:site_name" content="道不远人">
-<meta property="og:description" content="1. docker mysql 配置 123456789docker search mysqldocker run --name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5docker image lsdocker exec -it some-mysql b">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2023-03-03T04:49:12.099Z">
+<meta property="og:description" content="1.  docker mysql 配置 123456789docker search mysqldocker run --name some-mysql -p 3306:3306 -v &#x2F;root&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql -e MYSQL_ROOT_PASSWORD&#x3D;xxx -d mysql:5.5docker image lsdocker exec -it some-mysql">
+<meta property="og:locale">
+<meta property="article:published_time" content="2018-10-15T02:56:40.000Z">
+<meta property="article:modified_time" content="2023-03-03T08:43:15.591Z">
+<meta property="article:author" content="bigsuperangel">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker">
-<meta name="twitter:description" content="1. docker mysql 配置 123456789docker search mysqldocker run --name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5docker image lsdocker exec -it some-mysql b">
 
     
     <link rel="alternative" href="/atom.xml" title="道不远人" type="application/atom+xml">
@@ -43,9 +43,11 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
   <body>
     <header>
       
@@ -113,10 +115,11 @@
 		
 		</div>
 		
-		<p><code>1.</code> docker mysql 配置</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br><span class="line">docker <span class="built_in">run</span> <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></span><br><span class="line">docker image ls</span><br><span class="line">docker exec -<span class="keyword">it</span> <span class="keyword">some</span>-mysql bash</span><br><span class="line"><span class="comment">#配置远程访问</span></span><br><span class="line">mysql&gt; grant all privileges <span class="keyword">on</span> *.* <span class="keyword">to</span> root@<span class="string">"%"</span> identified <span class="keyword">by</span> <span class="string">"password"</span> <span class="keyword">with</span> grant option; </span><br><span class="line">Query OK, <span class="number">0</span> rows affected, <span class="number">1</span> warning (<span class="number">0.04</span> sec)</span><br><span class="line">mysql&gt; flush privileges; </span><br><span class="line">Query OK, <span class="number">0</span> rows affected (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-<p><code>2.</code> docker tomcat 配置</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tomcat8 给内网服务器使用</span></span><br><span class="line">docker run --name tomcat8 -d \</span><br><span class="line">	-v ~<span class="regexp">/web/</span>tomcat8<span class="regexp">/webapps:/u</span>sr<span class="regexp">/local/</span>tomcat<span class="regexp">/webapps \</span></span><br><span class="line"><span class="regexp">	-v ~/</span>web<span class="regexp">/tomcat8/</span>logs:<span class="regexp">/usr/</span>local<span class="regexp">/tomcat/</span>logs \</span><br><span class="line">	-v <span class="regexp">/etc/</span>localtime:<span class="regexp">/etc/</span>localtime:ro \</span><br><span class="line">	-e TZ=<span class="string">"Asia/Shanghai"</span> \</span><br><span class="line">	-p <span class="number">8080</span>:<span class="number">8080</span> tomcat:<span class="number">8.0</span></span><br><span class="line"></span><br><span class="line">docker logs --tail=<span class="number">100</span> -f tomcat8</span><br><span class="line">docker container stop tomcat8</span><br><span class="line">docker container start tomcat8</span><br></pre></td></tr></table></figure>
+		<p><code>1. </code> docker mysql 配置</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">search</span> mysql</span><br><span class="line">docker run <span class="comment">--name some-mysql -p 3306:3306 -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=xxx -d mysql:5.5</span></span><br><span class="line">docker image ls</span><br><span class="line">docker exec -it <span class="keyword">some</span>-mysql bash</span><br><span class="line">#配置远程访问</span><br><span class="line">mysql&gt; <span class="keyword">grant</span> <span class="keyword">all</span> <span class="keyword">privileges</span> <span class="keyword">on</span> *.* <span class="keyword">to</span> root@&quot;%&quot; identified <span class="keyword">by</span> &quot;password&quot; <span class="keyword">with</span> <span class="keyword">grant</span> <span class="keyword">option</span>; </span><br><span class="line">Query OK, <span class="number">0</span> <span class="keyword">rows</span> affected, <span class="number">1</span> <span class="built_in">warning</span> (<span class="number">0.04</span> sec)</span><br><span class="line">mysql&gt; flush <span class="keyword">privileges</span>; </span><br><span class="line">Query OK, <span class="number">0</span> <span class="keyword">rows</span> affected (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+
+<p><code>2. </code> docker tomcat 配置</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tomcat8 给内网服务器使用</span></span><br><span class="line">docker run --name tomcat8 -d \</span><br><span class="line">	-v ~<span class="regexp">/web/</span>tomcat8<span class="regexp">/webapps:/u</span>sr<span class="regexp">/local/</span>tomcat/webapps \</span><br><span class="line">	-v ~<span class="regexp">/web/</span>tomcat8<span class="regexp">/logs:/u</span>sr<span class="regexp">/local/</span>tomcat/logs \</span><br><span class="line">	-v <span class="regexp">/etc/</span>localtime:<span class="regexp">/etc/</span>localtime:ro \</span><br><span class="line">	-e TZ=<span class="string">&quot;Asia/Shanghai&quot;</span> \</span><br><span class="line">	-p <span class="number">8080</span>:<span class="number">8080</span> tomcat:<span class="number">8.0</span></span><br><span class="line"></span><br><span class="line">docker logs --tail=<span class="number">100</span> -f tomcat8</span><br><span class="line">docker container stop tomcat8</span><br><span class="line">docker container start tomcat8</span><br></pre></td></tr></table></figure>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -220,6 +223,14 @@
 			
 		
 			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/mysql/" title="mysql">mysql<sup>4</sup></a></li>
 			
 		
@@ -228,19 +239,11 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/actions/" title="actions">actions<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/python/" title="python">python<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
@@ -260,6 +263,14 @@
 			
 		
 			
+				<li><a href="/tags/submodule/" title="submodule">submodule<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/npm/" title="npm">npm<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/command/" title="command">command<sup>2</sup></a></li>
 			
 		
@@ -273,14 +284,6 @@
 		
 			
 				<li><a href="/tags/curl/" title="curl">curl<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/docker/" title="docker">docker<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/freenom/" title="freenom">freenom<sup>1</sup></a></li>
 			
 		
 		</ul>
